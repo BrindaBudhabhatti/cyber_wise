@@ -123,8 +123,8 @@ export function CyberQuiz() {
               className={cn(
                 "flex items-center gap-4 rounded-lg border p-4 transition-all cursor-pointer hover:bg-accent/50",
                 selectedAnswer === option && "bg-accent",
-                answerState === 'correct' && selectedAnswer === option && 'border-green-500 bg-green-500/10',
-                answerState === 'incorrect' && selectedAnswer === option && 'border-destructive bg-destructive/10'
+                answerState === 'correct' && selectedAnswer === option && 'border-success bg-success/10 text-success',
+                answerState === 'incorrect' && selectedAnswer === option && 'border-destructive bg-destructive/10 text-destructive'
               )}
             >
               <RadioGroupItem value={option} id={option} />
@@ -133,7 +133,7 @@ export function CyberQuiz() {
           ))}
         </RadioGroup>
         {showExplanation && (
-          <div className={cn("mt-4 p-4 rounded-lg", answerState === 'correct' ? "bg-green-500/10 text-green-700" : "bg-destructive/10 text-destructive")}>
+          <div className={cn("mt-4 p-4 rounded-lg", answerState === 'correct' ? "bg-success/10 text-success" : "bg-destructive/10 text-destructive")}>
               <div className="flex items-center gap-2 font-bold">
                  {answerState === 'correct' ? <CheckCircle /> : <XCircle />}
                  {answerState === 'correct' ? "Correct!" : "Incorrect."}
