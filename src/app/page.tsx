@@ -11,37 +11,43 @@ export default function Home() {
   const { t } = useTranslation();
 
   return (
-    <div className="space-y-8">
-      <div className="text-center space-y-2">
-        <h1 className="text-3xl md:text-4xl font-bold text-primary">
+    <div className="space-y-12">
+      <div className="text-center space-y-4 pt-8">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
           {t('home.title')}
         </h1>
-        <p className="text-muted-foreground md:text-lg">
+        <p className="text-muted-foreground md:text-xl max-w-3xl mx-auto">
           {t('home.description')}
         </p>
       </div>
 
-      <SafetyTipCarousel />
+      <div className="grid lg:grid-cols-2 gap-8 items-start">
+        <SafetyTipCarousel />
 
-      <Card className="w-full shadow-lg border-primary/20">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <MessageCircle className="text-primary" />
-            <span>{t('home.chat.title')}</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-muted-foreground mb-4">
-            {t('home.chat.description')}
-          </p>
-          <Button asChild size="lg" className="w-full md:w-auto">
-            <Link href="/chat">
-              {t('home.chat.button')}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-        </CardContent>
-      </Card>
+        <Card className="w-full shadow-lg border-primary/10 flex flex-col h-full">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-3">
+              <div className="bg-primary/10 p-2 rounded-full">
+                <MessageCircle className="text-primary h-6 w-6" />
+              </div>
+              <span className="text-2xl">{t('home.chat.title')}</span>
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <p className="text-muted-foreground">
+              {t('home.chat.description')}
+            </p>
+          </CardContent>
+          <div className="p-6 pt-0">
+            <Button asChild size="lg" className="w-full text-base">
+              <Link href="/chat">
+                {t('home.chat.button')}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </Card>
+      </div>
     </div>
   );
 }
