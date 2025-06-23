@@ -1,4 +1,4 @@
-import { Fish, KeyRound, UserX, ShieldAlert, DollarSign, type LucideIcon } from "lucide-react";
+import { Fish, KeyRound, UserX, ShieldAlert, IndianRupee, Lock, Users, Virus, type LucideIcon } from "lucide-react";
 
 export type Topic = {
   slug: string;
@@ -77,7 +77,7 @@ export const topics: Topic[] = [
     slug: "online-scams",
     title: "Online Scams",
     summary: "Various fraudulent schemes conducted via the internet, from fake job offers to lottery scams.",
-    icon: DollarSign,
+    icon: IndianRupee,
     description: "Online scams come in many forms, including fake job offers, lottery notifications, tech support scams, and romance scams. The goal is always to trick the victim into sending money or sensitive information.",
     law: "Section 66D of the IT Act (Cheating by personation using computer resource) & IPC Section 420 (Cheating).",
     penalty: "Imprisonment of up to three years and a fine of up to one lakh rupees.",
@@ -86,6 +86,51 @@ export const topics: Topic[] = [
       "Never pay an upfront fee for a job, prize, or loan.",
       "Do independent research on any company or person before dealing with them.",
       "Be wary of high-pressure sales tactics or urgent requests for money.",
+    ],
+  },
+  {
+    slug: "ransomware",
+    title: "Ransomware",
+    summary: "Malicious software that blocks access to a computer system until a sum of money is paid.",
+    icon: Lock,
+    description: "Ransomware is a type of malware that encrypts a victim's files. The attacker then demands a ransom from the victim to restore access to the data upon payment.",
+    law: "Considered extortion under IPC Section 383. Also falls under Sections 43 & 66 of the IT Act.",
+    penalty: "Imprisonment for up to three years, or a fine up to five lakh rupees, or both.",
+    tips: [
+      "Regularly back up your important data to an external drive or cloud storage.",
+      "Do not open suspicious attachments or click on untrusted links.",
+      "Use reputable security software and keep it updated.",
+      "Never pay the ransom, as there's no guarantee you'll get your data back.",
+    ],
+  },
+  {
+    slug: "social-engineering",
+    title: "Social Engineering",
+    summary: "Psychological manipulation of people into performing actions or divulging confidential information.",
+    icon: Users,
+    description: "Social engineering is the art of manipulating people so they give up confidential information. The types of information these criminals are seeking can vary, but when individuals are targeted the criminals are usually trying to trick you into giving them your passwords or bank information.",
+    law: "Often a component of crimes covered under Sections 66, 66C, 66D of the IT Act and IPC sections for cheating (420).",
+    penalty: "Penalties vary based on the resulting crime, but can include imprisonment and hefty fines.",
+    tips: [
+      "Be wary of unsolicited emails, calls, or messages asking for personal information.",
+      "Verify the identity of the person or organization before sharing any data.",
+      "Don't be rushed. Scammers often create a sense of urgency.",
+      "Be suspicious of tempting offers or threats.",
+    ],
+  },
+  {
+    slug: "malware",
+    title: "Malware",
+    summary: "Software intentionally designed to cause disruption to a computer, server, client, or computer network.",
+    icon: Virus,
+    description: "Malware (short for malicious software) is a catch-all term for any type of software designed to harm or exploit any programmable device, service or network. This includes viruses, worms, trojan horses, spyware, and adware.",
+    law: "Section 43 and Section 66 of the IT Act cover damage to computer systems and spreading viruses.",
+    penalty: "Imprisonment for a term which may extend to three years or with a fine which may extend to five lakh rupees or with both.",
+    tips: [
+      "Install and maintain anti-virus software.",
+      "Be cautious of free software downloads from unknown sources.",
+      "Scan email attachments before opening them.",
+      "Avoid clicking on pop-up ads.",
     ],
   },
 ];
