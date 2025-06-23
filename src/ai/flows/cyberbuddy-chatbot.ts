@@ -15,6 +15,7 @@ import {z} from 'genkit';
 
 const CyberBuddyChatbotInputSchema = z.object({
   query: z.string().describe('The user query about cybercrime, laws, penalties, or tips.'),
+  language: z.string().describe('The language for the chatbot to respond in (e.g., "en", "hi", "gu").'),
 });
 export type CyberBuddyChatbotInput = z.infer<typeof CyberBuddyChatbotInputSchema>;
 
@@ -36,6 +37,9 @@ const prompt = ai.definePrompt({
   A user will ask a question related to cybercrime, Indian cyber laws, penalties, or safety tips.
   Provide a concise and informative answer based on your knowledge.
 
+  VERY IMPORTANT: You MUST respond in the language specified in the 'language' field.
+
+  Language: {{{language}}}
   User Query: {{{query}}}`,
 });
 

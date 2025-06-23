@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Bot, Send, User, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 type Message = {
   role: "user" | "bot";
@@ -20,6 +21,7 @@ type ChatProps = {
 };
 
 export function ChatInterface({ sendMessage }: ChatProps) {
+  const { i18n } = useTranslation();
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'bot',
@@ -49,7 +51,7 @@ export function ChatInterface({ sendMessage }: ChatProps) {
     setIsLoading(true);
 
     try {
-      const response = await sendMessage({ query: input });
+      const response = await sendMessage({ query: input, language: i18n.language });
       const botMessage: Message = { role: "bot", content: response.response };
       setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
