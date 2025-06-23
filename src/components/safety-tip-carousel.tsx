@@ -26,7 +26,7 @@ export function SafetyTipCarousel() {
   const { title, tip } = safetyTips[currentTip];
 
   return (
-    <Card className="shadow-lg">
+    <Card className="shadow-lg bg-gradient-to-br from-card to-muted/30">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Lightbulb className="text-yellow-400" />
