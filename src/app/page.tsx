@@ -6,7 +6,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SafetyTipCarousel } from '@/components/safety-tip-carousel';
 import { MessageCircle, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { cn } from '@/lib/utils';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -14,7 +13,7 @@ export default function Home() {
   return (
     <div className="space-y-12">
       <div className="text-center space-y-4 pt-8">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary transition-all hover:saturate-150">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tighter text-primary">
           {t('home.title')}
         </h1>
         <p className="text-muted-foreground md:text-xl max-w-3xl mx-auto">
@@ -40,7 +39,7 @@ export default function Home() {
             </p>
           </CardContent>
           <div className="p-6 pt-0">
-            <Button asChild size="lg" className="w-full text-base bg-gradient-to-r from-primary to-primary-variant hover:shadow-lg hover:scale-105 transition-transform">
+            <Button asChild size="lg" className="w-full text-base">
               <Link href="/chat">
                 {t('home.chat.button')}
                 <ArrowRight className="ml-2 h-5 w-5" />

@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -6,8 +5,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, Lightbulb } from "lucide-react";
 import { safetyTips } from "@/lib/tips";
+import { useTranslation } from "react-i18next";
 
 export function SafetyTipCarousel() {
+  const { t } = useTranslation();
   const [currentTip, setCurrentTip] = useState(0);
 
   const nextTip = () => {
@@ -23,19 +24,19 @@ export function SafetyTipCarousel() {
     return () => clearInterval(timer);
   }, []);
 
-  const { title, tip } = safetyTips[currentTip];
+  const { titleKey, tipKey } = safetyTips[currentTip];
 
   return (
-    <Card className="shadow-lg bg-gradient-to-br from-card to-muted/30">
+    <Card className="shadow-lg bg-surface">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Lightbulb className="text-yellow-400" />
-          <span>Quick Safety Tip</span>
+          <Lightbulb className="text-secondary" />
+          <span>{t('safety_tip_carousel.title')}</span>
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4 text-center">
-        <h3 className="text-lg font-semibold text-primary">{title}</h3>
-        <p className="text-muted-foreground min-h-[60px]">{tip}</p>
+        <h3 className="text-lg font-semibold text-primary">{t(titleKey)}</h3>
+        <p className="text-muted-foreground min-h-[60px]">{t(tipKey)}</p>
         <div className="flex justify-center items-center gap-4">
           <Button variant="outline" size="icon" onClick={prevTip} aria-label="Previous tip">
             <ArrowLeft className="h-4 w-4" />
