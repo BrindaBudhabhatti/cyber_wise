@@ -1,4 +1,4 @@
-import { Fish, KeyRound, UserX, ShieldAlert, IndianRupee, Lock, Users, Virus, type LucideIcon } from "lucide-react";
+import { Fish, KeyRound, UserX, ShieldAlert, IndianRupee, Lock, Users, Bug, type LucideIcon } from "lucide-react";
 
 export type Topic = {
   slug: string;
@@ -122,7 +122,7 @@ export const topics: Topic[] = [
     slug: "malware",
     title: "Malware",
     summary: "Software intentionally designed to cause disruption to a computer, server, client, or computer network.",
-    icon: Virus,
+    icon: Bug,
     description: "Malware (short for malicious software) is a catch-all term for any type of software designed to harm or exploit any programmable device, service or network. This includes viruses, worms, trojan horses, spyware, and adware.",
     law: "Section 43 and Section 66 of the IT Act cover damage to computer systems and spreading viruses.",
     penalty: "Imprisonment for a term which may extend to three years or with a fine which may extend to five lakh rupees or with both.",
