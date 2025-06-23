@@ -20,5 +20,6 @@ export default function LearnTopicPage({
     notFound();
   }
 
-  return <LearnTopicDetails topic={topic} />;
+  // Pass only the serializable slug to the Client Component
+  return <LearnTopicDetails slug={params.slug} />;
 }

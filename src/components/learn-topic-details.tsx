@@ -6,10 +6,18 @@ import { BookCopy, Gavel, ShieldCheck, AlertTriangle, ArrowLeft } from "lucide-r
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-import type { Topic } from "@/lib/learn-data";
+import { topics } from "@/lib/learn-data";
+import { notFound } from "next/navigation";
 
-export function LearnTopicDetails({ topic }: { topic: Topic }) {
+export function LearnTopicDetails({ slug }: { slug: string }) {
   const { t } = useTranslation();
+
+  // Find the topic object within the client component using the slug
+  const topic = topics.find((t) => t.slug === slug);
+
+  if (!topic) {
+    notFound();
+  }
 
   return (
     <div className="space-y-8">
