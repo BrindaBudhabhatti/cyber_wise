@@ -8,6 +8,7 @@ import {
   FileText,
   MessageCircle,
   Shield,
+  GalleryHorizontal,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -31,6 +32,7 @@ const menuItems = [
   { href: "/learn", label: "Learn", icon: BookOpen },
   { href: "/quiz", label: "Quiz", icon: ShieldQuestion },
   { href: "/report", label: "Report", icon: FileText },
+  { href: "/awareness", label: "Awareness", icon: GalleryHorizontal },
   { href: "/chat", label: "CyberBuddy", icon: MessageCircle },
 ];
 
