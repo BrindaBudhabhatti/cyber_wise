@@ -1,4 +1,3 @@
-
 "use client";
 
 import {
@@ -7,7 +6,7 @@ import {
   ShieldQuestion,
   FileText,
   MessageCircle,
-  ShieldCheck,
+  Fingerprint,
   GalleryHorizontal,
 } from "lucide-react";
 import Link from "next/link";
@@ -63,7 +62,7 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
       <Sidebar>
         <SidebarHeader>
           <div className="flex items-center gap-2 p-2">
-            <ShieldCheck className="h-8 w-8 text-primary" />
+            <Fingerprint className="h-8 w-8 text-primary" />
             <div className="flex flex-col">
               <h1 className="text-xl font-semibold tracking-tight">CyberWise</h1>
             </div>
