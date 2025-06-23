@@ -1,5 +1,4 @@
 
-import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { awarenessPosters } from "@/lib/awareness-data";
 
@@ -14,18 +13,12 @@ export default function AwarenessPage() {
       </div>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {awarenessPosters.map((poster) => (
-          <Card key={poster.id} className="overflow-hidden shadow-lg transition-transform hover:scale-105">
-            <div className="relative h-96 w-full">
-              <Image
-                src={poster.imageUrl}
-                alt={poster.title}
-                fill
-                className="object-cover"
-                data-ai-hint={poster.dataAiHint}
-              />
-            </div>
-            <CardHeader>
-              <CardTitle>&ldquo;{poster.title}&rdquo;</CardTitle>
+          <Card key={poster.id} className="flex h-full flex-col justify-start overflow-hidden shadow-lg transition-transform hover:scale-105 hover:shadow-primary/20">
+            <CardHeader className="flex-row items-center gap-4">
+               <div className="bg-primary/10 p-3 rounded-full">
+                  <poster.icon className="h-8 w-8 text-primary" />
+                </div>
+              <CardTitle className="text-xl">&ldquo;{poster.title}&rdquo;</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">{poster.message}</p>
