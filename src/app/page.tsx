@@ -38,7 +38,7 @@ export default function Home() {
       <section className="text-center py-16">
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter">
           {t('home.hero.title1')}{' '}
-          <span className="bg-gradient-to-r from-primary to-emerald-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             {t('home.hero.title2')}
           </span>
         </h1>
