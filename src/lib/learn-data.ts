@@ -2,135 +2,135 @@ import { Fish, KeyRound, UserX, ShieldAlert, IndianRupee, Lock, Users, Bug, type
 
 export type Topic = {
   slug: string;
-  title: string;
-  summary: string;
+  titleKey: string;
+  summaryKey: string;
   icon: LucideIcon;
-  description: string;
-  law: string;
-  penalty: string;
-  tips: string[];
+  descriptionKey: string;
+  lawKey: string;
+  penaltyKey: string;
+  tipsKeys: string[];
 };
 
 export const topics: Topic[] = [
   {
     slug: "phishing",
-    title: "Phishing",
-    summary: "Tricking individuals into revealing sensitive information through deceptive emails, messages, or websites.",
+    titleKey: "learn.phishing.title",
+    summaryKey: "learn.phishing.summary",
     icon: Fish,
-    description: "Phishing is a fraudulent attempt to obtain sensitive information such as usernames, passwords, and credit card details by disguising as a trustworthy entity in an electronic communication.",
-    law: "Section 43 of the Information Technology Act, 2000 & Section 66 of IT Act. Indian Penal Code Section 419 (Cheating by Personation) & 420 (Cheating).",
-    penalty: "Imprisonment up to three years, or a fine up to five lakh rupees, or both.",
-    tips: [
-      "Verify the sender's email address.",
-      "Look for spelling and grammar mistakes.",
-      "Hover over links to see the actual URL before clicking.",
-      "Never provide personal information in response to an unsolicited request.",
+    descriptionKey: "learn.phishing.description",
+    lawKey: "learn.phishing.law",
+    penaltyKey: "learn.phishing.penalty",
+    tipsKeys: [
+      "learn.phishing.tip1",
+      "learn.phishing.tip2",
+      "learn.phishing.tip3",
+      "learn.phishing.tip4",
     ],
   },
   {
     slug: "otp-fraud",
-    title: "OTP Fraud",
-    summary: "Scammers tricking victims into sharing One-Time Passwords (OTPs) to authorize fraudulent transactions.",
+    titleKey: "learn.otp_fraud.title",
+    summaryKey: "learn.otp_fraud.summary",
     icon: KeyRound,
-    description: "OTP fraud involves tricking users into sharing the One-Time Password (OTP) they receive on their mobile for transactions. Scammers often pose as bank employees, tech support, or service providers.",
-    law: "Sections 43, 66, 66C, 66D of IT Act, 2000. IPC Sections 419, 420, 468, 471.",
-    penalty: "Can lead to imprisonment and significant financial fines depending on the scale of fraud.",
-    tips: [
-      "Never share your OTP with anyone, including bank officials.",
-      "Banks or any legitimate company will never ask for your OTP.",
-      "Be suspicious of urgent requests for OTPs.",
-      "If you receive an OTP for a transaction you did not initiate, report it immediately.",
+    descriptionKey: "learn.otp_fraud.description",
+    lawKey: "learn.otp_fraud.law",
+    penaltyKey: "learn.otp_fraud.penalty",
+    tipsKeys: [
+      "learn.otp_fraud.tip1",
+      "learn.otp_fraud.tip2",
+      "learn.otp_fraud.tip3",
+      "learn.otp_fraud.tip4",
     ],
   },
   {
     slug: "cyber-bullying",
-    title: "Cyber Bullying",
-    summary: "Using digital technology to harass, threaten, or humiliate someone, often repeatedly.",
+    titleKey: "learn.cyber_bullying.title",
+    summaryKey: "learn.cyber_bullying.summary",
     icon: ShieldAlert,
-    description: "Cyberbullying is bullying that takes place over digital devices like cell phones, computers, and tablets. It can occur through SMS, Text, and apps, or online in social media, forums, or gaming where people can view, participate in, or share content.",
-    law: "Section 67 of IT Act (publishing or transmitting obscene material), Section 66E (violation of privacy), IPC Sections 507 (criminal intimidation by anonymous communication) & 509 (insulting the modesty of a woman).",
-    penalty: "Imprisonment which may extend to five years and with fine which may extend to ten lakh rupees.",
-    tips: [
-      "Do not respond to the bully.",
-      "Block the person and report them on the platform.",
-      "Save the evidence (screenshots, messages).",
-      "Talk to a trusted adult, like a parent or teacher.",
-      "Report the incident to the cybercrime portal.",
+    descriptionKey: "learn.cyber_bullying.description",
+    lawKey: "learn.cyber_bullying.law",
+    penaltyKey: "learn.cyber_bullying.penalty",
+    tipsKeys: [
+      "learn.cyber_bullying.tip1",
+      "learn.cyber_bullying.tip2",
+      "learn.cyber_bullying.tip3",
+      "learn.cyber_bullying.tip4",
+      "learn.cyber_bullying.tip5",
     ],
   },
   {
     slug: "identity-theft",
-    title: "Identity Theft",
-    summary: "Stealing someone's personal information to commit fraud or other crimes in their name.",
+    titleKey: "learn.identity_theft.title",
+    summaryKey: "learn.identity_theft.summary",
     icon: UserX,
-    description: "Identity theft happens when someone steals your personal information (like your Aadhaar number, PAN, or bank account details) and uses it without your permission. This can damage your credit status and cost you time and money to restore your good name.",
-    law: "Section 66C of the Information Technology Act, 2000.",
-    penalty: "Imprisonment for a term which may extend to three years and shall also be liable to fine which may extend to rupees one lakh.",
-    tips: [
-      "Shred financial documents before discarding them.",
-      "Use strong, unique passwords for online accounts.",
-      "Be cautious about sharing personal information online.",
-      "Regularly check your bank and credit card statements.",
+    descriptionKey: "learn.identity_theft.description",
+    lawKey: "learn.identity_theft.law",
+    penaltyKey: "learn.identity_theft.penalty",
+    tipsKeys: [
+      "learn.identity_theft.tip1",
+      "learn.identity_theft.tip2",
+      "learn.identity_theft.tip3",
+      "learn.identity_theft.tip4",
     ],
   },
    {
     slug: "online-scams",
-    title: "Online Scams",
-    summary: "Various fraudulent schemes conducted via the internet, from fake job offers to lottery scams.",
+    titleKey: "learn.online_scams.title",
+    summaryKey: "learn.online_scams.summary",
     icon: IndianRupee,
-    description: "Online scams come in many forms, including fake job offers, lottery notifications, tech support scams, and romance scams. The goal is always to trick the victim into sending money or sensitive information.",
-    law: "Section 66D of the IT Act (Cheating by personation using computer resource) & IPC Section 420 (Cheating).",
-    penalty: "Imprisonment of up to three years and a fine of up to one lakh rupees.",
-    tips: [
-      "If it sounds too good to be true, it probably is.",
-      "Never pay an upfront fee for a job, prize, or loan.",
-      "Do independent research on any company or person before dealing with them.",
-      "Be wary of high-pressure sales tactics or urgent requests for money.",
+    descriptionKey: "learn.online_scams.description",
+    lawKey: "learn.online_scams.law",
+    penaltyKey: "learn.online_scams.penalty",
+    tipsKeys: [
+        "learn.online_scams.tip1",
+        "learn.online_scams.tip2",
+        "learn.online_scams.tip3",
+        "learn.online_scams.tip4",
     ],
   },
   {
     slug: "ransomware",
-    title: "Ransomware",
-    summary: "Malicious software that blocks access to a computer system until a sum of money is paid.",
+    titleKey: "learn.ransomware.title",
+    summaryKey: "learn.ransomware.summary",
     icon: Lock,
-    description: "Ransomware is a type of malware that encrypts a victim's files. The attacker then demands a ransom from the victim to restore access to the data upon payment.",
-    law: "Considered extortion under IPC Section 383. Also falls under Sections 43 & 66 of the IT Act.",
-    penalty: "Imprisonment for up to three years, or a fine up to five lakh rupees, or both.",
-    tips: [
-      "Regularly back up your important data to an external drive or cloud storage.",
-      "Do not open suspicious attachments or click on untrusted links.",
-      "Use reputable security software and keep it updated.",
-      "Never pay the ransom, as there's no guarantee you'll get your data back.",
+    descriptionKey: "learn.ransomware.description",
+    lawKey: "learn.ransomware.law",
+    penaltyKey: "learn.ransomware.penalty",
+    tipsKeys: [
+        "learn.ransomware.tip1",
+        "learn.ransomware.tip2",
+        "learn.ransomware.tip3",
+        "learn.ransomware.tip4",
     ],
   },
   {
     slug: "social-engineering",
-    title: "Social Engineering",
-    summary: "Psychological manipulation of people into performing actions or divulging confidential information.",
+    titleKey: "learn.social_engineering.title",
+    summaryKey: "learn.social_engineering.summary",
     icon: Users,
-    description: "Social engineering is the art of manipulating people so they give up confidential information. The types of information these criminals are seeking can vary, but when individuals are targeted the criminals are usually trying to trick you into giving them your passwords or bank information.",
-    law: "Often a component of crimes covered under Sections 66, 66C, 66D of the IT Act and IPC sections for cheating (420).",
-    penalty: "Penalties vary based on the resulting crime, but can include imprisonment and hefty fines.",
-    tips: [
-      "Be wary of unsolicited emails, calls, or messages asking for personal information.",
-      "Verify the identity of the person or organization before sharing any data.",
-      "Don't be rushed. Scammers often create a sense of urgency.",
-      "Be suspicious of tempting offers or threats.",
+    descriptionKey: "learn.social_engineering.description",
+    lawKey: "learn.social_engineering.law",
+    penaltyKey: "learn.social_engineering.penalty",
+    tipsKeys: [
+      "learn.social_engineering.tip1",
+      "learn.social_engineering.tip2",
+      "learn.social_engineering.tip3",
+      "learn.social_engineering.tip4",
     ],
   },
   {
     slug: "malware",
-    title: "Malware",
-    summary: "Software intentionally designed to cause disruption to a computer, server, client, or computer network.",
+    titleKey: "learn.malware.title",
+    summaryKey: "learn.malware.summary",
     icon: Bug,
-    description: "Malware (short for malicious software) is a catch-all term for any type of software designed to harm or exploit any programmable device, service or network. This includes viruses, worms, trojan horses, spyware, and adware.",
-    law: "Section 43 and Section 66 of the IT Act cover damage to computer systems and spreading viruses.",
-    penalty: "Imprisonment for a term which may extend to three years or with a fine which may extend to five lakh rupees or with both.",
-    tips: [
-      "Install and maintain anti-virus software.",
-      "Be cautious of free software downloads from unknown sources.",
-      "Scan email attachments before opening them.",
-      "Avoid clicking on pop-up ads.",
+    descriptionKey: "learn.malware.description",
+    lawKey: "learn.malware.law",
+    penaltyKey: "learn.malware.penalty",
+    tipsKeys: [
+        "learn.malware.tip1",
+        "learn.malware.tip2",
+        "learn.malware.tip3",
+        "learn.malware.tip4",
     ],
   },
 ];
