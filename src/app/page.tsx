@@ -27,8 +27,8 @@ export default function Home() {
         <Card className="w-full shadow-lg flex flex-col h-full">
            <CardHeader>
             <CardTitle className="flex items-center gap-3">
-              <div className="p-2 rounded-full bg-accent/10">
-                <MessageCircle className="text-accent h-6 w-6" />
+              <div className="p-2 rounded-full bg-secondary/10">
+                <MessageCircle className="text-secondary h-6 w-6" />
               </div>
               <span className="text-2xl">{t('home.chat.title')}</span>
             </CardTitle>
