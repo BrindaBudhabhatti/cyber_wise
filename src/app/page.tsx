@@ -21,7 +21,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-8 items-start">
+      <div className="space-y-8">
         <SafetyTipCarousel />
 
         <Card className="w-full shadow-lg flex flex-col h-full">
