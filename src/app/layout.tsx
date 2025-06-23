@@ -3,6 +3,7 @@ import './globals.css';
 import {MainLayout} from '@/components/main-layout';
 import {Toaster} from '@/components/ui/toaster';
 import { I18nProvider } from '@/components/i18n-provider';
+import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
   title: 'CyberWise',
@@ -33,10 +34,17 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body className="font-body antialiased">
-        <I18nProvider>
-          <MainLayout>{children}</MainLayout>
-          <Toaster />
-        </I18nProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <I18nProvider>
+            <MainLayout>{children}</MainLayout>
+            <Toaster />
+          </I18nProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
