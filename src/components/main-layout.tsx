@@ -26,31 +26,33 @@ import {
   SidebarInset,
 } from "@/components/ui/sidebar";
 import { LanguageSwitcher } from "./language-switcher";
+import { useTranslation } from "react-i18next";
 
-
-const menuItems = [
-  { href: "/", label: "Home", icon: Home },
-  { href: "/learn", label: "Learn", icon: BookOpen },
-  { href: "/quiz", label: "Quiz", icon: ShieldQuestion },
-  { href: "/report", label: "Report", icon: FileText },
-  { href: "/awareness", label: "Awareness", icon: GalleryHorizontal },
-  { href: "/chat", label: "CyberBuddy", icon: MessageCircle },
-];
 
 export function MainLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const { t } = useTranslation();
+
+  const menuItems = [
+    { href: "/", labelKey: "nav.home", icon: Home },
+    { href: "/learn", labelKey: "nav.learn", icon: BookOpen },
+    { href: "/quiz", labelKey: "nav.quiz", icon: ShieldQuestion },
+    { href: "/report", labelKey: "nav.report", icon: FileText },
+    { href: "/awareness", labelKey: "nav.awareness", icon: GalleryHorizontal },
+    { href: "/chat", labelKey: "nav.cyberbuddy", icon: MessageCircle },
+  ];
 
   const getPageTitle = () => {
     for (const item of menuItems) {
       if (item.href === "/" && pathname === item.href) {
-        return item.label;
+        return t(item.labelKey);
       }
       if (item.href !== "/" && pathname.startsWith(item.href)) {
         // Special case for learn detail pages
         if (item.href === '/learn' && pathname !== '/learn') {
-            return 'Learn';
+            return t('nav.learn');
         }
-        return item.label;
+        return t(item.labelKey);
       }
     }
     return "CyberWise";
@@ -78,11 +80,11 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
                       ? pathname === item.href
                       : pathname.startsWith(item.href)
                   }
-                  tooltip={item.label}
+                  tooltip={t(item.labelKey)}
                 >
                   <Link href={item.href}>
                     <item.icon />
-                    <span>{item.label}</span>
+                    <span>{t(item.labelKey)}</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
