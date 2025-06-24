@@ -1,3 +1,4 @@
+
 'use client';
 
 import { usePathname } from 'next/navigation';
@@ -13,6 +14,7 @@ export function PageTitle() {
     { href: '/news', labelKey: 'nav.news' },
     { href: '/stats', labelKey: 'nav.stats' },
     { href: '/quiz', labelKey: 'nav.quiz' },
+    { href: '/games', labelKey: 'nav.games' },
     { href: '/report', labelKey: 'nav.report' },
     { href: '/awareness', labelKey: 'nav.awareness' },
     { href: '/chat', labelKey: 'nav.cyberbuddy' },

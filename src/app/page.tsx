@@ -1,9 +1,10 @@
+
 'use client';
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { ArrowRight, BookOpen, BarChart, Newspaper, ScanLine } from 'lucide-react';
+import { ArrowRight, BookOpen, BarChart, Newspaper, ScanLine, Gamepad2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export default function Home() {
@@ -32,11 +33,11 @@ export default function Home() {
       linkKey: "home.features.analyzer.link"
     },
     {
-      href: "/stats",
-      icon: BarChart,
-      titleKey: "home.features.stats.title",
-      descriptionKey: "home.features.stats.description",
-      linkKey: "home.features.stats.link"
+      href: "/games",
+      icon: Gamepad2,
+      titleKey: "home.features.games.title",
+      descriptionKey: "home.features.games.description",
+      linkKey: "home.features.games.link"
     },
   ];
 
