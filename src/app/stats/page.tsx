@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -101,7 +102,7 @@ export default function StatsPage() {
            <Card>
                 <CardHeader>
                     <CardTitle>{t('stats_page.trends_title')}</CardTitle>
-                </Header>
+                </CardHeader>
                 <CardContent>
                      <ChartContainer config={chartConfig} className="h-[300px] w-full">
                         <LineChart data={stats.yearlyTrends} margin={{ top: 5, right: 20, left: -10, bottom: 5 }}>
