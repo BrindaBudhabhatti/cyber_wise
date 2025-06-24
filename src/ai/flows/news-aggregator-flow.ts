@@ -19,7 +19,7 @@ const NewsArticleSchema = z.object({
     title: z.string().describe('The headline of the news article.'),
     summary: z.string().describe('A brief summary of the news article.'),
     source: z.string().describe('The name of the news source (e.g., "The Hacker News", "Times of India").'),
-    url: z.string().describe('A placeholder URL to the full article.'),
+    url: z.string().describe('A Google search URL for the full article title.'),
     publishedDate: z.string().describe('The publication date of the article, in a friendly format (e.g., "June 24, 2024").'),
 });
 export type NewsArticle = z.infer<typeof NewsArticleSchema>;
@@ -44,12 +44,16 @@ const prompt = ai.definePrompt({
   - If the category is 'Local', the news must be specific to India.
   - If the category is 'Global', the news should cover significant international cyber events.
 
-  For each article, provide a concise title, a brief summary (2-3 sentences), a plausible news source, a placeholder URL (e.g., https://example.com/news-story), and a recent-looking publication date.
+  For each article, provide a concise title, a brief summary (2-3 sentences), a plausible news source, a Google search URL for the article's title, and a recent-looking publication date. The URL should be a valid Google search link for the generated title. For example: "https://www.google.com/search?q=New+AI+Cybersecurity+Threats".
 
   Category: {{{category}}}
   
   IMPORTANT: You must respond with a valid JSON object that strictly adheres to the output schema. Do not add any text, comments, or markdown formatting outside of the JSON structure.
   `,
+   config: {
+    responseFormat: "json",
+    temperature: 0.8,
+  }
 });
 
 const newsAggregatorFlow = ai.defineFlow(
@@ -61,7 +65,7 @@ const newsAggregatorFlow = ai.defineFlow(
   async input => {
     const {output} = await prompt(input);
     
-    if (!output) {
+    if (!output || !output.articles || output.articles.length === 0) {
         throw new Error("The AI model failed to return valid news articles. Please try again.");
     }
     
