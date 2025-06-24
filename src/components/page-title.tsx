@@ -11,6 +11,7 @@ export function PageTitle() {
     { href: '/', labelKey: 'nav.home' },
     { href: '/learn', labelKey: 'nav.learn' },
     { href: '/news', labelKey: 'nav.news' },
+    { href: '/stats', labelKey: 'nav.stats' },
     { href: '/quiz', labelKey: 'nav.quiz' },
     { href: '/report', labelKey: 'nav.report' },
     { href: '/awareness', labelKey: 'nav.awareness' },

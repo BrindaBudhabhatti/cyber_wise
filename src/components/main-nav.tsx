@@ -9,6 +9,7 @@ import {
   Newspaper,
   ScanLine,
   ShieldQuestion,
+  BarChart,
 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -29,6 +30,7 @@ export function MainNav() {
     { href: '/', labelKey: 'nav.home', icon: Home },
     { href: '/learn', labelKey: 'nav.learn', icon: BookOpen },
     { href: '/news', labelKey: 'nav.news', icon: Newspaper },
+    { href: '/stats', labelKey: 'nav.stats', icon: BarChart },
     { href: '/quiz', labelKey: 'nav.quiz', icon: ShieldQuestion },
     { href: '/threat-analyzer', labelKey: 'nav.threat_analyzer', icon: ScanLine },
     { href: '/report', labelKey: 'nav.report', icon: FileText },
