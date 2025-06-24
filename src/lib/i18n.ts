@@ -254,6 +254,7 @@ const resources = {
       "threat_analyzer.results.no_red_flags": "No specific red flags were automatically detected.",
       "threat_analyzer.results.detailed_analysis": "Detailed Analysis",
 
+      "footer.copyright": "© {{year}} CyberWise. All Rights Reserved.",
       "footer.about_developer": "About the Developer",
       "about_dialog.title": "About the Developer",
       "about_dialog.name": "Brinda Budhabhatti",
@@ -522,6 +523,7 @@ const resources = {
       "threat_analyzer.results.no_red_flags": "कोई विशिष्ट खतरे का संकेत स्वचालित रूप से नहीं मिला।",
       "threat_analyzer.results.detailed_analysis": "विस्तृत विश्लेषण",
 
+      "footer.copyright": "© {{year}} साइबरवाइज़। सर्वाधिकार सुरक्षित।",
       "footer.about_developer": "डेवलपर के बारे में",
       "about_dialog.title": "डेवलपर के बारे में",
       "about_dialog.name": "वृंदा बुधभट्टी",
@@ -790,6 +792,7 @@ const resources = {
       "threat_analyzer.results.no_red_flags": "કોઈ ચોક્કસ લાલ ધ્વજ આપમેળે શોધી શકાયા નથી.",
       "threat_analyzer.results.detailed_analysis": "વિગતવાર વિશ્લેષણ",
 
+      "footer.copyright": "© {{year}} સાયબરવાઇઝ. સર્વાધિકાર સુરક્ષિત.",
       "footer.about_developer": "ડેવલપર વિશે",
       "about_dialog.title": "ડેવલપર વિશે",
       "about_dialog.name": "બ્રિન્દા બુધભટ્ટી",
