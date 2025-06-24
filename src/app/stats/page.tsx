@@ -7,7 +7,21 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Skeleton } from '@/components/ui/skeleton';
 import { useTranslation } from 'react-i18next';
 import { Bar, BarChart, CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
+import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } from '@/components/ui/chart';
+
+const chartConfig = {
+  primary: {
+    color: 'hsl(var(--primary))',
+  },
+  cases: {
+    label: 'Cases',
+    color: 'hsl(var(--primary))',
+  },
+  reportedCases: {
+    label: 'Reported Cases',
+    color: 'hsl(var(--primary))',
+  },
+} satisfies ChartConfig;
 
 export default function StatsPage() {
   const { t } = useTranslation();
@@ -72,7 +86,7 @@ export default function StatsPage() {
                     <CardTitle>{t('stats_page.crime_types_title')}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <ChartContainer config={{}} className="h-[300px] w-full">
+                    <ChartContainer config={chartConfig} className="h-[300px] w-full">
                         <BarChart data={stats.crimeTypes} margin={{ top: 5, right: 20, left: -10, bottom: 5 }}>
                             <CartesianGrid strokeDasharray="3 3" vertical={false} />
                             <XAxis dataKey="type" tickLine={false} axisLine={false} tickMargin={8} angle={-30} textAnchor="end" height={60} />
@@ -87,9 +101,9 @@ export default function StatsPage() {
            <Card>
                 <CardHeader>
                     <CardTitle>{t('stats_page.trends_title')}</CardTitle>
-                </CardHeader>
+                </Header>
                 <CardContent>
-                     <ChartContainer config={{}} className="h-[300px] w-full">
+                     <ChartContainer config={chartConfig} className="h-[300px] w-full">
                         <LineChart data={stats.yearlyTrends} margin={{ top: 5, right: 20, left: -10, bottom: 5 }}>
                             <CartesianGrid strokeDasharray="3 3" vertical={false} />
                             <XAxis dataKey="year" tickLine={false} axisLine={false} tickMargin={8} />
