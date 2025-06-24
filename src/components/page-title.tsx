@@ -30,6 +30,9 @@ export function PageTitle() {
         if (item.href === '/learn' && pathname !== '/learn') {
           return t('nav.learn');
         }
+        if (item.href === '/games' && pathname !== '/games') {
+          return t('nav.games');
+        }
         return t(item.labelKey);
       }
     }

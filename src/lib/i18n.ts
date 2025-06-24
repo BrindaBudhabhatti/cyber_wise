@@ -74,6 +74,13 @@ const resources = {
       "game.explanation.generic_greeting": "Vague greetings like 'Dear Valued Customer' are a common tactic. Legitimate companies usually address you by your name.",
       "game.explanation.casual_message": "This is a simple, casual message. It contains no links, no urgent demands, and no red flags.",
       
+      "games.phishing_spotter.description": "Review sample messages and decide if they are a phishing attempt or a safe message to sharpen your detection skills.",
+      "games.password_challenge.title": "Password Strength Challenge",
+      "games.password_challenge.description": "Test your password creation skills and learn how to create stronger, more secure passwords. (Coming Soon!)",
+      "games.back_to_games": "Back to Games",
+      "games.coming_soon": "This game is under construction. Check back soon!",
+      "games.play_game": "Play Game",
+
       "news_page.title": "Cyber World News",
       "news_page.description": "Stay updated with the latest in the cyber world, both locally and globally.",
       "news_page.global": "Global News",
@@ -343,6 +350,13 @@ const resources = {
       "game.explanation.generic_greeting": "'प्रिय मूल्यवान ग्राहक' जैसे अस्पष्ट अभिवादन एक आम रणनीति है। वैध कंपनियां आमतौर पर आपको आपके नाम से संबोधित करती हैं।",
       "game.explanation.casual_message": "यह एक सरल, आकस्मिक संदेश है। इसमें कोई लिंक नहीं है, कोई तत्काल मांग नहीं है, और कोई खतरे के संकेत नहीं हैं।",
 
+      "games.phishing_spotter.description": "नमूना संदेशों की समीक्षा करें और तय करें कि क्या वे एक फ़िशिंग प्रयास हैं या आपके पहचान कौशल को तेज करने के लिए एक सुरक्षित संदेश।",
+      "games.password_challenge.title": "पासवर्ड शक्ति चुनौती",
+      "games.password_challenge.description": "अपने पासवर्ड बनाने के कौशल का परीक्षण करें और सीखें कि कैसे मजबूत, अधिक सुरक्षित पासवर्ड बनाएं। (जल्द आ रहा है!)",
+      "games.back_to_games": "गेम्स पर वापस जाएं",
+      "games.coming_soon": "यह गेम निर्माणाधीन है। जल्द ही वापस देखें!",
+      "games.play_game": "गेम खेलें",
+
       "news_page.title": "साइबर दुनिया के समाचार",
       "news_page.description": "स्थानीय और वैश्विक रूप से साइबर दुनिया में नवीनतम से अपडेट रहें।",
       "news_page.global": "वैश्विक समाचार",
@@ -611,6 +625,13 @@ const resources = {
       "game.explanation.too_good_to_be_true": "જે ઓફરો સાચી હોવા માટે ખૂબ સારી લાગે છે તે સામાન્ય રીતે હોય છે. સ્કેમર્સ તમને ફી ચૂકવવા અથવા ડેટા આપવા માટે મફત ઇનામોનો લાલચ આપે છે.",
       "game.explanation.generic_greeting": "'પ્રિય મૂલ્યવાન ગ્રાહક' જેવા અસ્પષ્ટ અભિવાદન એક સામાન્ય યુક્તિ છે. કાયદેસર કંપનીઓ સામાન્ય રીતે તમને તમારા નામથી સંબોધિત કરે છે.",
       "game.explanation.casual_message": "આ એક સરળ, પરચુરણ સંદેશ છે. તેમાં કોઈ લિંક્સ નથી, કોઈ તાત્કાલિક માંગણીઓ નથી, અને કોઈ લાલ ધ્વજ નથી.",
+      
+      "games.phishing_spotter.description": "નમૂના સંદેશાઓની સમીક્ષા કરો અને નક્કી કરો કે તે ફિશિંગનો પ્રયાસ છે કે તમારી શોધ કૌશલ્યને તીવ્ર બનાવવા માટે સલામત સંદેશ છે.",
+      "games.password_challenge.title": "પાસવર્ડ સ્ટ્રેન્થ ચેલેન્જ",
+      "games.password_challenge.description": "તમારી પાસવર્ડ બનાવવાની કુશળતાનું પરીક્ષણ કરો અને વધુ મજબૂત, વધુ સુરક્ષિત પાસવર્ડ કેવી રીતે બનાવવું તે શીખો. (ટૂંક સમયમાં આવી રહ્યું છે!)",
+      "games.back_to_games": "ગેમ્સ પર પાછા જાઓ",
+      "games.coming_soon": "આ રમત નિર્માણાધીન છે. ટૂંક સમયમાં પાછા તપાસો!",
+      "games.play_game": "રમત રમો",
 
       "news_page.title": "સાયબર વિશ્વ સમાચાર",
       "news_page.description": "સ્થાનિક અને વૈશ્વિક સ્તરે સાયબર વિશ્વમાં નવીનતમ સાથે અપડેટ રહો.",
