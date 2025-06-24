@@ -19,7 +19,7 @@ export const NewsArticleSchema = z.object({
     title: z.string().describe('The headline of the news article.'),
     summary: z.string().describe('A brief summary of the news article.'),
     source: z.string().describe('The name of the news source (e.g., "The Hacker News", "Times of India").'),
-    url: z.string().url().describe('A placeholder URL to the full article.'),
+    url: z.string().describe('A placeholder URL to the full article.'),
     publishedDate: z.string().describe('The publication date of the article, in a friendly format (e.g., "June 24, 2024").'),
 });
 export type NewsArticle = z.infer<typeof NewsArticleSchema>;
@@ -47,6 +47,8 @@ const prompt = ai.definePrompt({
   For each article, provide a concise title, a brief summary (2-3 sentences), a plausible news source, a placeholder URL (e.g., https://example.com/news-story), and a recent-looking publication date.
 
   Category: {{{category}}}
+  
+  IMPORTANT: You must respond with a valid JSON object that strictly adheres to the output schema. Do not add any text, comments, or markdown formatting outside of the JSON structure.
   `,
 });
 
@@ -58,6 +60,11 @@ const newsAggregatorFlow = ai.defineFlow(
   },
   async input => {
     const {output} = await prompt(input);
-    return output!;
+    
+    if (!output) {
+        throw new Error("The AI model failed to return valid news articles. Please try again.");
+    }
+    
+    return output;
   }
 );
