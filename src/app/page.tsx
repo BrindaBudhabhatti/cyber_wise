@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { ArrowRight, BookOpen, ShieldQuestion, MessageCircle, ScanLine } from 'lucide-react';
+import { ArrowRight, BookOpen, ShieldQuestion, Newspaper, ScanLine } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export default function Home() {
@@ -18,11 +18,11 @@ export default function Home() {
       linkKey: "home.features.learn.link"
     },
      {
-      href: "/quiz",
-      icon: ShieldQuestion,
-      titleKey: "home.features.quiz.title",
-      descriptionKey: "home.features.quiz.description",
-      linkKey: "home.features.quiz.link"
+      href: "/news",
+      icon: Newspaper,
+      titleKey: "home.features.news.title",
+      descriptionKey: "home.features.news.description",
+      linkKey: "home.features.news.link"
     },
     {
       href: "/threat-analyzer",
@@ -30,7 +30,14 @@ export default function Home() {
       titleKey: "home.features.analyzer.title",
       descriptionKey: "home.features.analyzer.description",
       linkKey: "home.features.analyzer.link"
-    }
+    },
+    {
+      href: "/quiz",
+      icon: ShieldQuestion,
+      titleKey: "home.features.quiz.title",
+      descriptionKey: "home.features.quiz.description",
+      linkKey: "home.features.quiz.link"
+    },
   ];
 
   return (
@@ -56,7 +63,7 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
             <Card key={feature.href} className="flex flex-col text-center items-center justify-start group hover:border-primary transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2">
               <CardHeader>
