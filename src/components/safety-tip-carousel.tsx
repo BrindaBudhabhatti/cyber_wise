@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -30,7 +31,7 @@ export function SafetyTipCarousel() {
     <Card className="shadow-lg">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Lightbulb className="text-secondary" />
+          <Lightbulb className="text-yellow-500" />
           <span>{t('safety_tip_carousel.title')}</span>
         </CardTitle>
       </CardHeader>

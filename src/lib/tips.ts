@@ -1,3 +1,4 @@
+
 export const safetyTips = [
   {
     titleKey: "safety_tips.strong_passwords.title",

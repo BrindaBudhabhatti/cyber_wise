@@ -6,18 +6,22 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { topics } from "@/lib/learn-data";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { SafetyTipCarousel } from "@/components/safety-tip-carousel";
 
 export default function LearnPage() {
   const { t } = useTranslation();
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-bold">{t('learn_page.title')}</h1>
         <p className="text-muted-foreground">
           {t('learn_page.description')}
         </p>
       </div>
+
+      <SafetyTipCarousel />
+
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {topics.map((topic) => (
           <Link href={`/learn/${topic.slug}`} key={topic.slug} className="group">
