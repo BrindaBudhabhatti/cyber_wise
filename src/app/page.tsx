@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { ArrowRight, BookOpen, ShieldQuestion, MessageCircle } from 'lucide-react';
+import { ArrowRight, BookOpen, ShieldQuestion, MessageCircle, ScanLine } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
       descriptionKey: "home.features.learn.description",
       linkKey: "home.features.learn.link"
     },
-    {
+     {
       href: "/quiz",
       icon: ShieldQuestion,
       titleKey: "home.features.quiz.title",
@@ -25,11 +25,11 @@ export default function Home() {
       linkKey: "home.features.quiz.link"
     },
     {
-      href: "/chat",
-      icon: MessageCircle,
-      titleKey: "home.features.chat.title",
-      descriptionKey: "home.features.chat.description",
-      linkKey: "home.features.chat.link"
+      href: "/threat-analyzer",
+      icon: ScanLine,
+      titleKey: "home.features.analyzer.title",
+      descriptionKey: "home.features.analyzer.description",
+      linkKey: "home.features.analyzer.link"
     }
   ];
 
