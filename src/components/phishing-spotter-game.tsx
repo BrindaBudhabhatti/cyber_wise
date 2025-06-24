@@ -1,24 +1,28 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { phishingGameMessages, type GameMessage } from "@/lib/game-data";
-import { Award, CheckCircle, RotateCw, ShieldAlert, ShieldCheck, ThumbsDown, ThumbsUp, XCircle } from "lucide-react";
+import { phishingGameMessages } from "@/lib/game-data";
+import { Award, CheckCircle, RotateCw, ShieldAlert, ShieldCheck, XCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type GameState = 'playing' | 'feedback' | 'finished';
 
 export function PhishingSpotterGame() {
   const { t } = useTranslation();
-  const [messages, setMessages] = useState(() => [...phishingGameMessages].sort(() => Math.random() - 0.5));
+  const [messages, setMessages] = useState([...phishingGameMessages]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [gameState, setGameState] = useState<GameState>('playing');
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+
+  // Shuffle messages on client-side mount to avoid hydration mismatch
+  useEffect(() => {
+    setMessages((prevMessages) => [...prevMessages].sort(() => Math.random() - 0.5));
+  }, []);
 
   const currentMessage = messages[currentIndex];
 
