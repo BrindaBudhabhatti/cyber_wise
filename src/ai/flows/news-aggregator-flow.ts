@@ -10,12 +10,12 @@
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
-export const CyberNewsInputSchema = z.object({
+const CyberNewsInputSchema = z.object({
   category: z.enum(['Local', 'Global']).describe("The category of news to fetch. 'Local' focuses on India, 'Global' on worldwide news."),
 });
 export type CyberNewsInput = z.infer<typeof CyberNewsInputSchema>;
 
-export const NewsArticleSchema = z.object({
+const NewsArticleSchema = z.object({
     title: z.string().describe('The headline of the news article.'),
     summary: z.string().describe('A brief summary of the news article.'),
     source: z.string().describe('The name of the news source (e.g., "The Hacker News", "Times of India").'),
@@ -24,7 +24,7 @@ export const NewsArticleSchema = z.object({
 });
 export type NewsArticle = z.infer<typeof NewsArticleSchema>;
 
-export const CyberNewsOutputSchema = z.object({
+const CyberNewsOutputSchema = z.object({
     articles: z.array(NewsArticleSchema).describe("A list of 5 generated news articles.")
 });
 export type CyberNewsOutput = z.infer<typeof CyberNewsOutputSchema>;
