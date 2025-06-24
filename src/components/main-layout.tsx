@@ -8,12 +8,14 @@ import {
   SidebarFooter,
   SidebarTrigger,
   SidebarInset,
+  SidebarSeparator,
 } from "@/components/ui/sidebar";
 import { LanguageSwitcher } from "./language-switcher";
 import { Shield } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import { MainNav } from "./main-nav";
 import { PageTitle } from "./page-title";
+import { AboutDeveloperDialog } from "./about-developer-dialog";
 
 
 export function MainLayout({ children }: { children: React.ReactNode }) {
@@ -32,6 +34,8 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
           <MainNav />
         </SidebarContent>
         <SidebarFooter>
+          <SidebarSeparator className="mx-0 mb-1 w-full" />
+          <AboutDeveloperDialog />
         </SidebarFooter>
       </Sidebar>
       <SidebarInset>

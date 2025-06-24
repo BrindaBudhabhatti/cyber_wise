@@ -252,7 +252,23 @@ const resources = {
       "threat_analyzer.results.threat_type": "Identified Threat Type",
       "threat_analyzer.results.red_flags": "Red Flags Found",
       "threat_analyzer.results.no_red_flags": "No specific red flags were automatically detected.",
-      "threat_analyzer.results.detailed_analysis": "Detailed Analysis"
+      "threat_analyzer.results.detailed_analysis": "Detailed Analysis",
+
+      "footer.about_developer": "About the Developer",
+      "about_dialog.title": "About the Developer",
+      "about_dialog.name": "Brinda Budhabhatti",
+      "about_dialog.role": "Intern at the Cyber Crime Department, Jamnagar",
+      "about_dialog.intro_title": "CyberWise & CyberBuddy Developer",
+      "about_dialog.intro_p1": "I’m the creator behind CyberBuddy, a digital assistant designed to raise awareness and offer guidance on cybercrime, online safety, and digital rights. As a CyberWise advocate, I’m committed to educating people—especially students and youth—on staying safe in the digital world.",
+      "about_dialog.cyberbuddy.title": "CyberBuddy",
+      "about_dialog.cyberbuddy.p1": "CyberBuddy is more than just a chatbot — it's a trustworthy companion for anyone seeking help or clarity about cybercrime. It provides users with:",
+      "about_dialog.cyberbuddy.l1": "Information about common online threats",
+      "about_dialog.cyberbuddy.l2": "Legal rights and penalties under cyber laws",
+      "about_dialog.cyberbuddy.l3": "Tips to stay safe online",
+      "about_dialog.cyberbuddy.l4": "Support resources like reporting channels and psychological help",
+      "about_dialog.cyberbuddy.l5": "Engaging quizzes and learning modules on cyber safety",
+      "about_dialog.cyberwise.title": "CyberWise",
+      "about_dialog.cyberwise.p1": "As CyberWise, I strive to simplify complex cyber concepts, making digital literacy and cybersecurity accessible for all. My goal is to empower individuals with knowledge, so they can protect themselves and others in the digital space."
     },
   },
   hi: {
@@ -504,7 +520,23 @@ const resources = {
       "threat_analyzer.results.threat_type": "पहचाने गए खतरे का प्रकार",
       "threat_analyzer.results.red_flags": "मिले खतरे के संकेत",
       "threat_analyzer.results.no_red_flags": "कोई विशिष्ट खतरे का संकेत स्वचालित रूप से नहीं मिला।",
-      "threat_analyzer.results.detailed_analysis": "विस्तृत विश्लेषण"
+      "threat_analyzer.results.detailed_analysis": "विस्तृत विश्लेषण",
+
+      "footer.about_developer": "डेवलपर के बारे में",
+      "about_dialog.title": "डेवलपर के बारे में",
+      "about_dialog.name": "वृंदा बुधभट्टी",
+      "about_dialog.role": "इंटर्न, साइबर क्राइम विभाग, जामनगर",
+      "about_dialog.intro_title": "साइबरवाइज और साइबरबडी डेवलपर",
+      "about_dialog.intro_p1": "मैं साइबरबडी के पीछे की निर्माता हूं, जो साइबर अपराध, ऑनलाइन सुरक्षा और डिजिटल अधिकारों पर जागरूकता बढ़ाने और मार्गदर्शन प्रदान करने के लिए डिज़ाइन किया गया एक डिजिटल सहायक है। एक साइबरवाइज हिमायती के रूप में, मैं लोगों को - विशेष रूप से छात्रों और युवाओं को - डिजिटल दुनिया में सुरक्षित रहने के बारे में शिक्षित करने के लिए प्रतिबद्ध हूं।",
+      "about_dialog.cyberbuddy.title": "साइबरबडी",
+      "about_dialog.cyberbuddy.p1": "साइबरबडी सिर्फ एक चैटबॉट से कहीं बढ़कर है - यह साइबर अपराध के बारे में मदद या स्पष्टता चाहने वाले किसी भी व्यक्ति के लिए एक भरोसेमंद साथी है। यह उपयोगकर्ताओं को प्रदान करता है:",
+      "about_dialog.cyberbuddy.l1": "सामान्य ऑनलाइन खतरों के बारे में जानकारी",
+      "about_dialog.cyberbuddy.l2": "साइबर कानूनों के तहत कानूनी अधिकार और दंड",
+      "about_dialog.cyberbuddy.l3": "ऑनलाइन सुरक्षित रहने के टिप्स",
+      "about_dialog.cyberbuddy.l4": "रिपोर्टिंग चैनलों और मनोवैज्ञानिक सहायता जैसे सहायता संसाधन",
+      "about_dialog.cyberbuddy.l5": "साइबर सुरक्षा पर आकर्षक क्विज़ और लर्निंग मॉड्यूल",
+      "about_dialog.cyberwise.title": "साइबरवाइज",
+      "about_dialog.cyberwise.p1": "साइबरवाइज के रूप में, मैं जटिल साइबर अवधारणाओं को सरल बनाने का प्रयास करती हूं, जिससे डिजिटल साक्षरता और साइबर सुरक्षा सभी के लिए सुलभ हो। मेरा लक्ष्य व्यक्तियों को ज्ञान के साथ सशक्त बनाना है, ताकि वे डिजिटल स्पेस में खुद को और दूसरों को सुरक्षित रख सकें।"
     },
   },
   gu: {
@@ -756,7 +788,23 @@ const resources = {
       "threat_analyzer.results.threat_type": "ઓળખાયેલ જોખમનો પ્રકાર",
       "threat_analyzer.results.red_flags": "મળેલા લાલ ધ્વજ",
       "threat_analyzer.results.no_red_flags": "કોઈ ચોક્કસ લાલ ધ્વજ આપમેળે શોધી શકાયા નથી.",
-      "threat_analyzer.results.detailed_analysis": "વિગતવાર વિશ્લેષણ"
+      "threat_analyzer.results.detailed_analysis": "વિગતવાર વિશ્લેષણ",
+
+      "footer.about_developer": "ડેવલપર વિશે",
+      "about_dialog.title": "ડેવલપર વિશે",
+      "about_dialog.name": "બ્રિન્દા બુધભટ્ટી",
+      "about_dialog.role": "ઇન્ટર્ન, સાયબર ક્રાઇમ વિભાગ, જામનગર",
+      "about_dialog.intro_title": "સાયબરવાઇઝ અને સાયબરબડી ડેવલપર",
+      "about_dialog.intro_p1": "હું સાયબરબડી પાછળની સર્જક છું, જે સાયબર ક્રાઇમ, ઓનલાઈન સુરક્ષા અને ડિજિટલ અધિકારો પર જાગૃતિ લાવવા અને માર્ગદર્શન આપવા માટે રચાયેલ ડિજિટલ સહાયક છે. સાયબરવાઇઝના હિમાયતી તરીકે, હું લોકોને - ખાસ કરીને વિદ્યાર્થીઓ અને યુવાનોને - ડિજિટલ વિશ્વમાં સુરક્ષિત રહેવા વિશે શિક્ષિત કરવા માટે પ્રતિબદ્ધ છું.",
+      "about_dialog.cyberbuddy.title": "સાયબરબડી",
+      "about_dialog.cyberbuddy.p1": "સાયબરબડી માત્ર એક ચેટબોટ કરતાં વધુ છે — તે સાયબર ક્રાઇમ વિશે મદદ અથવા સ્પષ્ટતા માંગતા કોઈપણ માટે એક વિશ્વસનીય સાથી છે. તે વપરાશકર્તાઓને પ્રદાન કરે છે:",
+      "about_dialog.cyberbuddy.l1": "સામાન્ય ઓનલાઈન જોખમો વિશે માહિતી",
+      "about_dialog.cyberbuddy.l2": "સાયબર કાયદા હેઠળ કાનૂની અધિકારો અને દંડ",
+      "about_dialog.cyberbuddy.l3": "ઓનલાઈન સુરક્ષિત રહેવા માટેની ટિપ્સ",
+      "about_dialog.cyberbuddy.l4": "રિપોર્ટિંગ ચેનલો અને મનોવૈજ્ઞાનિક સહાય જેવા સહાયક સંસાધનો",
+      "about_dialog.cyberbuddy.l5": "સાયબર સુરક્ષા પર આકર્ષક ક્વિઝ અને લર્નિંગ મોડ્યુલ્સ",
+      "about_dialog.cyberwise.title": "સાયબરવાઇઝ",
+      "about_dialog.cyberwise.p1": "સાયબરવાઇઝ તરીકે, હું જટિલ સાયબર વિભાવનાઓને સરળ બનાવવાનો પ્રયત્ન કરું છું, જે ડિજિટલ સાક્ષરતા અને સાયબર સુરક્ષાને બધા માટે સુલભ બનાવે છે. મારો ધ્યેય વ્યક્તિઓને જ્ઞાન સાથે સશક્ત બનાવવાનો છે, જેથી તેઓ ડિજિટલ સ્પેસમાં પોતાને અને અન્યને સુરક્ષિત રાખી શકે."
     },
   },
 };
