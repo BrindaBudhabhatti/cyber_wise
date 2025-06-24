@@ -51,7 +51,6 @@ const prompt = ai.definePrompt({
   IMPORTANT: You must respond with a valid JSON object that strictly adheres to the output schema. Do not add any text, comments, or markdown formatting outside of the JSON structure.
   `,
    config: {
-    responseFormat: "json",
     temperature: 0.8,
   }
 });
