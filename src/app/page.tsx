@@ -12,6 +12,7 @@ import {
   Gamepad2,
   ShieldQuestion,
   GalleryHorizontal,
+  Shield,
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -73,6 +74,9 @@ export default function Home() {
   return (
     <div className="space-y-12">
       <section className="text-center py-16">
+        <div className="mb-6 flex justify-center text-primary">
+          <Shield className="h-16 w-16" />
+        </div>
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter">
           {t('home.hero.title1')}{' '}
           <span className="text-primary">{t('home.hero.title2')}</span>
