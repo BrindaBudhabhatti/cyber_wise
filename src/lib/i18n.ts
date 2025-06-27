@@ -40,6 +40,14 @@ const resources = {
       "home.features.awareness.description": "Browse our collection of fun and informative posters with a Bollywood twist.",
       "home.features.awareness.link": "View Gallery",
 
+      "home.messages.title": "A Message from Our Leaders",
+      "home.messages.sp.name": "Prem Sukh Delu, IPS",
+      "home.messages.sp.title": "Superintendent of Police, Jamnagar",
+      "home.messages.sp.message": "In our digital age, awareness is the best shield. CyberWise is a commendable initiative to empower our citizens against online threats. Stay alert, stay safe.",
+      "home.messages.psi.name": "B.S. Vala",
+      "home.messages.psi.title": "Police Sub-Inspector, Cyber Crime Police Station, Jamnagar",
+      "home.messages.psi.message": "We are committed to making the digital world safer for everyone. This platform provides the essential knowledge to identify and report cybercrime. Use it to protect yourself and your family.",
+
       "nav.home": "Home",
       "nav.learn": "Learn",
       "nav.news": "News",
@@ -328,6 +336,14 @@ const resources = {
       "home.features.awareness.title": "जागरूकता गैलरी",
       "home.features.awareness.description": "बॉलीवुड ट्विस्ट के साथ हमारे मजेदार और जानकारीपूर्ण पोस्टरों का संग्रह ब्राउज़ करें।",
       "home.features.awareness.link": "गैलरी देखें",
+      
+      "home.messages.title": "हमारे नेताओं का एक संदेश",
+      "home.messages.sp.name": "प्रेम सुख डेलू, आईपीएस",
+      "home.messages.sp.title": "पुलिस अधीक्षक, जामनगर",
+      "home.messages.sp.message": "हमारे डिजिटल युग में, जागरूकता ही सबसे अच्छी ढाल है। साइबरवाइज़ हमारे नागरिकों को ऑनलाइन खतरों के खिलाफ सशक्त बनाने के लिए एक सराहनीय पहल है। सतर्क रहें, सुरक्षित रहें।",
+      "home.messages.psi.name": "बी.एस. वाला",
+      "home.messages.psi.title": "पुलिस उप-निरीक्षक, साइबर क्राइम पुलिस स्टेशन, जामनगर",
+      "home.messages.psi.message": "हम डिजिटल दुनिया को सभी के लिए सुरक्षित बनाने के लिए प्रतिबद्ध हैं। यह मंच साइबर अपराध की पहचान और रिपोर्ट करने के लिए आवश्यक ज्ञान प्रदान करता है। इसका उपयोग अपनी और अपने परिवार की सुरक्षा के लिए करें।",
 
       "nav.home": "होम",
       "nav.learn": "जानें",
@@ -474,7 +490,7 @@ const resources = {
       "learn.otp_fraud.title": "ओटीपी धोखाधड़ी",
       "learn.otp_fraud.summary": "धोखेबाज पीड़ितों को धोखाधड़ी वाले लेनदेन को अधिकृत करने के लिए वन-टाइम पासवर्ड (ओटीपी) साझा करने के लिए बरगलाते हैं।",
       "learn.otp_fraud.description": "ओटीपी धोखाधड़ी में उपयोगकर्ताओं को लेनदेन के लिए अपने मोबाइल पर प्राप्त वन-टाइम पासवर्ड (ओटीपी) साझा करने के लिए धोखा देना शामिल है। धोखेबाज अक्सर बैंक कर्मचारी, तकनीकी सहायता या सेवा प्रदाता के रूप में प्रस्तुत होते हैं।",
-      "learn.otp_fraud.law": "आईटी अधिनियम, 2000 की धारा 43, 66, 66सी, 66डी। आईपीसी की धारा 419, 420, 468, 471।",
+      "learn.otp_fraud.law": "आईटी अधिनियम, 2000 की धारा 43, 66, 66सी, 66ડી। आईपीसी की धारा 419, 420, 468, 471।",
       "learn.otp_fraud.penalty": "धोखाधड़ी के पैमाने के आधार पर कारावास और महत्वपूर्ण वित्तीय जुर्माना हो सकता है।",
       "learn.otp_fraud.tip1": "बैंक अधिकारियों सहित किसी के भी साथ अपना ओटीपी कभी साझा न करें।",
       "learn.otp_fraud.tip2": "बैंक या कोई भी वैध कंपनी कभी भी आपका ओटीपी नहीं मांगेगी।",
@@ -617,6 +633,14 @@ const resources = {
       "home.features.awareness.title": "જાગૃતિ ગેલેરી",
       "home.features.awareness.description": "બોલિવૂડ ટ્વિસ્ટ સાથે અમારા મનોરંજક અને માહિતીપ્રદ પોસ્ટરોના સંગ્રહને બ્રાઉઝ કરો.",
       "home.features.awareness.link": "ગેલેરી જુઓ",
+
+      "home.messages.title": "અમારા નેતાઓ તરફથી એક સંદેશ",
+      "home.messages.sp.name": "પ્રેમ સુખ ડેલુ, આઈપીએસ",
+      "home.messages.sp.title": "પોલીસ અધિક્ષક, જામનગર",
+      "home.messages.sp.message": "આપણા ડિજિટલ યુગમાં, જાગૃતિ એ શ્રેષ્ઠ કવચ છે. સાયબરવાઇઝ અમારા નાગરિકોને ઓનલાઇન જોખમો સામે સશક્ત બનાવવા માટે એક પ્રશંસનીય પહેલ છે. સાવચેત રહો, સુરક્ષિત રહો.",
+      "home.messages.psi.name": "બી.એસ. વાળા",
+      "home.messages.psi.title": "પોલીસ સબ-ઇન્સ્પેક્ટર, સાયબર ક્રાઇમ પોલીસ સ્ટેશન, જામનગર",
+      "home.messages.psi.message": "અમે ડિજિટલ વિશ્વને દરેક માટે સુરક્ષિત બનાવવા માટે પ્રતિબદ્ધ છીએ. આ પ્લેટફોર્મ સાયબર ક્રાઇમને ઓળખવા અને તેની જાણ કરવા માટે જરૂરી જ્ઞાન પૂરું પાડે છે. તમારી અને તમારા પરિવારની સુરક્ષા માટે તેનો ઉપયોગ કરો.",
 
       "nav.home": "હોમ",
       "nav.learn": "જાણો",
