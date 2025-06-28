@@ -10,13 +10,8 @@ import { useToast } from '@/hooks/use-toast';
 import { useTranslation } from 'react-i18next';
 import { Send, Star, PartyPopper } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
-type SubmittedData = {
-  name: string;
-  contact: string;
-  feedback: string;
-  rating: number;
-};
+import { db } from '@/lib/firebase';
+import { collection, addDoc } from 'firebase/firestore';
 
 export default function FeedbackPage() {
   const { t } = useTranslation();
@@ -28,17 +23,17 @@ export default function FeedbackPage() {
   const [rating, setRating] = useState(0);
   
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submittedData, setSubmittedData] = useState<SubmittedData | null>(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleReset = () => {
     setName('');
     setContact('');
     setFeedback('');
     setRating(0);
-    setSubmittedData(null);
+    setIsSubmitted(false);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !feedback.trim() || rating === 0) {
       toast({
@@ -51,23 +46,28 @@ export default function FeedbackPage() {
 
     setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
-      setSubmittedData({ name, contact, feedback, rating });
+    try {
+      await addDoc(collection(db, 'feedback'), {
+        name,
+        contact,
+        feedback,
+        rating,
+        createdAt: new Date(),
+      });
+      setIsSubmitted(true);
+    } catch (error) {
+       toast({
+        title: "Submission Error",
+        description: "There was a problem submitting your feedback. Please try again.",
+        variant: "destructive",
+      });
+      console.error("Error adding document: ", error);
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
-  if (submittedData) {
-    const subject = t('feedback_page.email.subject', { name: submittedData.name });
-    const body = t('feedback_page.email.body_with_rating', {
-      name: submittedData.name,
-      rating: submittedData.rating,
-      contact: submittedData.contact || 'Not provided',
-      feedback: submittedData.feedback,
-    });
-    const mailtoLink = `mailto:brinda.budhabhatti@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
+  if (isSubmitted) {
     return (
       <div className="flex flex-col items-center justify-center text-center space-y-6">
         <Card className="max-w-2xl w-full">
@@ -78,10 +78,7 @@ export default function FeedbackPage() {
                   {t('feedback_page.thank_you.description')}
                 </CardDescription>
             </CardHeader>
-            <CardContent className="flex flex-col sm:flex-row justify-center gap-4">
-                 <Button asChild size="lg">
-                    <a href={mailtoLink}>{t('feedback_page.thank_you.open_email')}</a>
-                </Button>
+            <CardContent>
                 <Button onClick={handleReset} variant="outline" size="lg">
                     {t('feedback_page.thank_you.submit_another')}
                 </Button>

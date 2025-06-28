@@ -82,8 +82,7 @@ const resources = {
       "feedback_page.email.body": "Name: {{name}}\nContact: {{contact}}\n\nFeedback:\n{{feedback}}",
       "feedback_page.email.body_with_rating": "Name: {{name}}\nRating: {{rating}}/5\nContact: {{contact}}\n\nFeedback:\n{{feedback}}",
       "feedback_page.thank_you.title": "Thank You for Your Feedback!",
-      "feedback_page.thank_you.description": "We appreciate you taking the time to share your thoughts. Your feedback helps us improve CyberWise for everyone. Click the button below to send your feedback via email.",
-      "feedback_page.thank_you.open_email": "Open Email Client",
+      "feedback_page.thank_you.description": "We've received your feedback! We appreciate you taking the time to share your thoughts, which helps us improve CyberWise for everyone.",
       "feedback_page.thank_you.submit_another": "Submit Another Feedback",
 
       "exit_intent.title": "Leaving So Soon?",
@@ -411,8 +410,7 @@ const resources = {
       "feedback_page.email.body": "नाम: {{name}}\nसंपर्क: {{contact}}\n\nप्रतिक्रिया:\n{{feedback}}",
       "feedback_page.email.body_with_rating": "नाम: {{name}}\nरेटिंग: {{rating}}/5\nसंपर्क: {{contact}}\n\nप्रतिक्रिया:\n{{feedback}}",
       "feedback_page.thank_you.title": "आपकी प्रतिक्रिया के लिए धन्यवाद!",
-      "feedback_page.thank_you.description": "हम आपके विचारों को साझा करने के लिए समय निकालने की सराहना करते हैं। आपकी प्रतिक्रिया हमें सभी के लिए साइबरवाइज़ को बेहतर बनाने में मदद करती है। ईमेल के माध्यम से अपनी प्रतिक्रिया भेजने के लिए नीचे दिए गए बटन पर क्लिक करें।",
-      "feedback_page.thank_you.open_email": "ईमेल क्लाइंट खोलें",
+      "feedback_page.thank_you.description": "हमें आपकी प्रतिक्रिया मिल गई है! हम आपके विचारों को साझा करने के लिए समय निकालने की सराहना करते हैं, जो हमें सभी के लिए साइबरवाइज़ को बेहतर बनाने में मदद करता है।",
       "feedback_page.thank_you.submit_another": "एक और प्रतिक्रिया सबमिट करें",
       
       "exit_intent.title": "इतनी जल्दी जा रहे हैं?",
@@ -740,8 +738,7 @@ const resources = {
       "feedback_page.email.body": "નામ: {{name}}\nસંપર્ક: {{contact}}\n\nપ્રતિસાદ:\n{{feedback}}",
       "feedback_page.email.body_with_rating": "નામ: {{name}}\nરેટિંગ: {{rating}}/5\nસંપર્ક: {{contact}}\n\nપ્રતિસાદ:\n{{feedback}}",
       "feedback_page.thank_you.title": "તમારા પ્રતિસાદ બદલ આભાર!",
-      "feedback_page.thank_you.description": "તમારા વિચારો શેર કરવા માટે સમય કાઢવા બદલ અમે તમારી પ્રશંસા કરીએ છીએ. તમારો પ્રતિસાદ અમને દરેક માટે સાયબરવાઇઝને બહેતર બનાવવામાં મદદ કરે છે. ઇમેઇલ દ્વારા તમારો પ્રતિસાદ મોકલવા માટે નીચેના બટન પર ક્લિક કરો.",
-      "feedback_page.thank_you.open_email": "ઇમેઇલ ક્લાયંટ ખોલો",
+      "feedback_page.thank_you.description": "અમને તમારો પ્રતિસાદ મળ્યો છે! તમારા વિચારો શેર કરવા માટે સમય કાઢવા બદલ અમે તમારી પ્રશંસા કરીએ છીએ, જે અમને દરેક માટે સાયબરવાઇઝને બહેતર બનાવવામાં મદદ કરે છે.",
       "feedback_page.thank_you.submit_another": "બીજો પ્રતિસાદ સબમિટ કરો",
 
       "exit_intent.title": "આટલી જલ્દી જઈ રહ્યા છો?",
