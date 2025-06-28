@@ -12,6 +12,7 @@ import {
   ShieldQuestion,
   BarChart,
   Gamepad2,
+  Megaphone,
 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -38,6 +39,7 @@ export function MainNav() {
     { href: '/threat-analyzer', labelKey: 'nav.threat_analyzer', icon: ScanLine },
     { href: '/report', labelKey: 'nav.report', icon: FileText },
     { href: '/awareness', labelKey: 'nav.awareness', icon: GalleryHorizontal },
+    { href: '/feedback', labelKey: 'nav.feedback', icon: Megaphone },
     { href: '/chat', labelKey: 'nav.cyberbuddy', icon: MessageCircle },
   ];
 

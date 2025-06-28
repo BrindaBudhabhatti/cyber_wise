@@ -75,7 +75,8 @@ export default function Home() {
     <div className="space-y-12">
       <section className="text-center py-16">
         <div className="mb-6 flex justify-center text-primary">
-          <Shield className="h-16 w-16" />
+          {/* Updated Cyber Crime Logo */}
+          <img src="https://i.ibb.co/MrNntSn/updated-logo.png"/>
         </div>
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter">
           {t('home.hero.title1')}{' '}
@@ -103,7 +104,7 @@ export default function Home() {
             {/* SP's Card */}
             <Card className="flex flex-col sm:flex-row items-center gap-6 p-6 text-left shadow-lg hover:shadow-primary/20 transition-shadow">
               <img
-                src="https://placehold.co/150x150.png"
+                src="https://i.ibb.co/LDWF23MK/Delu.png"
                 alt={t('home.messages.sp.name')}
                 className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover border-4 border-primary/50 flex-shrink-0"
                 data-ai-hint="officer portrait"
@@ -120,7 +121,7 @@ export default function Home() {
             {/* PSI's Card */}
             <Card className="flex flex-col sm:flex-row items-center gap-6 p-6 text-left shadow-lg hover:shadow-primary/20 transition-shadow">
               <img
-                src="https://placehold.co/150x150.png"
+                src="https://i.ibb.co/d44q6y91/Jhala.png"
                 alt={t('home.messages.psi.name')}
                 className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover border-4 border-primary/50 flex-shrink-0"
                 data-ai-hint="officer portrait"

@@ -19,6 +19,7 @@ export function PageTitle() {
     { href: '/awareness', labelKey: 'nav.awareness' },
     { href: '/chat', labelKey: 'nav.cyberbuddy' },
     { href: '/threat-analyzer', labelKey: 'nav.threat_analyzer' },
+    { href: '/feedback', labelKey: 'nav.feedback' },
   ];
 
   const getPageTitle = () => {

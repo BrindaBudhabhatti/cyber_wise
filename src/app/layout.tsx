@@ -5,6 +5,7 @@ import {Toaster} from '@/components/ui/toaster';
 import { I18nProvider } from '@/components/i18n-provider';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Inter } from 'next/font/google';
+import { ExitIntentDialog } from '@/components/exit-intent-dialog';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -36,6 +37,7 @@ export default function RootLayout({
           <I18nProvider>
             <MainLayout>{children}</MainLayout>
             <Toaster />
+            <ExitIntentDialog />
           </I18nProvider>
         </ThemeProvider>
       </body>
