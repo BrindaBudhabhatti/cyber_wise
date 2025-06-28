@@ -59,6 +59,7 @@ const resources = {
       "nav.cyberbuddy": "CyberBuddy",
       "nav.threat_analyzer": "Threat Analyzer",
       "nav.feedback": "Feedback",
+      "nav.admin_feedback": "Admin - Feedback",
 
       "feedback_page.title": "Submit Feedback",
       "feedback_page.description": "We value your opinion. Let us know how we can improve.",
@@ -387,6 +388,7 @@ const resources = {
       "nav.cyberbuddy": "साइबरबडी",
       "nav.threat_analyzer": "खतरा विश्लेषक",
       "nav.feedback": "प्रतिक्रिया",
+      "nav.admin_feedback": "एडमिन - प्रतिक्रिया",
 
       "feedback_page.title": "प्रतिक्रिया भेजें",
       "feedback_page.description": "हम आपकी राय को महत्व देते हैं। हमें बताएं कि हम कैसे सुधार कर सकते हैं।",
@@ -470,7 +472,7 @@ const resources = {
       "news_page.error_description": "समाचार लेख लोड नहीं हो सके। कृपया बाद में पुनः प्रयास करें।",
       "news_page.read_more": "और पढ़ें",
 
-      "stats_page.title": "साइबर अपराध सांख्यिकी",
+      "stats_page.title": "साइબર अपराध सांख्यिकी",
       "stats_page.description": "भारत में हाल के साइबर अपराध के रुझानों और डेटा का एक अवलोकन।",
       "stats_page.crime_types_title": "सामान्य साइबर अपराध",
       "stats_page.trends_title": "रिपोर्ट किए गए मामले (YoY)",
@@ -647,7 +649,7 @@ const resources = {
       "about_dialog.name": "वृंदा बुधभट्टी",
       "about_dialog.role": "इंटर्न, साइबर क्राइम विभाग, जामनगर",
       "about_dialog.intro_title": "साइबरवाइज और साइबरबडी डेवलपर",
-      "about_dialog.intro_p1": "मैं साइबरबडी के पीछे की निर्माता हूं, जो साइबर अपराध, ऑनलाइन सुरक्षा और डिजिटल अधिकारों पर जागरूकता बढ़ाने और मार्गदर्शन प्रदान करने के लिए डिज़ाइन किया गया एक डिजिटल सहायक है। एक साइबरवाइज हिमायती के रूप में, मैं लोगों को - विशेष रूप से छात्रों और युवाओं को - डिजिटल दुनिया में सुरक्षित रहने के बारे में शिक्षित करने के लिए प्रतिबद्ध हूं।",
+      "about_dialog.intro_p1": "मैं साइबरबडी के पीछे की निर्माता हूं, जो साइबर अपराध, ऑनलाइन सुरक्षा और डिजिटल अधिकारों पर जागरूकता बढ़ाने और मार्गदर्शन प्रदान करने के लिए डिज़ाइन किया गया एक डिजिटल सहायक है। एक साइबरवाइज हिमायતી के रूप में, मैं लोगों को - विशेष रूप से छात्रों और युवाओं को - डिजिटल दुनिया में सुरक्षित रहने के बारे में शिक्षित करने के लिए प्रतिबद्ध हूं।",
       "about_dialog.cyberbuddy.title": "साइबरबडी",
       "about_dialog.cyberbuddy.p1": "साइबरबडी सिर्फ एक चैटबॉट से कहीं बढ़कर है - यह साइबर अपराध के बारे में मदद या स्पष्टता चाहने वाले किसी भी व्यक्ति के लिए एक भरोसेमंद साथी है। यह उपयोगकर्ताओं को प्रदान करता है:",
       "about_dialog.cyberbuddy.l1": "सामान्य ऑनलाइन खतरों के बारे में जानकारी",
@@ -715,6 +717,7 @@ const resources = {
       "nav.cyberbuddy": "સાયબરબડી",
       "nav.threat_analyzer": "થ્રેટ એનાલાઇઝર",
       "nav.feedback": "પ્રતિસાદ",
+      "nav.admin_feedback": "એડમિન - પ્રતિસાદ",
       
       "feedback_page.title": "પ્રતિસાદ સબમિટ કરો",
       "feedback_page.description": "અમે તમારા અભિપ્રાયને મહત્વ આપીએ છીએ. અમને જણાવો કે અમે કેવી રીતે સુધારી શકીએ.",
