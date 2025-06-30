@@ -1,29 +1,34 @@
+
 'use client';
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { analyzeThreat, type ThreatAnalyzerOutput } from '@/ai/flows/threat-analyzer-flow';
-import { Loader2, ScanLine, ShieldAlert, ShieldCheck, ShieldQuestion } from 'lucide-react';
+import { Loader2, ScanLine, ShieldAlert, ShieldCheck, ShieldQuestion, Link as LinkIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+
+type AnalysisType = 'message' | 'link';
 
 export default function ThreatAnalyzerPage() {
   const { t } = useTranslation();
   const [message, setMessage] = useState('');
+  const [linkUrl, setLinkUrl] = useState('');
   const [analysisResult, setAnalysisResult] = useState<ThreatAnalyzerOutput | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!message.trim()) {
+  const handleSubmit = async (content: string, type: AnalysisType) => {
+    if (!content.trim()) {
       toast({
-        title: t('threat_analyzer.toast.no_message_title'),
-        description: t('threat_analyzer.toast.no_message_description'),
+        title: t(`threat_analyzer.toast.no_${type}_title`),
+        description: t(`threat_analyzer.toast.no_${type}_description`),
         variant: 'destructive',
       });
       return;
@@ -33,7 +38,7 @@ export default function ThreatAnalyzerPage() {
     setAnalysisResult(null);
 
     try {
-      const result = await analyzeThreat({ message });
+      const result = await analyzeThreat({ content, type });
       setAnalysisResult(result);
     } catch (error) {
       console.error('Threat analysis error:', error);
@@ -67,34 +72,45 @@ export default function ThreatAnalyzerPage() {
       </div>
 
       <Card>
-        <CardHeader>
-          <CardTitle>{t('threat_analyzer.card_title')}</CardTitle>
-          <CardDescription>{t('threat_analyzer.card_description')}</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <Textarea
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder={t('threat_analyzer.placeholder')}
-              className="min-h-[150px] text-base"
-              disabled={isLoading}
-            />
-            <Button type="submit" disabled={isLoading || !message.trim()} className="w-full sm:w-auto">
-              {isLoading ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  {t('threat_analyzer.analyzing_button')}
-                </>
-              ) : (
-                <>
-                  <ScanLine className="mr-2 h-4 w-4" />
-                  {t('threat_analyzer.analyze_button')}
-                </>
-              )}
-            </Button>
-          </form>
-        </CardContent>
+        <Tabs defaultValue="message" className="w-full">
+            <CardHeader>
+              <TabsList className="grid w-full grid-cols-2">
+                <TabsTrigger value="message">{t('threat_analyzer.tabs.message')}</TabsTrigger>
+                <TabsTrigger value="link">{t('threat_analyzer.tabs.link')}</TabsTrigger>
+              </TabsList>
+            </CardHeader>
+            <CardContent>
+                <TabsContent value="message" className="space-y-4">
+                     <p className="text-sm text-muted-foreground">{t('threat_analyzer.card_description_message')}</p>
+                     <Textarea
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        placeholder={t('threat_analyzer.placeholder_message')}
+                        className="min-h-[150px] text-base"
+                        disabled={isLoading}
+                    />
+                    <Button onClick={() => handleSubmit(message, 'message')} disabled={isLoading || !message.trim()} className="w-full sm:w-auto">
+                        {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <ScanLine className="mr-2 h-4 w-4" />}
+                        {t('threat_analyzer.analyze_button')}
+                    </Button>
+                </TabsContent>
+                <TabsContent value="link" className="space-y-4">
+                     <p className="text-sm text-muted-foreground">{t('threat_analyzer.card_description_link')}</p>
+                     <Input
+                        value={linkUrl}
+                        onChange={(e) => setLinkUrl(e.target.value)}
+                        placeholder={t('threat_analyzer.placeholder_link')}
+                        className="text-base"
+                        disabled={isLoading}
+                        type="url"
+                    />
+                     <Button onClick={() => handleSubmit(linkUrl, 'link')} disabled={isLoading || !linkUrl.trim()} className="w-full sm:w-auto">
+                        {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <LinkIcon className="mr-2 h-4 w-4" />}
+                        {t('threat_analyzer.analyze_button_link')}
+                    </Button>
+                </TabsContent>
+            </CardContent>
+        </Tabs>
       </Card>
 
       {isLoading && (

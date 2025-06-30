@@ -13,6 +13,7 @@ import {
   ShieldQuestion,
   GalleryHorizontal,
   Shield,
+  ChevronDown,
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -71,12 +72,18 @@ export default function Home() {
     },
   ];
 
+  const handleScrollDown = () => {
+    const nextSection = document.getElementById('next-section');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="space-y-12">
-      <section className="text-center py-16">
+      <section className="relative flex flex-col items-center justify-center text-center min-h-[calc(100vh-8rem)] py-16">
         <div className="mb-6 flex justify-center text-primary">
-          {/* Updated Cyber Crime Logo */}
-          <img src="https://i.ibb.co/MrNntSn/updated-logo.png"/>
+          <Shield className="h-16 w-16" />
         </div>
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter">
           {t('home.hero.title1')}{' '}
@@ -95,9 +102,20 @@ export default function Home() {
             <Link href="/chat">{t('home.hero.cta2')}</Link>
           </Button>
         </div>
+        <div className="absolute bottom-4 hidden md:block">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={handleScrollDown}
+            className="animate-bounce"
+            aria-label="Scroll down"
+          >
+            <ChevronDown className="h-8 w-8" />
+          </Button>
+        </div>
       </section>
 
-      <section className="py-12 bg-card">
+      <section id="next-section" className="py-12 bg-card">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-10">{t('home.messages.title')}</h2>
           <div className="grid grid-cols-1 gap-10 max-w-4xl mx-auto">
