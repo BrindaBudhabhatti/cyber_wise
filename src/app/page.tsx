@@ -12,8 +12,9 @@ import {
   Gamepad2,
   ShieldQuestion,
   GalleryHorizontal,
-  Shield,
+  ChevronDown
 } from 'lucide-react';
+import { Analytics } from "@vercel/analytics/next"
 import { useTranslation } from 'react-i18next';
 
 export default function Home() {
@@ -72,13 +73,16 @@ export default function Home() {
   ];
 
   return (
-    <div className="space-y-12">
-      <section className="text-center py-16">
-        <div className="mb-6 flex justify-center text-primary">
-          {/* Updated Cyber Crime Logo */}
-          <img src="https://i.ibb.co/MrNntSn/updated-logo.png"/>
+    <div className="space-y-5">
+      <section className="text-center py-2">
+        <div className="sm:m-35">
+          {/* <h1>Test</h1> */}
         </div>
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter">
+        <div className="mb-3 flex justify-center text-primary">
+          {/* Updated Cyber Crime Logo */}
+          <img src="https://i.ibb.co/MrNntSn/updated-logo.png" width="250" height="250"/>
+        </div>
+        <h1 className="text-4xl md:text-7xl font-extrabold tracking-tighter">
           {t('home.hero.title1')}{' '}
           <span className="text-primary">{t('home.hero.title2')}</span>
         </h1>
@@ -97,6 +101,16 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="flex justify-center mt-0 md:mt-10 lg:mt-20">
+        {/* Scroll Down Arrow */}
+        <a href="#features" aria-label="Scroll down">
+          <ChevronDown className="h-8 w-8 text-primary animate-bounce" />
+        </a>
+      </div>
+
+
+      <section id="features" className="mt-20 flex justify-center">
+      </section>
       <section className="py-12 bg-card">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-10">{t('home.messages.title')}</h2>

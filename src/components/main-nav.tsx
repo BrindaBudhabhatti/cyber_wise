@@ -13,6 +13,7 @@ import {
   BarChart,
   Gamepad2,
   Megaphone,
+  Phone,
 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -40,6 +41,7 @@ export function MainNav() {
     { href: '/report', labelKey: 'nav.report', icon: FileText },
     { href: '/awareness', labelKey: 'nav.awareness', icon: GalleryHorizontal },
     { href: '/feedback', labelKey: 'nav.feedback', icon: Megaphone },
+    { href: '/reach-us', labelKey: 'nav.reach_us', icon: Phone },
     { href: '/chat', labelKey: 'nav.cyberbuddy', icon: MessageCircle },
   ];
 

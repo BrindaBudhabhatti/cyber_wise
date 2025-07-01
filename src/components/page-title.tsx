@@ -20,6 +20,7 @@ export function PageTitle() {
     { href: '/chat', labelKey: 'nav.cyberbuddy' },
     { href: '/threat-analyzer', labelKey: 'nav.threat_analyzer' },
     { href: '/feedback', labelKey: 'nav.feedback' },
+    { href: '/reach-us', labelKey: 'nav.reach_us' },
     { href: '/admin', labelKey: 'nav.admin_feedback' },
   ];
 
