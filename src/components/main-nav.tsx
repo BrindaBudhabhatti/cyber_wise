@@ -14,6 +14,7 @@ import {
   Gamepad2,
   Megaphone,
   Phone,
+  ShieldX,
 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -38,6 +39,7 @@ export function MainNav() {
     { href: '/quiz', labelKey: 'nav.quiz', icon: ShieldQuestion },
     { href: '/games', labelKey: 'nav.games', icon: Gamepad2 },
     { href: '/threat-analyzer', labelKey: 'nav.threat_analyzer', icon: ScanLine },
+    { href: '/breach-checker', labelKey: 'nav.breach_checker', icon: ShieldX },
     { href: '/report', labelKey: 'nav.report', icon: FileText },
     { href: '/awareness', labelKey: 'nav.awareness', icon: GalleryHorizontal },
     { href: '/feedback', labelKey: 'nav.feedback', icon: Megaphone },
@@ -74,3 +76,5 @@ export function MainNav() {
     </SidebarMenu>
   );
 }
+
+    
