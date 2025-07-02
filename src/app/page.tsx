@@ -14,7 +14,6 @@ import {
   GalleryHorizontal,
   ChevronDown
 } from 'lucide-react';
-import { Analytics } from "@vercel/analytics/next"
 import { useTranslation } from 'react-i18next';
 
 export default function Home() {
