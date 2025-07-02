@@ -12,7 +12,8 @@ import {
   Gamepad2,
   ShieldQuestion,
   GalleryHorizontal,
-  ChevronDown
+  ChevronDown,
+  Link2
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -56,11 +57,18 @@ export default function Home() {
       linkKey: 'home.features.games.link',
     },
     {
-      href: '/threat-analyzer',
+      href: '/scam-scanner',
       icon: ScanLine,
-      titleKey: 'home.features.analyzer.title',
-      descriptionKey: 'home.features.analyzer.description',
-      linkKey: 'home.features.analyzer.link',
+      titleKey: 'home.features.scam_scanner.title',
+      descriptionKey: 'home.features.scam_scanner.description',
+      linkKey: 'home.features.scam_scanner.link',
+    },
+    {
+      href: '/link-inspector',
+      icon: Link2,
+      titleKey: 'home.features.link_inspector.title',
+      descriptionKey: 'home.features.link_inspector.description',
+      linkKey: 'home.features.link_inspector.link',
     },
     {
       href: '/awareness',

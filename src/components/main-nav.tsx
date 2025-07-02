@@ -15,6 +15,7 @@ import {
   Megaphone,
   Phone,
   ShieldX,
+  Link2,
 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -38,7 +39,8 @@ export function MainNav() {
     { href: '/stats', labelKey: 'nav.stats', icon: BarChart },
     { href: '/quiz', labelKey: 'nav.quiz', icon: ShieldQuestion },
     { href: '/games', labelKey: 'nav.games', icon: Gamepad2 },
-    { href: '/threat-analyzer', labelKey: 'nav.threat_analyzer', icon: ScanLine },
+    { href: '/scam-scanner', labelKey: 'nav.scam_scanner', icon: ScanLine },
+    { href: '/link-inspector', labelKey: 'nav.link_inspector', icon: Link2 },
     { href: '/breach-checker', labelKey: 'nav.breach_checker', icon: ShieldX },
     { href: '/report', labelKey: 'nav.report', icon: FileText },
     { href: '/awareness', labelKey: 'nav.awareness', icon: GalleryHorizontal },
