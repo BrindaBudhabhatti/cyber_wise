@@ -331,8 +331,8 @@ const resources = {
 
       "breach_checker.title": "Password Breach Checker",
       "breach_checker.description": "Check if your password has ever been compromised in a data breach.",
-      "breach_checker.password.card_title": "Check a Password",
-      "breach_checker.password.description": "Check if a password has appeared in a data breach. Your password is never sent to our server or any third party.",
+      "breach_checker.password.card_title": "Check your Password",
+      "breach_checker.password.description": "Check if your password has appeared in a data breach. Your password is never sent to our server or any third party.",
       "breach_checker.password.anonymity_note": "This tool uses a k-Anonymity model that allows your password to be searched for without ever exposing it. Only the first 5 characters of your password's hash are sent to the API.",
       "breach_checker.password.placeholder": "Enter a password to check",
       "breach_checker.password.button": "Check Password",
