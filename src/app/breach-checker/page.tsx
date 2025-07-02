@@ -228,7 +228,7 @@ export default function BreachCheckerPage() {
       </div>
 
       <Card>
-        <Tabs defaultValue="email" className="w-full">
+        <Tabs defaultValue="password" className="w-full">
             <CardHeader>
               <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger value="email">{t('breach_checker.tabs.email')}</TabsTrigger>
