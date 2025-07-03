@@ -13,7 +13,7 @@ export default function ReachUsPage() {
   // 2. Click the "Share" button.
   // 3. Go to the "Embed a map" tab.
   // 4. Click "COPY HTML" and paste the URL from the `src` attribute below.
-  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.828656114884!2d70.05837631548809!3d22.4707649851817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c98a5d3a3c9b%3A0x4c7d0b3b3b3b3b3b!2sCyber%20Crime%20Police%20Station%20Jamnagar!5e0!3m2!1sen!2sin!4v1620000000000";
+  const googleMapsEmbedUrl = "https://www.google.com/maps/place/Cyber+Crime+Police+Station+Jamnagar/@22.477606,70.0438323,17z/data=!3m1!4b1!4m6!3m5!1s0x395715bccecc87b3:0xfe5bca95d74b78a8!8m2!3d22.477606!4d70.0464072!16s%2Fg%2F11rn007xvl?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D";
 
   return (
     <div className="space-y-8">
