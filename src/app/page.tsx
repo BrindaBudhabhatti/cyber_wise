@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -13,7 +14,8 @@ import {
   ShieldQuestion,
   GalleryHorizontal,
   ChevronDown,
-  Link2
+  Link2,
+  ShieldX,
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -70,6 +72,13 @@ export default function Home() {
       descriptionKey: 'home.features.link_inspector.description',
       linkKey: 'home.features.link_inspector.link',
     },
+     {
+      href: '/breach-checker',
+      icon: ShieldX,
+      titleKey: 'home.features.breach_checker.title',
+      descriptionKey: 'home.features.breach_checker.description',
+      linkKey: 'home.features.breach_checker.link',
+    },
     {
       href: '/awareness',
       icon: GalleryHorizontal,
@@ -83,11 +92,9 @@ export default function Home() {
     <div className="space-y-5">
       <section className="text-center py-2">
         <div className="sm:m-35">
-          {/* <h1>Test</h1> */}
         </div>
         <div className="mb-3 flex justify-center text-primary">
-          {/* Updated Cyber Crime Logo */}
-          <img src="https://i.ibb.co/MrNntSn/updated-logo.png" width="250" height="250"/>
+          <img src="https://i.ibb.co/MrNntSn/updated-logo.png" width="250" height="250" alt="CyberWise Logo"/>
         </div>
         <h1 className="text-4xl md:text-7xl font-extrabold tracking-tighter">
           {t('home.hero.title1')}{' '}
@@ -109,7 +116,6 @@ export default function Home() {
       </section>
 
       <div className="flex justify-center mt-0 md:mt-10 lg:mt-20">
-        {/* Scroll Down Arrow */}
         <a href="#features" aria-label="Scroll down">
           <ChevronDown className="h-8 w-8 text-primary animate-bounce" />
         </a>
@@ -118,11 +124,10 @@ export default function Home() {
 
       <section id="features" className="mt-20 flex justify-center">
       </section>
-      <section className="py-12 bg-card">
+      <section className="py-12 bg-secondary">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-10">{t('home.messages.title')}</h2>
           <div className="grid grid-cols-1 gap-10 max-w-4xl mx-auto">
-            {/* SP's Card */}
             <Card className="flex flex-col sm:flex-row items-center gap-6 p-6 text-left shadow-lg hover:shadow-primary/20 transition-shadow">
               <img
                 src="https://i.ibb.co/LDWF23MK/Delu.png"
@@ -138,29 +143,12 @@ export default function Home() {
                 </p>
               </div>
             </Card>
-            
-            {/* PSI's Card
-            <Card className="flex flex-col sm:flex-row items-center gap-6 p-6 text-left shadow-lg hover:shadow-primary/20 transition-shadow">
-              <img
-                src="https://i.ibb.co/d44q6y91/Jhala.png"
-                alt={t('home.messages.psi.name')}
-                className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover border-4 border-primary/50 flex-shrink-0"
-                data-ai-hint="officer portrait"
-              />
-              <div>
-                <h3 className="text-xl font-bold">{t('home.messages.psi.name')}</h3>
-                <p className="text-sm text-primary font-semibold mb-2">{t('home.messages.psi.title')}</p>
-                <p className="text-muted-foreground italic">
-                  &ldquo;{t('home.messages.psi.message')}&rdquo;
-                </p>
-              </div>
-            </Card> */}
           </div>
         </div>
       </section>
 
       <section>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <Card
               key={feature.href}
