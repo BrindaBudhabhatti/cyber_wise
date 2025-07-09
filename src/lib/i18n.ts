@@ -15,6 +15,7 @@ const resources = {
       "home.hero.subtitle": "Your all-in-one guide to understanding cyber threats, Indian cyber laws, and staying safe online.",
       "home.hero.cta1": "Start Learning",
       "home.hero.cta2": "Ask CyberBuddy",
+      "home.features.title": "Explore Our Toolkit",
       "home.features.learn.title": "In-Depth Learning",
       "home.features.learn.description": "Explore comprehensive guides on various cybercrimes and Indian laws.",
       "home.features.learn.link": "Explore Topics",
@@ -379,6 +380,7 @@ const resources = {
       "home.hero.subtitle": "साइबर खतरों, भारतीय साइबर कानूनों को समझने और ऑनलाइन सुरक्षित रहने के लिए आपकी ऑल-इन-वन गाइड।",
       "home.hero.cta1": "सीखना शुरू करें",
       "home.hero.cta2": "साइबरबडी से पूछें",
+      "home.features.title": "हमारे टूलकिट का अन्वेषण करें",
       "home.features.learn.title": "गहन शिक्षा",
       "home.features.learn.description": "विभिन्न साइबर अपराधों और भारतीय कानूनों पर व्यापक गाइड का अन्वेषण करें।",
       "home.features.learn.link": "विषय खोजें",
@@ -476,7 +478,7 @@ const resources = {
       "game.explanation.too_good_to_be_true": "जो प्रस्ताव बहुत अच्छे लगते हैं, वे आमतौर पर होते हैं। धोखेबाज आपको शुल्क का भुगतान करने या डेटा देने के लिए मुफ्त पुरस्कारों का लालच देते हैं।",
       "game.explanation.generic_greeting": "'प्रिय मूल्यवान ग्राहक' जैसे अस्पष्ट अभिवादन एक आम रणनीति है। वैध कंपनियां आमतौर पर आपको आपके नाम से संबोधित करती हैं।",
       "game.explanation.casual_message": "यह एक सरल, आकस्मिक संदेश है। इसमें कोई लिंक नहीं है, कोई तत्काल मांग नहीं है, और कोई खतरे के संकेत नहीं हैं।",
-
+      
       "games.phishing_spotter.description": "नमूना संदेशों की समीक्षा करें और तय करें कि क्या वे एक फ़िशिंग प्रयास हैं या आपके पहचान कौशल को तेज करने के लिए एक सुरक्षित संदेश।",
       "games.password_challenge.title": "पासवर्ड शक्ति चुनौती",
       "games.password_challenge.description": "अपने पासवर्ड बनाने के कौशल का परीक्षण करें और सीखें कि कैसे मजबूत, अधिक सुरक्षित पासवर्ड बनाएं।",
@@ -743,6 +745,7 @@ const resources = {
       "home.hero.subtitle": "સાયબર ધમકીઓ, ભારતીય સાયબર કાયદાઓને સમજવા અને ઓનલાઈન સુરક્ષિત રહેવા માટે તમારી ઓલ-ઇન-વન માર્ગદર્શિકા.",
       "home.hero.cta1": "શીખવાનું શરૂ કરો",
       "home.hero.cta2": "સાયબરબડીને પૂછો",
+      "home.features.title": "અમારા ટૂલકિટનું અન્વેષણ કરો",
       "home.features.learn.title": "ઊંડાણપૂર્વકનું શિક્ષણ",
       "home.features.learn.description": "વિવિધ સાયબર અપરાધો અને ભારતીય કાયદાઓ પર વ્યાપક માર્ગદર્શિકાઓનું અન્વેષણ કરો.",
       "home.features.learn.link": "વિષયોનું અન્વેષણ કરો",
