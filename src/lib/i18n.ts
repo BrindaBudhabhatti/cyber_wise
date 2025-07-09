@@ -78,7 +78,7 @@ const resources = {
       "reach_us_page.contact_card.address_title": "Address",
       "reach_us_page.contact_card.address_content": "Cyber Crime Police Station, District Police Office, Jamnagar, Gujarat 361001",
       "reach_us_page.contact_card.phone_title": "Phone Number",
-      "reach_us_page.contact_card.phone_content": "(0288) 2560222",
+      "reach_us_page.contact_card.phone_content": "(0288) 2666610",
       "reach_us_page.map_card.title": "Our Location",
       "reach_us_page.map_card.description": "Find us on Google Maps.",
 
@@ -439,7 +439,7 @@ const resources = {
       "reach_us_page.contact_card.address_title": "पता",
       "reach_us_page.contact_card.address_content": "साइबर क्राइम पुलिस स्टेशन, जिला पुलिस कार्यालय, जामनगर, गुजरात 361001",
       "reach_us_page.contact_card.phone_title": "फोन नंबर",
-      "reach_us_page.contact_card.phone_content": "(0288) 2560222",
+      "reach_us_page.contact_card.phone_content": "(0288) 2666610",
       "reach_us_page.map_card.title": "हमारा स्थान",
       "reach_us_page.map_card.description": "हमें गूगल मैप्स पर खोजें।",
 
@@ -800,7 +800,7 @@ const resources = {
       "reach_us_page.contact_card.address_title": "સરનામું",
       "reach_us_page.contact_card.address_content": "સાયબર ક્રાઇમ પોલીસ સ્ટેશન, જિલ્લા પોલીસ કાર્યાલય, જામનગર, ગુજરાત 361001",
       "reach_us_page.contact_card.phone_title": "ફોન નંબર",
-      "reach_us_page.contact_card.phone_content": "(0288) 2560222",
+      "reach_us_page.contact_card.phone_content": "(0288) 2666610",
       "reach_us_page.map_card.title": "અમારું સ્થાન",
       "reach_us_page.map_card.description": "અમને Google Maps પર શોધો.",
 
