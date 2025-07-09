@@ -116,42 +116,27 @@ export default function Home() {
       </section>
 
       <div className="flex justify-center mt-0 md:mt-10 lg:mt-20">
-        <a href="#features" aria-label="Scroll down">
+        <a href="#message" aria-label="Scroll down">
           <ChevronDown className="h-8 w-8 text-primary animate-bounce" />
         </a>
       </div>
 
-      <section className="py-12 mt-20">
+      <section id="message" className="py-12 mt-20">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-10">{t('home.messages.title')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-10">{t('home.message.title')}</h2>
+          <div className="max-w-2xl mx-auto">
             <Card className="flex flex-col sm:flex-row items-center gap-6 p-6 text-left shadow-lg hover:shadow-primary/20 transition-shadow">
               <img
                 src="https://i.ibb.co/LDWF23MK/Delu.png"
-                alt={t('home.messages.sp.name')}
+                alt={t('home.message.sp.name')}
                 className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover border-4 border-primary/50 flex-shrink-0"
                 data-ai-hint="officer portrait"
               />
               <div>
-                <h3 className="text-xl font-bold">{t('home.messages.sp.name')}</h3>
-                <p className="text-sm text-primary font-semibold mb-2">{t('home.messages.sp.title')}</p>
+                <h3 className="text-xl font-bold">{t('home.message.sp.name')}</h3>
+                <p className="text-sm text-primary font-semibold mb-2">{t('home.message.sp.title')}</p>
                 <p className="text-muted-foreground italic">
-                  &ldquo;{t('home.messages.sp.message')}&rdquo;
-                </p>
-              </div>
-            </Card>
-            <Card className="flex flex-col sm:flex-row items-center gap-6 p-6 text-left shadow-lg hover:shadow-primary/20 transition-shadow">
-              <img
-                src="https://placehold.co/128x128.png"
-                alt={t('home.messages.psi.name')}
-                className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover border-4 border-primary/50 flex-shrink-0"
-                data-ai-hint="officer portrait"
-              />
-              <div>
-                <h3 className="text-xl font-bold">{t('home.messages.psi.name')}</h3>
-                <p className="text-sm text-primary font-semibold mb-2">{t('home.messages.psi.title')}</p>
-                <p className="text-muted-foreground italic">
-                  &ldquo;{t('home.messages.psi.message')}&rdquo;
+                  &ldquo;{t('home.message.sp.message')}&rdquo;
                 </p>
               </div>
             </Card>
