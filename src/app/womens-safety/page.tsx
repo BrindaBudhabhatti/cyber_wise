@@ -4,7 +4,7 @@
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { HeartHandshake, Phone, Shield, FileText, MessageCircle, UserX, GitCommit, ShieldAlert } from 'lucide-react';
+import { HeartHandshake, Phone, Shield, FileText, UserX, GitCommit, ShieldAlert, ArrowRight, MessageCircle } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 
@@ -12,10 +12,10 @@ export default function WomensSafetyPage() {
   const { t } = useTranslation();
 
   const learnTopics = [
-    { titleKey: 'womens_safety_page.threats.stalking.title', descriptionKey: 'womens_safety_page.threats.stalking.description', icon: UserX },
-    { titleKey: 'womens_safety_page.threats.morphing.title', descriptionKey: 'womens_safety_page.threats.morphing.description', icon: GitCommit },
-    { titleKey: 'womens_safety_page.threats.doxxing.title', descriptionKey: 'womens_safety_page.threats.doxxing.description', icon: FileText },
-    { titleKey: 'womens_safety_page.threats.bullying.title', descriptionKey: 'womens_safety_page.threats.bullying.description', icon: ShieldAlert },
+    { slug: 'cyberstalking', titleKey: 'womens_safety_page.threats.stalking.title', descriptionKey: 'womens_safety_page.threats.stalking.description', icon: UserX },
+    { slug: 'photo-morphing', titleKey: 'womens_safety_page.threats.morphing.title', descriptionKey: 'womens_safety_page.threats.morphing.description', icon: GitCommit },
+    { slug: 'doxxing', titleKey: 'womens_safety_page.threats.doxxing.title', descriptionKey: 'womens_safety_page.threats.doxxing.description', icon: FileText },
+    { slug: 'cyber-bullying', titleKey: 'womens_safety_page.threats.bullying.title', descriptionKey: 'womens_safety_page.threats.bullying.description', icon: ShieldAlert },
   ];
 
   const resources: { titleKey: string; descriptionKey: string; ctaKey: string; href: string; icon: LucideIcon }[] = [
@@ -46,17 +46,24 @@ export default function WomensSafetyPage() {
           {learnTopics.map((topic) => {
              const Icon = topic.icon;
              return (
-              <Card key={topic.titleKey}>
-                <CardHeader className="flex-row items-center gap-4">
-                   <div className="bg-primary/10 p-3 rounded-full">
-                      <Icon className="h-6 w-6 text-primary" />
-                    </div>
-                  <CardTitle className="text-xl">{t(topic.titleKey)}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{t(topic.descriptionKey)}</p>
-                </CardContent>
-              </Card>
+                <Link href={`/learn/${topic.slug}`} key={topic.slug} className="group">
+                    <Card className="h-full flex flex-col transition-all duration-300 ease-in-out group-hover:shadow-xl group-hover:border-primary/50 group-hover:-translate-y-1">
+                        <CardHeader className="flex-row items-center gap-4">
+                        <div className="bg-primary/10 p-3 rounded-full">
+                            <Icon className="h-6 w-6 text-primary" />
+                            </div>
+                        <CardTitle className="text-xl">{t(topic.titleKey)}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="flex-grow">
+                            <p className="text-muted-foreground">{t(topic.descriptionKey)}</p>
+                        </CardContent>
+                         <CardFooter>
+                            <p className="text-sm font-medium text-primary flex items-center">
+                                {t('learn_page.learn_more')} <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                            </p>
+                        </CardFooter>
+                    </Card>
+              </Link>
             )
           })}
         </div>

@@ -1,4 +1,4 @@
-import { Fish, KeyRound, UserX, ShieldAlert, IndianRupee, Lock, Users, Bug, type LucideIcon } from "lucide-react";
+import { Fish, KeyRound, UserX, ShieldAlert, IndianRupee, Lock, Users, Bug, type LucideIcon, FileText, GitCommit } from "lucide-react";
 
 export type Topic = {
   slug: string;
@@ -56,6 +56,51 @@ export const topics: Topic[] = [
       "learn.cyber_bullying.tip3",
       "learn.cyber_bullying.tip4",
       "learn.cyber_bullying.tip5",
+    ],
+  },
+   {
+    slug: "cyberstalking",
+    titleKey: "learn.cyberstalking.title",
+    summaryKey: "learn.cyberstalking.summary",
+    icon: UserX,
+    descriptionKey: "learn.cyberstalking.description",
+    lawKey: "learn.cyberstalking.law",
+    penaltyKey: "learn.cyberstalking.penalty",
+    tipsKeys: [
+      "learn.cyberstalking.tip1",
+      "learn.cyberstalking.tip2",
+      "learn.cyberstalking.tip3",
+      "learn.cyberstalking.tip4",
+    ],
+  },
+  {
+    slug: "photo-morphing",
+    titleKey: "learn.photo_morphing.title",
+    summaryKey: "learn.photo_morphing.summary",
+    icon: GitCommit,
+    descriptionKey: "learn.photo_morphing.description",
+    lawKey: "learn.photo_morphing.law",
+    penaltyKey: "learn.photo_morphing.penalty",
+    tipsKeys: [
+      "learn.photo_morphing.tip1",
+      "learn.photo_morphing.tip2",
+      "learn.photo_morphing.tip3",
+      "learn.photo_morphing.tip4",
+    ],
+  },
+   {
+    slug: "doxxing",
+    titleKey: "learn.doxxing.title",
+    summaryKey: "learn.doxxing.summary",
+    icon: FileText,
+    descriptionKey: "learn.doxxing.description",
+    lawKey: "learn.doxxing.law",
+    penaltyKey: "learn.doxxing.penalty",
+    tipsKeys: [
+      "learn.doxxing.tip1",
+      "learn.doxxing.tip2",
+      "learn.doxxing.tip3",
+      "learn.doxxing.tip4",
     ],
   },
   {
