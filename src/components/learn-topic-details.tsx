@@ -7,9 +7,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { topics } from "@/lib/learn-data";
-import { notFound } from "next/navigation";
+import { notFound, useSearchParams } from "next/navigation";
 
-export function LearnTopicDetails({ slug }: { slug: string }) {
+export function LearnTopicDetails({ slug, from }: { slug: string, from: string }) {
   const { t } = useTranslation();
 
   // Find the topic object within the client component using the slug
@@ -19,12 +19,15 @@ export function LearnTopicDetails({ slug }: { slug: string }) {
     notFound();
   }
 
+  const backPath = from || '/learn';
+  const backButtonLabel = backPath === '/womens-safety' ? t('womens_safety_page.title') : t('learn_page.title');
+
   return (
     <div className="space-y-8">
        <Button asChild variant="outline" className="mb-4">
-          <Link href="/learn">
+          <Link href={backPath}>
             <ArrowLeft className="mr-2 h-4 w-4" />
-            {t('learn_detail_page.back_to_learn')}
+            {t('learn_detail_page.back_to')} {backButtonLabel}
           </Link>
         </Button>
       <header className="flex items-center gap-4 rounded-lg bg-card p-6">

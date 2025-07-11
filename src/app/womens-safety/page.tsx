@@ -46,7 +46,7 @@ export default function WomensSafetyPage() {
           {learnTopics.map((topic) => {
              const Icon = topic.icon;
              return (
-                <Link href={`/learn/${topic.slug}`} key={topic.slug} className="group">
+                <Link href={`/learn/${topic.slug}?from=/womens-safety`} key={topic.slug} className="group">
                     <Card className="h-full flex flex-col transition-all duration-300 ease-in-out group-hover:shadow-xl group-hover:border-primary/50 group-hover:-translate-y-1">
                         <CardHeader className="flex-row items-center gap-4">
                         <div className="bg-primary/10 p-3 rounded-full">

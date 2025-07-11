@@ -11,8 +11,10 @@ export function generateStaticParams() {
 
 export default function LearnTopicPage({
   params,
+  searchParams,
 }: {
   params: { slug: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }) {
   const topic = topics.find((t) => t.slug === params.slug);
 
@@ -20,6 +22,8 @@ export default function LearnTopicPage({
     notFound();
   }
 
-  // Pass only the serializable slug to the Client Component
-  return <LearnTopicDetails slug={params.slug} />;
+  const from = typeof searchParams?.from === 'string' ? searchParams.from : '/learn';
+
+  // Pass the serializable slug and from path to the Client Component
+  return <LearnTopicDetails slug={params.slug} from={from} />;
 }
