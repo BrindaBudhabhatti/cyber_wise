@@ -2,9 +2,9 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { HeartHandshake, Phone, Shield, BookOpen, MessageCircle } from 'lucide-react';
+import { HeartHandshake, Phone, Shield, FileText, MessageCircle, UserX, GitCommit, ShieldAlert } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 
@@ -93,9 +93,3 @@ export default function WomensSafetyPage() {
     </div>
   );
 }
-
-// Dummy icons for compilation if they don't exist
-const UserX = Shield;
-const GitCommit = Shield;
-const FileText = Shield;
-const ShieldAlert = Shield;
