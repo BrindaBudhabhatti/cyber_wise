@@ -1,4 +1,5 @@
-import { Fish, KeyRound, UserX, ShieldAlert, IndianRupee, Lock, Users, Bug, type LucideIcon, FileText, GitCommit } from "lucide-react";
+
+import { Fish, KeyRound, UserX, ShieldAlert, IndianRupee, Lock, Users, Bug, type LucideIcon, FileText, GitCommit, Gamepad2, UserRoundX } from "lucide-react";
 
 export type Topic = {
   slug: string;
@@ -131,6 +132,36 @@ export const topics: Topic[] = [
         "learn.online_scams.tip2",
         "learn.online_scams.tip3",
         "learn.online_scams.tip4",
+    ],
+  },
+  {
+    slug: "online-predators",
+    titleKey: "learn.online_predators.title",
+    summaryKey: "learn.online_predators.summary",
+    icon: UserRoundX,
+    descriptionKey: "learn.online_predators.description",
+    lawKey: "learn.online_predators.law",
+    penaltyKey: "learn.online_predators.penalty",
+    tipsKeys: [
+      "learn.online_predators.tip1",
+      "learn.online_predators.tip2",
+      "learn.online_predators.tip3",
+      "learn.online_predators.tip4",
+    ],
+  },
+  {
+    slug: "gaming-scams",
+    titleKey: "learn.gaming_scams.title",
+    summaryKey: "learn.gaming_scams.summary",
+    icon: Gamepad2,
+    descriptionKey: "learn.gaming_scams.description",
+    lawKey: "learn.gaming_scams.law",
+    penaltyKey: "learn.gaming_scams.penalty",
+    tipsKeys: [
+      "learn.gaming_scams.tip1",
+      "learn.gaming_scams.tip2",
+      "learn.gaming_scams.tip3",
+      "learn.gaming_scams.tip4",
     ],
   },
   {
