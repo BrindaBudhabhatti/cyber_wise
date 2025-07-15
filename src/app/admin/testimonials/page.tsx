@@ -1,5 +1,5 @@
 
-import { getVictimTestimonials } from "@/lib/firestore-service";
+import { getVictimTestimonials } from "@/lib/data-service";
 import { AdminTestimonialTable } from "./_components/admin-testimonial-table";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -13,7 +13,7 @@ export default async function AdminTestimonialsPage() {
              <div className="flex justify-between items-center">
                 <div>
                     <h1 className="text-3xl font-bold">Manage Victim Voices</h1>
-                    <p className="text-muted-foreground">Add, edit, or delete testimonials.</p>
+                    <p className="text-muted-foreground">Add, edit, or delete testimonials. Note: This is a demo and changes will not be saved.</p>
                 </div>
                 <Button asChild>
                     <Link href="/admin/testimonials/new">

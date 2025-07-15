@@ -19,7 +19,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useTransition } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { upsertTestimonialAction } from "../../actions";
-import type { VictimTestimonial } from "@/lib/firestore-service";
+import type { VictimTestimonial } from "@/lib/data-service";
 import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 
@@ -50,9 +50,9 @@ export function TestimonialForm({ testimonialData }: { testimonialData?: VictimT
     startTransition(async () => {
         const result = await upsertTestimonialAction(values);
         if (result?.error) {
-            toast({ title: 'Error', description: result.error, variant: 'destructive'});
+            toast({ title: 'Error submitting form', description: "Please check the form for errors.", variant: 'destructive'});
         } else {
-            toast({ title: 'Success', description: 'Testimonial saved successfully.' });
+            toast({ title: 'Success (Demo)', description: 'In a real app, this testimonial would be saved.' });
             router.push('/admin/testimonials');
         }
     })

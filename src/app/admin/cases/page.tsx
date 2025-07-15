@@ -1,5 +1,5 @@
 
-import { getSolvedCases } from "@/lib/firestore-service";
+import { getSolvedCases } from "@/lib/data-service";
 import { AdminCaseTable } from "./_components/admin-case-table";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -13,7 +13,7 @@ export default async function AdminCasesPage() {
              <div className="flex justify-between items-center">
                 <div>
                     <h1 className="text-3xl font-bold">Manage Solved Cases</h1>
-                    <p className="text-muted-foreground">Add, edit, or delete solved cases.</p>
+                    <p className="text-muted-foreground">Add, edit, or delete solved cases. Note: This is a demo and changes will not be saved.</p>
                 </div>
                 <Button asChild>
                     <Link href="/admin/cases/new">

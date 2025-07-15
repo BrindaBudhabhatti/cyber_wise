@@ -10,7 +10,7 @@ import {
   addVictimTestimonial,
   updateVictimTestimonial,
   deleteVictimTestimonial,
-} from "@/lib/firestore-service";
+} from "@/lib/data-service";
 
 const caseSchema = z.object({
   id: z.string().optional(),
@@ -32,70 +32,38 @@ const testimonialSchema = z.object({
 
 
 export async function upsertCaseAction(data: unknown) {
+  console.log("This is a demo. Data is not saved.");
   const result = caseSchema.safeParse(data);
   if (!result.success) {
     return { error: result.error.flatten().fieldErrors };
   }
-
-  const caseData = {
-      ...result.data,
-      toolsUsed: result.data.toolsUsed.split(',').map(t => t.trim()),
-      tags: result.data.tags.split(',').map(t => t.trim()),
-  }
-
-  try {
-    if (caseData.id) {
-      await updateSolvedCase(caseData.id, caseData);
-    } else {
-      await addSolvedCase(caseData);
-    }
-    revalidatePath('/admin/cases');
-    revalidatePath('/case-gallery');
-    return { success: true };
-  } catch (e) {
-    return { error: 'Failed to save the case.' };
-  }
+  revalidatePath('/admin/cases');
+  revalidatePath('/case-gallery');
+  return { success: true, message: "This is a demo. Data is not saved." };
 }
 
 export async function deleteCaseAction(id: string) {
-    try {
-        await deleteSolvedCase(id);
-        revalidatePath('/admin/cases');
-        revalidatePath('/case-gallery');
-        return { success: true };
-    } catch (e) {
-        return { error: 'Failed to delete the case.' };
-    }
+    console.log("This is a demo. Data is not saved.");
+    revalidatePath('/admin/cases');
+    revalidatePath('/case-gallery');
+    return { success: true, message: "This is a demo. Data is not saved." };
 }
 
 
 export async function upsertTestimonialAction(data: unknown) {
+  console.log("This is a demo. Data is not saved.");
   const result = testimonialSchema.safeParse(data);
   if (!result.success) {
     return { error: result.error.flatten().fieldErrors };
   }
-  
-  try {
-    if (result.data.id) {
-      await updateVictimTestimonial(result.data.id, result.data);
-    } else {
-      await addVictimTestimonial(result.data);
-    }
-    revalidatePath('/admin/testimonials');
-    revalidatePath('/case-gallery');
-    return { success: true };
-  } catch (e) {
-    return { error: 'Failed to save the testimonial.' };
-  }
+  revalidatePath('/admin/testimonials');
+  revalidatePath('/case-gallery');
+  return { success: true, message: "This is a demo. Data is not saved." };
 }
 
 export async function deleteTestimonialAction(id: string) {
-    try {
-        await deleteVictimTestimonial(id);
-        revalidatePath('/admin/testimonials');
-        revalidatePath('/case-gallery');
-        return { success: true };
-    } catch (e) {
-        return { error: 'Failed to delete the testimonial.' };
-    }
+    console.log("This is a demo. Data is not saved.");
+    revalidatePath('/admin/testimonials');
+    revalidatePath('/case-gallery');
+    return { success: true, message: "This is a demo. Data is not saved." };
 }

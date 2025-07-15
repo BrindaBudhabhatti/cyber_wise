@@ -1,5 +1,5 @@
 
-import { getVictimTestimonial } from "@/lib/firestore-service";
+import { getVictimTestimonial } from "@/lib/data-service";
 import { TestimonialForm } from "../../_components/testimonial-form";
 import { notFound } from "next/navigation";
 
@@ -14,7 +14,7 @@ export default async function EditTestimonialPage({ params }: { params: { id: st
         <div className="space-y-6">
             <div>
                 <h1 className="text-3xl font-bold">Edit Victim Voice</h1>
-                <p className="text-muted-foreground">Update the testimonial details below.</p>
+                <p className="text-muted-foreground">Update the testimonial details below. Note: This is a demo and changes will not be saved.</p>
             </div>
             <TestimonialForm testimonialData={testimonialData} />
         </div>

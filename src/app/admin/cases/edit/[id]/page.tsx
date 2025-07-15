@@ -1,5 +1,5 @@
 
-import { getSolvedCase } from "@/lib/firestore-service";
+import { getSolvedCase } from "@/lib/data-service";
 import { CaseForm } from "../../_components/case-form";
 import { notFound } from "next/navigation";
 
@@ -14,7 +14,7 @@ export default async function EditCasePage({ params }: { params: { id: string } 
         <div className="space-y-6">
             <div>
                 <h1 className="text-3xl font-bold">Edit Solved Case</h1>
-                <p className="text-muted-foreground">Update the case details below.</p>
+                <p className="text-muted-foreground">Update the case details below. Note: This is a demo and changes will not be saved.</p>
             </div>
             <CaseForm caseData={caseData} />
         </div>

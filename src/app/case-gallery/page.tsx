@@ -9,7 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Heart, Scale, MessageSquareQuote, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { getSolvedCases, getVictimTestimonials, type SolvedCase, type VictimTestimonial } from '@/lib/firestore-service';
+import { getSolvedCases, getVictimTestimonials, type SolvedCase, type VictimTestimonial } from '@/lib/data-service';
 
 export default function CaseGalleryPage() {
   const { t } = useTranslation();
@@ -99,12 +99,12 @@ export default function CaseGalleryPage() {
             {filteredCases.map(caseItem => (
               <Card key={caseItem.id} className="flex flex-col h-full shadow-sm hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <CardTitle className="text-lg">{caseItem.titleKey} ({caseItem.year})</CardTitle>
+                  <CardTitle className="text-lg">{t(caseItem.titleKey)} ({caseItem.year})</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 flex-grow">
                   <div>
                     <h4 className="font-semibold text-sm mb-1">{t('case_gallery_page.solved_cases.summary')}</h4>
-                    <p className="text-muted-foreground text-sm">{caseItem.summaryKey}</p>
+                    <p className="text-muted-foreground text-sm">{t(caseItem.summaryKey)}</p>
                   </div>
                    <div>
                     <h4 className="font-semibold text-sm mb-1">{t('case_gallery_page.solved_cases.tools_used')}</h4>
@@ -112,7 +112,7 @@ export default function CaseGalleryPage() {
                   </div>
                    <div>
                     <h4 className="font-semibold text-sm mb-1">{t('case_gallery_page.solved_cases.outcome')}</h4>
-                    <p className="text-muted-foreground text-sm">{caseItem.outcomeKey}</p>
+                    <p className="text-muted-foreground text-sm">{t(caseItem.outcomeKey)}</p>
                   </div>
                 </CardContent>
                 <div className="p-6 pt-0">
@@ -130,17 +130,17 @@ export default function CaseGalleryPage() {
             {testimonials.map(testimonial => (
               <Card key={testimonial.id} className="bg-muted/50 flex flex-col">
                 <CardHeader>
-                  <CardTitle className="text-lg">{testimonial.aliasKey}</CardTitle>
+                  <CardTitle className="text-lg">{t(testimonial.aliasKey)}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 flex-grow">
-                   <p className="italic text-card-foreground">"{testimonial.storyKey}"</p>
+                   <p className="italic text-card-foreground">"{t(testimonial.storyKey)}"</p>
                    <div>
                         <h4 className="font-semibold text-sm">{t('case_gallery_page.victim_voices.help_received')}</h4>
-                        <p className="text-sm text-muted-foreground">{testimonial.helpKey}</p>
+                        <p className="text-sm text-muted-foreground">{t(testimonial.helpKey)}</p>
                    </div>
                      <div>
                         <h4 className="font-semibold text-sm">{t('case_gallery_page.victim_voices.their_message')}</h4>
-                        <p className="text-sm text-muted-foreground">{testimonial.messageKey}</p>
+                        <p className="text-sm text-muted-foreground">{t(testimonial.messageKey)}</p>
                    </div>
                 </CardContent>
                 <div className="p-6 pt-0">

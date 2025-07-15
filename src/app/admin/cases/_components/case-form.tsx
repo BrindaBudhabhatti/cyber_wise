@@ -19,7 +19,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useTransition } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { upsertCaseAction } from "../../actions";
-import type { SolvedCase } from "@/lib/firestore-service";
+import type { SolvedCase } from "@/lib/data-service";
 import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 
@@ -58,9 +58,9 @@ export function CaseForm({ caseData }: { caseData?: SolvedCase }) {
     startTransition(async () => {
         const result = await upsertCaseAction(values);
         if (result?.error) {
-            toast({ title: 'Error', description: result.error, variant: 'destructive'});
+            toast({ title: 'Error submitting form', description: "Please check the form for errors.", variant: 'destructive'});
         } else {
-            toast({ title: 'Success', description: 'Case saved successfully.' });
+            toast({ title: 'Success (Demo)', description: 'In a real app, this case would be saved.' });
             router.push('/admin/cases');
         }
     })
