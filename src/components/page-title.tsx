@@ -23,7 +23,7 @@ export function PageTitle() {
     { href: '/breach-checker', labelKey: 'nav.breach_checker' },
     { href: '/feedback', labelKey: 'nav.feedback' },
     { href: '/reach-us', labelKey: 'nav.reach_us' },
-    { href: '/admin', labelKey: 'nav.admin_feedback' },
+    { href: '/admin', labelKey: 'nav.admin_panel' },
     { href: '/womens-safety', labelKey: 'nav.womens_safety' },
     { href: '/cyberwise-kids', labelKey: 'nav.cyberwise_kids' },
     { href: '/case-gallery', labelKey: 'nav.case_gallery' },
@@ -42,7 +42,7 @@ export function PageTitle() {
           return t('nav.games');
         }
         if (item.href === '/admin' && pathname.startsWith('/admin')) {
-            return t('nav.admin_feedback');
+            return t('nav.admin_panel');
         }
         return t(item.labelKey);
       }
@@ -52,5 +52,3 @@ export function PageTitle() {
 
   return <h2 className="text-lg font-semibold md:text-xl">{getPageTitle()}</h2>;
 }
-
-    

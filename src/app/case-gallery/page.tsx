@@ -1,31 +1,57 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { solvedCases, victimTestimonials } from '@/lib/case-gallery-data';
-import { Heart, Scale, MessageSquareQuote } from 'lucide-react';
+import { Heart, Scale, MessageSquareQuote, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { getSolvedCases, getVictimTestimonials, type SolvedCase, type VictimTestimonial } from '@/lib/firestore-service';
 
 export default function CaseGalleryPage() {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('solved-cases');
-  const [likedStories, setLikedStories] = useState<number[]>([]);
+  const [likedStories, setLikedStories] = useState<string[]>([]);
+  
+  const [solvedCases, setSolvedCases] = useState<SolvedCase[]>([]);
+  const [testimonials, setTestimonials] = useState<VictimTestimonial[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchData() {
+        setIsLoading(true);
+        const [casesData, testimonialsData] = await Promise.all([
+            getSolvedCases(),
+            getVictimTestimonials(),
+        ]);
+        setSolvedCases(casesData);
+        setTestimonials(testimonialsData);
+        setIsLoading(false);
+    }
+    fetchData();
+  }, [])
 
   const allTags = [...new Set(solvedCases.flatMap(c => c.tags))];
   const [activeTag, setActiveTag] = useState<string | null>(null);
 
   const filteredCases = activeTag ? solvedCases.filter(c => c.tags.includes(activeTag)) : solvedCases;
 
-  const toggleLike = (id: number) => {
+  const toggleLike = (id: string) => {
     setLikedStories(prev => 
         prev.includes(id) ? prev.filter(storyId => storyId !== id) : [...prev, id]
     );
   };
+
+  if (isLoading) {
+    return (
+        <div className="flex justify-center items-center h-64">
+            <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+    )
+  }
 
   return (
     <div className="space-y-6">
@@ -73,12 +99,12 @@ export default function CaseGalleryPage() {
             {filteredCases.map(caseItem => (
               <Card key={caseItem.id} className="flex flex-col h-full shadow-sm hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <CardTitle className="text-lg">{t(caseItem.titleKey)} ({caseItem.year})</CardTitle>
+                  <CardTitle className="text-lg">{caseItem.titleKey} ({caseItem.year})</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 flex-grow">
                   <div>
                     <h4 className="font-semibold text-sm mb-1">{t('case_gallery_page.solved_cases.summary')}</h4>
-                    <p className="text-muted-foreground text-sm">{t(caseItem.summaryKey)}</p>
+                    <p className="text-muted-foreground text-sm">{caseItem.summaryKey}</p>
                   </div>
                    <div>
                     <h4 className="font-semibold text-sm mb-1">{t('case_gallery_page.solved_cases.tools_used')}</h4>
@@ -86,7 +112,7 @@ export default function CaseGalleryPage() {
                   </div>
                    <div>
                     <h4 className="font-semibold text-sm mb-1">{t('case_gallery_page.solved_cases.outcome')}</h4>
-                    <p className="text-muted-foreground text-sm">{t(caseItem.outcomeKey)}</p>
+                    <p className="text-muted-foreground text-sm">{caseItem.outcomeKey}</p>
                   </div>
                 </CardContent>
                 <div className="p-6 pt-0">
@@ -101,29 +127,29 @@ export default function CaseGalleryPage() {
 
         <TabsContent value="victim-voices" className="mt-6">
           <div className="grid gap-6 md:grid-cols-2">
-            {victimTestimonials.map(testimonial => (
+            {testimonials.map(testimonial => (
               <Card key={testimonial.id} className="bg-muted/50 flex flex-col">
                 <CardHeader>
-                  <CardTitle className="text-lg">{t(testimonial.aliasKey)}</CardTitle>
+                  <CardTitle className="text-lg">{testimonial.aliasKey}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 flex-grow">
-                   <p className="italic text-card-foreground">"{t(testimonial.storyKey)}"</p>
+                   <p className="italic text-card-foreground">"{testimonial.storyKey}"</p>
                    <div>
                         <h4 className="font-semibold text-sm">{t('case_gallery_page.victim_voices.help_received')}</h4>
-                        <p className="text-sm text-muted-foreground">{t(testimonial.helpKey)}</p>
+                        <p className="text-sm text-muted-foreground">{testimonial.helpKey}</p>
                    </div>
                      <div>
                         <h4 className="font-semibold text-sm">{t('case_gallery_page.victim_voices.their_message')}</h4>
-                        <p className="text-sm text-muted-foreground">{t(testimonial.messageKey)}</p>
+                        <p className="text-sm text-muted-foreground">{testimonial.messageKey}</p>
                    </div>
                 </CardContent>
                 <div className="p-6 pt-0">
                     <Button 
                         variant="outline" 
                         size="sm"
-                        onClick={() => toggleLike(testimonial.id)}
+                        onClick={() => toggleLike(testimonial.id!)}
                     >
-                       <Heart className={cn("mr-2 h-4 w-4", likedStories.includes(testimonial.id) && "fill-red-500 text-red-500")} /> 
+                       <Heart className={cn("mr-2 h-4 w-4", likedStories.includes(testimonial.id!) && "fill-red-500 text-red-500")} /> 
                        {t('case_gallery_page.victim_voices.like_button')}
                     </Button>
                 </div>
