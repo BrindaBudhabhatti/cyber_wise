@@ -26,6 +26,7 @@ export function PageTitle() {
     { href: '/admin', labelKey: 'nav.admin_feedback' },
     { href: '/womens-safety', labelKey: 'nav.womens_safety' },
     { href: '/cyberwise-kids', labelKey: 'nav.cyberwise_kids' },
+    { href: '/case-gallery', labelKey: 'nav.case_gallery' },
   ];
 
   const getPageTitle = () => {
