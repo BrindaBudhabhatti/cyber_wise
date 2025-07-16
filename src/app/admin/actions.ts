@@ -32,38 +32,58 @@ const testimonialSchema = z.object({
 
 
 export async function upsertCaseAction(data: unknown) {
-  console.log("This is a demo. Data is not saved.");
   const result = caseSchema.safeParse(data);
   if (!result.success) {
     return { error: result.error.flatten().fieldErrors };
   }
+
+  const caseData = {
+    ...result.data,
+    toolsUsed: result.data.toolsUsed.split(',').map(t => t.trim()),
+    tags: result.data.tags.split(',').map(t => t.trim()),
+  };
+
+  if (result.data.id) {
+    await updateSolvedCase(result.data.id, caseData);
+  } else {
+    await addSolvedCase(caseData);
+  }
+
   revalidatePath('/admin/cases');
   revalidatePath('/case-gallery');
-  return { success: true, message: "This is a demo. Data is not saved." };
+  return { success: true, message: "Case saved successfully." };
 }
 
 export async function deleteCaseAction(id: string) {
-    console.log("This is a demo. Data is not saved.");
+    await deleteSolvedCase(id);
     revalidatePath('/admin/cases');
     revalidatePath('/case-gallery');
-    return { success: true, message: "This is a demo. Data is not saved." };
+    return { success: true, message: "Case deleted successfully." };
 }
 
 
 export async function upsertTestimonialAction(data: unknown) {
-  console.log("This is a demo. Data is not saved.");
   const result = testimonialSchema.safeParse(data);
   if (!result.success) {
     return { error: result.error.flatten().fieldErrors };
   }
+  
+  const testimonialData = result.data;
+
+  if (testimonialData.id) {
+      await updateVictimTestimonial(testimonialData.id, testimonialData);
+  } else {
+      await addVictimTestimonial(testimonialData);
+  }
+  
   revalidatePath('/admin/testimonials');
   revalidatePath('/case-gallery');
-  return { success: true, message: "This is a demo. Data is not saved." };
+  return { success: true, message: "Testimonial saved successfully." };
 }
 
 export async function deleteTestimonialAction(id: string) {
-    console.log("This is a demo. Data is not saved.");
+    await deleteVictimTestimonial(id);
     revalidatePath('/admin/testimonials');
     revalidatePath('/case-gallery');
-    return { success: true, message: "This is a demo. Data is not saved." };
+    return { success: true, message: "Testimonial deleted successfully." };
 }

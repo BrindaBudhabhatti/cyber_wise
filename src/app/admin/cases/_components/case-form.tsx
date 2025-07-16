@@ -60,7 +60,7 @@ export function CaseForm({ caseData }: { caseData?: SolvedCase }) {
         if (result?.error) {
             toast({ title: 'Error submitting form', description: "Please check the form for errors.", variant: 'destructive'});
         } else {
-            toast({ title: 'Success (Demo)', description: 'In a real app, this case would be saved.' });
+            toast({ title: 'Success', description: 'Case saved successfully.' });
             router.push('/admin/cases');
         }
     })

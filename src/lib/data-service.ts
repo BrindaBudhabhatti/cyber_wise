@@ -3,9 +3,10 @@
 
 import { cases } from './cases-data';
 import { testimonials } from './testimonials-data';
+import { v4 as uuidv4 } from 'uuid';
 
 export interface SolvedCase {
-    id: string;
+    id?: string;
     titleKey: string;
     year: number;
     summaryKey: string;
@@ -15,7 +16,7 @@ export interface SolvedCase {
 }
 
 export interface VictimTestimonial {
-    id: string;
+    id?: string;
     aliasKey: string;
     storyKey: string;
     helpKey: string;
@@ -38,18 +39,29 @@ export async function getSolvedCase(id: string): Promise<SolvedCase | null> {
     return caseItem;
 }
 
-export async function addSolvedCase(data: Omit<SolvedCase, 'id'>) {
-    console.log("This is a demo. Data is not saved.", data);
-    return;
+export async function addSolvedCase(data: SolvedCase) {
+    await delay(100);
+    const newCase = { ...data, id: uuidv4() };
+    cases.unshift(newCase); // Add to the beginning of the array
+    return newCase;
 }
 
-export async function updateSolvedCase(id: string, data: Omit<SolvedCase, 'id'>) {
-    console.log("This is a demo. Data is not saved.", id, data);
-    return;
+export async function updateSolvedCase(id: string, data: SolvedCase) {
+    await delay(100);
+    const caseIndex = cases.findIndex(c => c.id === id);
+    if (caseIndex !== -1) {
+        cases[caseIndex] = { ...cases[caseIndex], ...data };
+        return cases[caseIndex];
+    }
+    return null;
 }
 
 export async function deleteSolvedCase(id: string) {
-    console.log("This is a demo. Data is not saved.", id);
+    await delay(100);
+    const caseIndex = cases.findIndex(c => c.id === id);
+    if (caseIndex > -1) {
+        cases.splice(caseIndex, 1);
+    }
     return;
 }
 
@@ -66,17 +78,28 @@ export async function getVictimTestimonial(id: string): Promise<VictimTestimonia
     return testimonial;
 }
 
-export async function addVictimTestimonial(data: Omit<VictimTestimonial, 'id'>) {
-    console.log("This is a demo. Data is not saved.", data);
-    return;
+export async function addVictimTestimonial(data: VictimTestimonial) {
+    await delay(100);
+    const newTestimonial = { ...data, id: uuidv4() };
+    testimonials.unshift(newTestimonial); // Add to the beginning of the array
+    return newTestimonial;
 }
 
-export async function updateVictimTestimonial(id: string, data: Omit<VictimTestimonial, 'id'>) {
-     console.log("This is a demo. Data is not saved.", id, data);
-    return;
+export async function updateVictimTestimonial(id: string, data: VictimTestimonial) {
+    await delay(100);
+     const testimonialIndex = testimonials.findIndex(t => t.id === id);
+    if (testimonialIndex !== -1) {
+        testimonials[testimonialIndex] = { ...testimonials[testimonialIndex], ...data };
+        return testimonials[testimonialIndex];
+    }
+    return null;
 }
 
 export async function deleteVictimTestimonial(id: string) {
-    console.log("This is a demo. Data is not saved.", id);
+    await delay(100);
+    const testimonialIndex = testimonials.findIndex(t => t.id === id);
+    if (testimonialIndex > -1) {
+        testimonials.splice(testimonialIndex, 1);
+    }
     return;
 }

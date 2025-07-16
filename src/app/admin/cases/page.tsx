@@ -13,7 +13,7 @@ export default async function AdminCasesPage() {
              <div className="flex justify-between items-center">
                 <div>
                     <h1 className="text-3xl font-bold">Manage Solved Cases</h1>
-                    <p className="text-muted-foreground">Add, edit, or delete solved cases. Note: This is a demo and changes will not be saved.</p>
+                    <p className="text-muted-foreground">Add, edit, or delete solved cases from the Case Gallery.</p>
                 </div>
                 <Button asChild>
                     <Link href="/admin/cases/new">

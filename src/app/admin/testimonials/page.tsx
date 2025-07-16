@@ -13,7 +13,7 @@ export default async function AdminTestimonialsPage() {
              <div className="flex justify-between items-center">
                 <div>
                     <h1 className="text-3xl font-bold">Manage Victim Voices</h1>
-                    <p className="text-muted-foreground">Add, edit, or delete testimonials. Note: This is a demo and changes will not be saved.</p>
+                    <p className="text-muted-foreground">Add, edit, or delete testimonials from the Case Gallery.</p>
                 </div>
                 <Button asChild>
                     <Link href="/admin/testimonials/new">

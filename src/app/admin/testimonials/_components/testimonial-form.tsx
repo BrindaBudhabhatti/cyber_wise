@@ -52,7 +52,7 @@ export function TestimonialForm({ testimonialData }: { testimonialData?: VictimT
         if (result?.error) {
             toast({ title: 'Error submitting form', description: "Please check the form for errors.", variant: 'destructive'});
         } else {
-            toast({ title: 'Success (Demo)', description: 'In a real app, this testimonial would be saved.' });
+            toast({ title: 'Success', description: 'Testimonial saved successfully.' });
             router.push('/admin/testimonials');
         }
     })
