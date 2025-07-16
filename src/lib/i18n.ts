@@ -549,7 +549,7 @@ const resources = {
       "story.mystery_friend.p3": "Arjun told his older sister, Priya. Priya looked at the profile and noticed it had no other friends and was created just yesterday. 'This looks suspicious, Arjun,' she said. 'It’s better to be safe.'",
       "story.mystery_friend.p4": "Together, they blocked 'CoolGamer99' and told their parents. Arjun learned that not everyone online is who they say they are. It’s okay to say NO and block people who make you feel uncomfortable.",
       "story.mystery_friend.takeaway": "Never accept friend requests from people you don't know in real life. Keep your personal information private!",
-
+home.title
       "story.ninas_selfie_scare.title": "Diya’s Selfie Scare",
       "story.ninas_selfie_scare.description": "Learn about sharing photos safely and what happens when pictures fall into the wrong hands.",
       "story.ninas_selfie_scare.p1": "Diya loved taking selfies. She posted a cute picture of herself in her school uniform on her public profile. She got lots of likes, which made her happy.",
