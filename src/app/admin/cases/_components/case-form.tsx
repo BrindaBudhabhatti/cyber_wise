@@ -19,7 +19,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useTransition } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { upsertCaseAction } from "../../actions";
-import type { SolvedCase } from "@/lib/data-service";
+import type { SolvedCase } from "@/lib/cases-data";
 import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 
