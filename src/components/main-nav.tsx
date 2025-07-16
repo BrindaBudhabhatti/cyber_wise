@@ -19,7 +19,6 @@ import {
   HeartHandshake,
   Backpack,
   BookKey,
-  Settings,
 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -54,7 +53,6 @@ export function MainNav() {
     { href: '/feedback', labelKey: 'nav.feedback', icon: Megaphone },
     { href: '/reach-us', labelKey: 'nav.reach_us', icon: Phone },
     { href: '/chat', labelKey: 'nav.cyberbuddy', icon: MessageCircle },
-    { href: '/admin', labelKey: 'nav.admin_panel', icon: Settings },
   ];
 
   const handleLinkClick = () => {
