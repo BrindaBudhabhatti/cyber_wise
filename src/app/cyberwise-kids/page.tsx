@@ -48,15 +48,13 @@ export default function CyberWiseKidsPage() {
   const { t } = useTranslation();
 
   const littleExplorersFeatures: FeatureCardProps[] = [
-    { titleKey: 'kids_page.explorers.story.title', descriptionKey: 'kids_page.explorers.story.description', Icon: BookOpen, href: '#', ctaKey: 'kids_page.comics.cta', comingSoon: true },
+    { titleKey: 'kids_page.explorers.story.title', descriptionKey: 'kids_page.explorers.story.description', Icon: BookOpen, href: '/stories/mystery-friend', ctaKey: 'kids_page.comics.cta' },
     { titleKey: 'kids_page.explorers.coloring.title', descriptionKey: 'kids_page.explorers.coloring.description', Icon: ToyBrick, href: '#', ctaKey: 'kids_page.explorers.coloring.cta', comingSoon: true },
-    { titleKey: 'kids_page.comics.friend.title', descriptionKey: 'kids_page.comics.friend.description', Icon: UserX, href: '#', ctaKey: 'kids_page.comics.cta', comingSoon: true },
-    
   ];
   
   const smartLearnersFeatures: FeatureCardProps[] = [
     { titleKey: 'kids_page.learners.game.title', descriptionKey: 'kids_page.learners.game.description', Icon: Gamepad2, href: '/games', ctaKey: 'kids_page.learners.game.cta' },
-    { titleKey: 'kids_page.comics.selfie.title', descriptionKey: 'kids_page.comics.selfie.description', Icon: CameraOff, href: '#', ctaKey: 'kids_page.comics.cta', comingSoon: true },
+    { titleKey: 'kids_page.comics.selfie.title', descriptionKey: 'kids_page.comics.selfie.description', Icon: CameraOff, href: '/stories/ninas-selfie-scare', ctaKey: 'kids_page.comics.cta' },
     { titleKey: 'kids_page.comics.gaming.title', descriptionKey: 'kids_page.comics.gaming.description', Icon: Trophy, href: '#', ctaKey: 'kids_page.comics.cta', comingSoon: true },
     { titleKey: 'kids_page.comics.impersonation.title', descriptionKey: 'kids_page.comics.impersonation.description', Icon: UserCheck, href: '#', ctaKey: 'kids_page.comics.cta', comingSoon: true },
   ];
@@ -96,7 +94,7 @@ export default function CyberWiseKidsPage() {
               <CardTitle>{t('kids_page.explorers.title')}</CardTitle>
               <CardDescription>{t('kids_page.explorers.description')}</CardDescription>
             </CardHeader>
-            <CardContent className="grid md:grid-cols-3 gap-6">
+            <CardContent className="grid md:grid-cols-2 gap-6">
                 {littleExplorersFeatures.map(feature => <FeatureCard key={feature.titleKey} {...feature} />)}
             </CardContent>
           </Card>

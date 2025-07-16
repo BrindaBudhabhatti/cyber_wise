@@ -133,7 +133,7 @@ const resources = {
       "kids_page.learners.game.description": "Play games like Phishing Spotter and Password Puzzles to sharpen your skills.",
       "kids_page.learners.game.cta": "Play Games",
 
-      "kids_page.comics.cta": "Read Story (Coming Soon)",
+      "kids_page.comics.cta": "Read Story",
       "kids_page.comics.selfie.title": "Nina’s Selfie Scare",
       "kids_page.comics.selfie.description": "Learn about sharing photos safely and what happens when pictures fall into the wrong hands.",
       "kids_page.comics.friend.title": "The Mystery Friend Request",
@@ -539,7 +539,24 @@ const resources = {
       "about_dialog.cyberbuddy.l4": "Support resources like reporting channels and psychological help",
       "about_dialog.cyberbuddy.l5": "Engaging quizzes and learning modules on cyber safety",
       "about_dialog.cyberwise.title": "CyberWise",
-      "about_dialog.cyberwise.p1": "As CyberWise, I strive to simplify complex cyber concepts, making digital literacy and cybersecurity accessible for all. My goal is to empower individuals with knowledge, so they can protect themselves and others in the digital space."
+      "about_dialog.cyberwise.p1": "As CyberWise, I strive to simplify complex cyber concepts, making digital literacy and cybersecurity accessible for all. My goal is to empower individuals with knowledge, so they can protect themselves and others in the digital space.",
+
+      "story.back_button": "Back to CyberWise Kids",
+      "story.mystery_friend.title": "The Mystery Friend Request",
+      "story.mystery_friend.description": "A story about recognizing and dealing with suspicious friend requests from strangers online.",
+      "story.mystery_friend.p1": "Leo loved playing online games. One day, he got a friend request from someone named 'CoolGamer99'. Leo didn’t know them, but their profile picture was a cool dragon, so he accepted.",
+      "story.mystery_friend.p2": "'CoolGamer99' started asking Leo questions. 'Where do you live?' 'What’s your school’s name?' Leo felt a little weird. He remembered his parents telling him not to share personal information with strangers.",
+      "story.mystery_friend.p3": "Leo told his older sister, Mia. Mia looked at the profile and noticed it had no other friends and was created just yesterday. 'This looks suspicious, Leo,' she said. 'It’s better to be safe.'",
+      "story.mystery_friend.p4": "Together, they blocked 'CoolGamer99' and told their parents. Leo learned that not everyone online is who they say they are. It’s okay to say NO and block people who make you feel uncomfortable.",
+      "story.mystery_friend.takeaway": "Never accept friend requests from people you don't know in real life. Keep your personal information private!",
+
+      "story.ninas_selfie_scare.title": "Nina’s Selfie Scare",
+      "story.ninas_selfie_scare.description": "Learn about sharing photos safely and what happens when pictures fall into the wrong hands.",
+      "story.ninas_selfie_scare.p1": "Nina loved taking selfies. She posted a cute picture of herself in her school uniform on her public profile. She got lots of likes, which made her happy.",
+      "story.ninas_selfie_scare.p2": "A few days later, a classmate showed Nina a new profile using her selfie. The profile was posting mean comments and pretending to be her. The school name was visible on her uniform, which was scary.",
+      "story.ninas_selfie_scare.p3": "Nina was heartbroken and scared. She told her teacher, who helped her report the fake profile. Her teacher explained that sharing photos with personal details, like a school uniform, can be risky.",
+      "story.ninas_selfie_scare.p4": "Nina made her profile private and learned to think before she posted. She started sharing her photos only with close friends and family. She realized that online safety is just as important as offline safety.",
+      "story.ninas_selfie_scare.takeaway": "Think twice before you post. Avoid sharing photos with personal details and keep your social media profiles private."
     },
   },
   hi: {
@@ -672,7 +689,7 @@ const resources = {
       "kids_page.learners.game.description": "अपने कौशल को तेज करने के लिए फ़िशिंग स्पॉटर और पासवर्ड पहेलियाँ जैसे खेल खेलें।",
       "kids_page.learners.game.cta": "खेल खेलें",
       
-      "kids_page.comics.cta": "कहानी पढ़ें (जल्द आ रहा है)",
+      "kids_page.comics.cta": "कहानी पढ़ें",
       "kids_page.comics.selfie.title": "नीना की सेल्फी स्केयर",
       "kids_page.comics.selfie.description": "फोटो को सुरक्षित रूप से साझा करने और जब तस्वीरें गलत हाथों में पड़ जाती हैं तो क्या होता है, इसके बारे में जानें।",
       "kids_page.comics.friend.title": "रहस्यमयी फ्रेंड रिक्वेस्ट",
@@ -1211,12 +1228,12 @@ const resources = {
       "kids_page.learners.game.description": "તમારી કુશળતાને તીવ્ર બનાવવા માટે ફિશિંગ સ્પોટર અને પાસવર્ડ પઝલ જેવી રમતો રમો.",
       "kids_page.learners.game.cta": "રમતો રમો",
       
-      "kids_page.comics.cta": "વાર્તા વાંચો (ટૂંક સમયમાં આવી રહ્યું છે)",
+      "kids_page.comics.cta": "વાર્તા વાંચો",
       "kids_page.comics.selfie.title": "નીનાની સેલ્ફી સ્કેર",
       "kids_page.comics.selfie.description": "ફોટા સુરક્ષિત રીતે શેર કરવા અને જ્યારે ચિત્રો ખોટા હાથમાં પડે ત્યારે શું થાય છે તે વિશે જાણો.",
       "kids_page.comics.friend.title": "રહસ્યમય મિત્ર વિનંતી",
       "kids_page.comics.friend.description": "ઓનલાઈન અજાણ્યાઓ તરફથી શંકાસ્પદ મિત્ર વિનંતીઓને ઓળખવા અને તેનો સામનો કરવા વિશેની વાર્તા.",
-      "kids_page.comics.gaming.title": "ગોલ્ડન આર્મરની શોધ",
+      "kids_page.comics.gaming.title": "ગોલ્ડન आर्मरની શોધ",
       "kids_page.comics.gaming.description": "એક ગેમરને અનુસરો જે ઇન-ગેમ આઇટમ્સ માટે નકલી ચીટ્સ અને કૌભાંડો વિશે કઠિન પાઠ શીખે છે.",
       "kids_page.comics.impersonation.title": "નકલી શિક્ષક",
       "kids_page.comics.impersonation.description": "વ્યક્તિગત માહિતી મેળવવા માટે શિક્ષક હોવાનો ઢોંગ કરનાર સ્કેમર વિશેની વાર્તા.",
@@ -1617,7 +1634,24 @@ const resources = {
       "about_dialog.cyberbuddy.l4": "રિપોર્ટિંગ ચેનલો અને મનોવૈજ્ઞાનિક સહાય જેવા સહાયક સંસાધનો",
       "about_dialog.cyberbuddy.l5": "સાયબર સુરક્ષા પર આકર્ષક ક્વિઝ અને લર્નિંગ મોડ્યુલ્સ",
       "about_dialog.cyberwise.title": "સાયબરવાઇઝ",
-      "about_dialog.cyberwise.p1": "સાયબરવાઇઝ તરીકે, હું જટિલ સાયબર વિભાવનાઓને સરળ બનાવવાનો પ્રયત્ન કરું છું, જે ડિજિટલ સાક્ષરતા અને સાયબર સુરક્ષાને બધા માટે સુલભ બનાવે છે. મારો ધ્યેય વ્યક્તિઓને જ્ઞાન સાથે સશક્ત બનાવવાનો છે, જેથી તેઓ ડિજિટલ સ્પેસમાં પોતાને અને અન્યને સુરક્ષિત રાખી શકે."
+      "about_dialog.cyberwise.p1": "સાયબરવાઇઝ તરીકે, હું જટિલ સાયબર વિભાવનાઓને સરળ બનાવવાનો પ્રયત્ન કરું છું, જે ડિજિટલ સાક્ષરતા અને સાયબર સુરક્ષાને બધા માટે સુલભ બનાવે છે. મારો ધ્યેય વ્યક્તિઓને જ્ઞાન સાથે સશક્ત બનાવવાનો છે, જેથી તેઓ ડિજિટલ સ્પેસમાં પોતાને અને અન્યને સુરક્ષિત રાખી શકે.",
+      
+      "story.back_button": "સાયબરવાઇઝ કિડ્સ પર પાછા જાઓ",
+      "story.mystery_friend.title": "રહસ્યમય મિત્ર વિનંતી",
+      "story.mystery_friend.description": "ઓનલાઈન અજાણ્યાઓ તરફથી શંકાસ્પદ મિત્ર વિનંતીઓને ઓળખવા અને તેનો સામનો કરવા વિશેની વાર્તા.",
+      "story.mystery_friend.p1": "લીઓને ઓનલાઈન ગેમ રમવાનું બહુ ગમતું. એક દિવસ, તેને 'CoolGamer99' નામના કોઈક તરફથી ફ્રેન્ડ રિક્વેસ્ટ મળી. લીઓ તેમને ઓળખતો ન હતો, પરંતુ તેમનો પ્રોફાઈલ પિક્ચર એક સરસ ડ્રેગનનો હતો, તેથી તેણે સ્વીકારી લીધી.",
+      "story.mystery_friend.p2": "'CoolGamer99' એ લીઓને પ્રશ્નો પૂછવાનું શરૂ કર્યું. 'તમે ક્યાં રહો છો?' 'તમારી શાળાનું નામ શું છે?' લીઓને થોડું વિચિત્ર લાગ્યું. તેને યાદ આવ્યું કે તેના માતાપિતાએ તેને અજાણ્યાઓ સાથે અંગત માહિતી શેર ન કરવા કહ્યું હતું.",
+      "story.mystery_friend.p3": "લીઓએ તેની મોટી બહેન મિયાને કહ્યું. મિયાએ પ્રોફાઈલ જોઈ અને નોંધ્યું કે તેના કોઈ અન્ય મિત્રો નથી અને તે ગઈકાલે જ બનાવવામાં આવી હતી. 'આ શંકાસ્પદ લાગે છે, લીઓ,' તેણે કહ્યું. 'સલામત રહેવું વધુ સારું છે.'",
+      "story.mystery_friend.p4": "તેઓએ સાથે મળીને 'CoolGamer99' ને બ્લોક કરી દીધા અને તેમના માતાપિતાને કહ્યું. લીઓએ શીખ્યું કે ઓનલાઈન દરેક જણ તે નથી જે તેઓ કહે છે. જે લોકો તમને અસ્વસ્થતા અનુભવ કરાવે છે તેમને ના કહેવું અને બ્લોક કરવું ઠીક છે.",
+      "story.mystery_friend.takeaway": "તમે વાસ્તવિક જીવનમાં જેમને નથી ઓળખતા તેવા લોકો પાસેથી ક્યારેય ફ્રેન્ડ રિક્વેસ્ટ સ્વીકારશો નહીં. તમારી અંગત માહિતી ખાનગી રાખો!",
+
+      "story.ninas_selfie_scare.title": "નીનાની સેલ્ફીનો ડર",
+      "story.ninas_selfie_scare.description": "ફોટા સુરક્ષિત રીતે શેર કરવા અને જ્યારે ચિત્રો ખોટા હાથમાં આવી જાય ત્યારે શું થાય છે તે વિશે જાણો.",
+      "story.ninas_selfie_scare.p1": "નીનાને સેલ્ફી લેવાનો બહુ શોખ હતો. તેણે તેની શાળાના ગણવેશમાં પોતાની એક સુંદર તસવીર તેની સાર્વજનિક પ્રોફાઇલ પર પોસ્ટ કરી. તેને ઘણી લાઈક્સ મળી, જેનાથી તે ખુશ થઈ.",
+      "story.ninas_selfie_scare.p2": "થોડા દિવસો પછી, એક સહાધ્યાયીએ નીનાને તેની સેલ્ફીનો ઉપયોગ કરતી એક નવી પ્રોફાઇલ બતાવી. પ્રોફાઇલ ખરાબ ટિપ્પણીઓ પોસ્ટ કરી રહી હતી અને તે હોવાનો ઢોંગ કરી રહી હતી. તેના ગણવેશ પર શાળાનું નામ દેખાઈ રહ્યું હતું, જે ડરામણું હતું.",
+      "story.ninas_selfie_scare.p3": "નીનાનું દિલ તૂટી ગયું અને તે ડરી ગઈ. તેણે તેના શિક્ષકને કહ્યું, જેમણે તેને નકલી પ્રોફાઇલની જાણ કરવામાં મદદ કરી. તેના શિક્ષકે સમજાવ્યું કે શાળાના ગણવેશ જેવી અંગત વિગતોવાળી તસવીરો શેર કરવી જોખમી હોઈ શકે છે.",
+      "story.ninas_selfie_scare.p4": "નીનાએ તેની પ્રોફાઇલ ખાનગી બનાવી અને પોસ્ટ કરતા પહેલા વિચારવાનું શીખી. તેણે ફક્ત નજીકના મિત્રો અને પરિવાર સાથે જ તેની તસવીરો શેર કરવાનું શરૂ કર્યું. તેણે સમજ્યું કે ઓનલાઈન સલામતી ઑફલાઈન સલામતી જેટલી જ મહત્વપૂર્ણ છે.",
+      "story.ninas_selfie_scare.takeaway": "તમે પોસ્ટ કરો તે પહેલાં બે વાર વિચારો. અંગત વિગતોવાળી તસવીરો શેર કરવાનું ટાળો અને તમારી સોશિયલ મીડિયા પ્રોફાઇલ ખાનગી રાખો."
     },
   },
 };
