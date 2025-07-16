@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ToyBrick, Gamepad2, Smartphone, Users, BookOpen, ArrowRight, Video, ShieldQuestion, Bot, HeartHandshake, CameraOff, UserX, Trophy } from 'lucide-react';
+import { ToyBrick, Gamepad2, Smartphone, Users, BookOpen, ArrowRight, Video, ShieldQuestion, Bot, HeartHandshake, CameraOff, UserX, Trophy, Drama, Skull, MessageSquareHeart, UserCheck } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 type FeatureCardProps = {
@@ -48,19 +48,23 @@ export default function CyberWiseKidsPage() {
   const { t } = useTranslation();
 
   const littleExplorersFeatures: FeatureCardProps[] = [
-    { titleKey: 'kids_page.explorers.story.title', descriptionKey: 'kids_page.explorers.story.description', Icon: BookOpen, href: '#', ctaKey: 'kids_page.explorers.story.cta', comingSoon: true },
+    { titleKey: 'kids_page.explorers.story.title', descriptionKey: 'kids_page.explorers.story.description', Icon: BookOpen, href: '#', ctaKey: 'kids_page.comics.cta', comingSoon: true },
     { titleKey: 'kids_page.explorers.coloring.title', descriptionKey: 'kids_page.explorers.coloring.description', Icon: ToyBrick, href: '#', ctaKey: 'kids_page.explorers.coloring.cta', comingSoon: true },
+    { titleKey: 'kids_page.comics.friend.title', descriptionKey: 'kids_page.comics.friend.description', Icon: UserX, href: '#', ctaKey: 'kids_page.comics.cta', comingSoon: true },
+    
   ];
   
   const smartLearnersFeatures: FeatureCardProps[] = [
     { titleKey: 'kids_page.learners.game.title', descriptionKey: 'kids_page.learners.game.description', Icon: Gamepad2, href: '/games', ctaKey: 'kids_page.learners.game.cta' },
     { titleKey: 'kids_page.comics.selfie.title', descriptionKey: 'kids_page.comics.selfie.description', Icon: CameraOff, href: '#', ctaKey: 'kids_page.comics.cta', comingSoon: true },
-    { titleKey: 'kids_page.comics.friend.title', descriptionKey: 'kids_page.comics.friend.description', Icon: UserX, href: '#', ctaKey: 'kids_page.comics.cta', comingSoon: true },
     { titleKey: 'kids_page.comics.gaming.title', descriptionKey: 'kids_page.comics.gaming.description', Icon: Trophy, href: '#', ctaKey: 'kids_page.comics.cta', comingSoon: true },
+    { titleKey: 'kids_page.comics.impersonation.title', descriptionKey: 'kids_page.comics.impersonation.description', Icon: UserCheck, href: '#', ctaKey: 'kids_page.comics.cta', comingSoon: true },
   ];
   
   const cyberTeensFeatures: FeatureCardProps[] = [
-    { titleKey: 'kids_page.teens.reels.title', descriptionKey: 'kids_page.teens.reels.description', Icon: Video, href: '#', ctaKey: 'kids_page.teens.reels.cta', comingSoon: true },
+    { titleKey: 'kids_page.teens.story_sextortion.title', descriptionKey: 'kids_page.teens.story_sextortion.description', Icon: Skull, href: '#', ctaKey: 'kids_page.comics.cta', comingSoon: true },
+    { titleKey: 'kids_page.teens.story_grooming.title', descriptionKey: 'kids_page.teens.story_grooming.description', Icon: MessageSquareHeart, href: '#', ctaKey: 'kids_page.comics.cta', comingSoon: true },
+    { titleKey: 'kids_page.teens.story_bullying.title', descriptionKey: 'kids_page.teens.story_bullying.description', Icon: Drama, href: '#', ctaKey: 'kids_page.comics.cta', comingSoon: true },
     { titleKey: 'kids_page.teens.quiz.title', descriptionKey: 'kids_page.teens.quiz.description', Icon: ShieldQuestion, href: '/quiz', ctaKey: 'kids_page.teens.quiz.cta' },
     { titleKey: 'kids_page.teens.chatbot.title', descriptionKey: 'kids_page.teens.chatbot.description', Icon: Bot, href: '/chat', ctaKey: 'kids_page.teens.chatbot.cta' },
     { titleKey: 'kids_page.teens.mental_health.title', descriptionKey: 'kids_page.teens.mental_health.description', Icon: HeartHandshake, href: '/report', ctaKey: 'kids_page.teens.mental_health.cta' },
@@ -92,7 +96,7 @@ export default function CyberWiseKidsPage() {
               <CardTitle>{t('kids_page.explorers.title')}</CardTitle>
               <CardDescription>{t('kids_page.explorers.description')}</CardDescription>
             </CardHeader>
-            <CardContent className="grid md:grid-cols-2 gap-6">
+            <CardContent className="grid md:grid-cols-3 gap-6">
                 {littleExplorersFeatures.map(feature => <FeatureCard key={feature.titleKey} {...feature} />)}
             </CardContent>
           </Card>
@@ -116,7 +120,7 @@ export default function CyberWiseKidsPage() {
               <CardTitle>{t('kids_page.teens.title')}</CardTitle>
               <CardDescription>{t('kids_page.teens.description')}</CardDescription>
             </CardHeader>
-            <CardContent className="grid md:grid-cols-2 gap-6">
+            <CardContent className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {cyberTeensFeatures.map(feature => <FeatureCard key={feature.titleKey} {...feature} />)}
             </CardContent>
           </Card>
