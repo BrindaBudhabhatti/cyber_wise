@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ToyBrick, Gamepad2, Smartphone, Users, BookOpen, ArrowRight, Video, ShieldQuestion, Bot, HeartHandshake, CameraOff, UserX, Trophy, Drama, Skull, MessageSquareHeart, UserCheck } from 'lucide-react';
+import { ToyBrick, Gamepad2, Smartphone, Users, BookOpen, ArrowRight, Video, ShieldQuestion, Bot, HeartHandshake, CameraOff, Trophy, Drama, Skull, MessageSquareHeart, UserCheck } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 type FeatureCardProps = {
