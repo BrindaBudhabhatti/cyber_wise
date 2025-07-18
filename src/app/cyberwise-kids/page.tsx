@@ -48,9 +48,44 @@ export default function CyberWiseKidsPage() {
   const { t } = useTranslation();
 
   const littleExplorersFeatures: FeatureCardProps[] = [
-    { titleKey: 'kids_page.explorers.story.title', descriptionKey: 'kids_page.explorers.story.description', Icon: BookOpen, href: '/stories/mystery-friend', ctaKey: 'kids_page.comics.cta' },
-    { titleKey: 'kids_page.explorers.coloring.title', descriptionKey: 'kids_page.explorers.coloring.description', Icon: ToyBrick, href: '#', ctaKey: 'kids_page.explorers.coloring.cta', comingSoon: true },
+    {
+      titleKey: 'story.aarav_talking_tablet.title',
+      descriptionKey: 'story.aarav_talking_tablet.description',
+      Icon: BookOpen,
+      href: '/stories/aarav-talking-tablet',
+      ctaKey: 'kids_page.comics.cta'
+    },
+    {
+      titleKey: 'story.nisha_password.title',
+      descriptionKey: 'story.nisha_password.description',
+      Icon: ToyBrick,
+      href: '/stories/nisha-password',
+      ctaKey: 'kids_page.comics.cta'
+    },
+    {
+      titleKey: 'story.raju_magic_tablet.title',
+      descriptionKey: 'story.raju_magic_tablet.description',
+      Icon: Video,
+      href: '/stories/raju-magic-tablet',
+      ctaKey: 'kids_page.comics.cta'
+    },
+    {
+      titleKey: 'story.maya_picture.title',
+      descriptionKey: 'story.maya_picture.description',
+      Icon: CameraOff,
+      href: '/stories/maya-picture',
+      ctaKey: 'kids_page.comics.cta'
+    },
+    {
+      titleKey: 'kids_page.explorers.coloring.title',
+      descriptionKey: 'kids_page.explorers.coloring.description',
+      Icon: ToyBrick,
+      href: '#',
+      ctaKey: 'kids_page.explorers.coloring.cta',
+      comingSoon: true
+    }
   ];
+  
   
   const smartLearnersFeatures: FeatureCardProps[] = [
     { titleKey: 'kids_page.learners.game.title', descriptionKey: 'kids_page.learners.game.description', Icon: Gamepad2, href: '/games', ctaKey: 'kids_page.learners.game.cta' },

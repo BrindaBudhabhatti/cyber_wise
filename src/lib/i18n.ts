@@ -549,14 +549,47 @@ const resources = {
       "story.mystery_friend.p3": "Arjun told his older sister, Priya. Priya looked at the profile and noticed it had no other friends and was created just yesterday. 'This looks suspicious, Arjun,' she said. 'It’s better to be safe.'",
       "story.mystery_friend.p4": "Together, they blocked 'CoolGamer99' and told their parents. Arjun learned that not everyone online is who they say they are. It’s okay to say NO and block people who make you feel uncomfortable.",
       "story.mystery_friend.takeaway": "Never accept friend requests from people you don't know in real life. Keep your personal information private!",
-home.title
+
       "story.ninas_selfie_scare.title": "Diya’s Selfie Scare",
       "story.ninas_selfie_scare.description": "Learn about sharing photos safely and what happens when pictures fall into the wrong hands.",
       "story.ninas_selfie_scare.p1": "Diya loved taking selfies. She posted a cute picture of herself in her school uniform on her public profile. She got lots of likes, which made her happy.",
       "story.ninas_selfie_scare.p2": "A few days later, a classmate showed Diya a new profile using her selfie. The profile was posting mean comments and pretending to be her. The school name was visible on her uniform, which was scary.",
       "story.ninas_selfie_scare.p3": "Diya was heartbroken and scared. She told her teacher, who helped her report the fake profile. Her teacher explained that sharing photos with personal details, like a school uniform, can be risky.",
       "story.ninas_selfie_scare.p4": "Diya made her profile private and learned to think before she posted. She started sharing her photos only with close friends and family. She realized that online safety is just as important as offline safety.",
-      "story.ninas_selfie_scare.takeaway": "Think twice before you post. Avoid sharing photos with personal details and keep your social media profiles private."
+      "story.ninas_selfie_scare.takeaway": "Think twice before you post. Avoid sharing photos with personal details and keep your social media profiles private.",
+
+      "story.aarav_talking_tablet.title": "Aarav’s Talking Tablet",
+      "story.aarav_talking_tablet.description": "Aarav taps a funny cartoon ad. But it takes him to a strange game! He learns to ask before tapping anything new online.",
+      "story.aarav_talking_tablet.p1": "Aarav was watching cartoons on his tablet when a funny ad popped up saying, 'Tap me! I talk!'",
+      "story.aarav_talking_tablet.p2": "He tapped the ad, and suddenly, a strange game started with loud noises and scary images.",
+      "story.aarav_talking_tablet.p3": "Aarav got scared and ran to his mother. She told him to never tap unknown pop-ups or links.",
+      "story.aarav_talking_tablet.p4": "Together, they blocked the ad and Aarav learned to always ask an adult before clicking anything new.",
+      "story.aarav_talking_tablet.takeaway": "Don’t tap unknown ads or pop-ups. Always ask an adult first!",
+
+      "story.nisha_password.title": "Nisha’s Secret Password",
+      "story.nisha_password.description": "Nisha shares her game password with her friend Meena. But the password gets changed! Nisha learns to keep her password safe.",
+      "story.nisha_password.p1": "Nisha loved playing 'Fruit Battle' and had a fun password: mango123.",
+      "story.nisha_password.p2": "One day, she told her friend Meena the password so they could play together.",
+      "story.nisha_password.p3": "But later, Nisha couldn’t log in. The password was changed!",
+      "story.nisha_password.p4": "Her parents helped her reset it, and she learned that passwords are meant to be private—even with friends.",
+      "story.nisha_password.takeaway": "Never share your passwords. Keep them safe, even from friends!",
+
+      "story.raju_magic_tablet.title": "Raju and the Magic Tablet",
+      "story.raju_magic_tablet.description": "Raju plays nonstop on his tablet. He dreams his toys are sad! Raju learns that playing outside is just as fun as playing on screens.",
+      "story.raju_magic_tablet.p1": "Raju loved playing games on his tablet and forgot to play with his toys.",
+      "story.raju_magic_tablet.p2": "One night, he dreamed that his toys were crying and missing him.",
+      "story.raju_magic_tablet.p3": "They said, 'Come back and play with us, Raju!'",
+      "story.raju_magic_tablet.p4": "Next day, Raju decided to spend time with his toys and play outside too. Balance is fun!",
+      "story.raju_magic_tablet.takeaway": "Too much screen time is not healthy. Take breaks and enjoy the real world!",
+
+      "story.maya_picture.title": "Maya’s Magic Picture",
+      "story.maya_picture.description": "Maya shares a selfie wearing her school badge. A stranger asks, 'Do you study at Green Valley School?' Maya learns to post safely.",
+      "story.maya_picture.p1": "Maya took a nice selfie in her school uniform and posted it online.",
+      "story.maya_picture.p2": "Soon, a stranger commented, 'You go to Green Valley School, right?'",
+      "story.maya_picture.p3": "Maya got scared and told her older brother. He said, 'Don’t share photos that show personal info!'",
+      "story.maya_picture.p4": "She made her profile private and stopped sharing school pictures. She felt safer and smarter.",
+      "story.maya_picture.takeaway": "Don’t share photos with school names, house numbers, or private details!"
+      
     },
   },
   hi: {
