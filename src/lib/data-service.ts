@@ -1,9 +1,7 @@
 
 'use server';
 
-import { v4 as uuidv4 } from 'uuid';
-import fs from 'fs/promises';
-import path from 'path';
+import { createClient } from './supabase-client';
 
 export interface SolvedCase {
     id?: string;
@@ -23,99 +21,143 @@ export interface VictimTestimonial {
     messageKey: string;
 }
 
-const casesPath = path.join(process.cwd(), 'src/lib/data/cases.json');
-const testimonialsPath = path.join(process.cwd(), 'src/lib/data/testimonials.json');
-
-async function readData<T>(filePath: string): Promise<T[]> {
-    try {
-        const data = await fs.readFile(filePath, 'utf-8');
-        return JSON.parse(data) as T[];
-    } catch (error) {
-        if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-            return []; // File doesn't exist, return empty array
-        }
-        throw error;
-    }
-}
-
-async function writeData<T>(filePath: string, data: T[]): Promise<void> {
-    await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8');
-}
-
+const supabase = createClient();
 
 // Functions for Solved Cases
 export async function getSolvedCases(): Promise<SolvedCase[]> {
-    const cases = await readData<SolvedCase>(casesPath);
-    return cases.sort((a, b) => b.year - a.year);
+    const { data, error } = await supabase
+        .from('cases')
+        .select('*')
+        .order('year', { ascending: false });
+
+    if (error) {
+        console.error('Error fetching cases:', error);
+        return [];
+    }
+    return data as SolvedCase[];
 }
 
 export async function getSolvedCase(id: string): Promise<SolvedCase | null> {
-    const cases = await readData<SolvedCase>(casesPath);
-    const caseItem = cases.find(c => c.id === id) || null;
-    return caseItem;
+    const { data, error } = await supabase
+        .from('cases')
+        .select('*')
+        .eq('id', id)
+        .single();
+
+    if (error) {
+        console.error('Error fetching case:', error);
+        return null;
+    }
+    return data as SolvedCase;
 }
 
-export async function addSolvedCase(data: SolvedCase) {
-    const cases = await readData<SolvedCase>(casesPath);
-    const newCase = { ...data, id: uuidv4() };
-    cases.unshift(newCase);
-    await writeData(casesPath, cases);
+export async function addSolvedCase(data: Omit<SolvedCase, 'id'>) {
+    const { data: newCase, error } = await supabase
+        .from('cases')
+        .insert([data])
+        .select()
+        .single();
+
+    if (error) {
+        console.error('Error adding case:', error);
+        return null;
+    }
     return newCase;
 }
 
-export async function updateSolvedCase(id: string, data: SolvedCase) {
-    const cases = await readData<SolvedCase>(casesPath);
-    const caseIndex = cases.findIndex(c => c.id === id);
-    if (caseIndex !== -1) {
-        cases[caseIndex] = { ...cases[caseIndex], ...data, id };
-        await writeData(casesPath, cases);
-        return cases[caseIndex];
+export async function updateSolvedCase(id: string, data: Partial<SolvedCase>) {
+    const { data: updatedCase, error } = await supabase
+        .from('cases')
+        .update(data)
+        .eq('id', id)
+        .select()
+        .single();
+
+    if (error) {
+        console.error('Error updating case:', error);
+        return null;
     }
-    return null;
+    return updatedCase;
 }
 
 export async function deleteSolvedCase(id: string) {
-    const cases = await readData<SolvedCase>(casesPath);
-    const updatedCases = cases.filter(c => c.id !== id);
-    await writeData(casesPath, updatedCases);
+    const { error } = await supabase
+        .from('cases')
+        .delete()
+        .eq('id', id);
+
+    if (error) {
+        console.error('Error deleting case:', error);
+    }
     return;
 }
 
 
 // Functions for Victim Testimonials
 export async function getVictimTestimonials(): Promise<VictimTestimonial[]> {
-    const testimonials = await readData<VictimTestimonial>(testimonialsPath);
-    return testimonials;
+     const { data, error } = await supabase
+        .from('testimonials')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+    if (error) {
+        console.error('Error fetching testimonials:', error);
+        return [];
+    }
+    return data as VictimTestimonial[];
 }
 
 export async function getVictimTestimonial(id: string): Promise<VictimTestimonial | null> {
-    const testimonials = await readData<VictimTestimonial>(testimonialsPath);
-    const testimonial = testimonials.find(t => t.id === id) || null;
-    return testimonial;
+    const { data, error } = await supabase
+        .from('testimonials')
+        .select('*')
+        .eq('id', id)
+        .single();
+
+    if (error) {
+        console.error('Error fetching testimonial:', error);
+        return null;
+    }
+    return data as VictimTestimonial;
 }
 
-export async function addVictimTestimonial(data: VictimTestimonial) {
-    const testimonials = await readData<VictimTestimonial>(testimonialsPath);
-    const newTestimonial = { ...data, id: uuidv4() };
-    testimonials.unshift(newTestimonial);
-    await writeData(testimonialsPath, testimonials);
+export async function addVictimTestimonial(data: Omit<VictimTestimonial, 'id'>) {
+    const { data: newTestimonial, error } = await supabase
+        .from('testimonials')
+        .insert([data])
+        .select()
+        .single();
+    
+    if (error) {
+        console.error('Error adding testimonial:', error);
+        return null;
+    }
     return newTestimonial;
 }
 
-export async function updateVictimTestimonial(id: string, data: VictimTestimonial) {
-     const testimonials = await readData<VictimTestimonial>(testimonialsPath);
-     const testimonialIndex = testimonials.findIndex(t => t.id === id);
-    if (testimonialIndex !== -1) {
-        testimonials[testimonialIndex] = { ...testimonials[testimonialIndex], ...data, id };
-        await writeData(testimonialsPath, testimonials);
-        return testimonials[testimonialIndex];
+export async function updateVictimTestimonial(id: string, data: Partial<VictimTestimonial>) {
+    const { data: updatedTestimonial, error } = await supabase
+        .from('testimonials')
+        .update(data)
+        .eq('id', id)
+        .select()
+        .single();
+
+    if (error) {
+        console.error('Error updating testimonial:', error);
+        return null;
     }
-    return null;
+    return updatedTestimonial;
 }
 
 export async function deleteVictimTestimonial(id: string) {
-    const testimonials = await readData<VictimTestimonial>(testimonialsPath);
-    const updatedTestimonials = testimonials.filter(t => t.id !== id);
-    await writeData(testimonialsPath, updatedTestimonials);
+    const { error } = await supabase
+        .from('testimonials')
+        .delete()
+        .eq('id', id);
+        
+    if (error) {
+        console.error('Error deleting testimonial:', error);
+    }
     return;
 }
