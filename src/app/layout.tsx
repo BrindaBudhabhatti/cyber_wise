@@ -8,6 +8,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { Inter } from 'next/font/google'
 import { ExitIntentDialog } from '@/components/exit-intent-dialog'
 import Script from 'next/script'
+import { DigitalRain } from '@/components/digital-rain'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           disableTransitionOnChange
         >
           <I18nProvider>
+            <DigitalRain />
             <MainLayout>{children}</MainLayout>
             <Toaster />
             <ExitIntentDialog />
