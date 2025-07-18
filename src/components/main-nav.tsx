@@ -39,7 +39,6 @@ export function MainNav() {
     { href: '/', labelKey: 'nav.home', icon: Home },
     { href: '/learn', labelKey: 'nav.learn', icon: BookOpen },
     { href: '/womens-safety', labelKey: 'nav.womens_safety', icon: HeartHandshake },
-    { href: '/cyberwise-kids', labelKey: 'nav.cyberwise_kids', icon: Backpack },
     { href: '/news', labelKey: 'nav.news', icon: Newspaper },
     { href: '/stats', labelKey: 'nav.stats', icon: BarChart },
     { href: '/case-gallery', labelKey: 'nav.case_gallery', icon: BookKey },

@@ -25,7 +25,6 @@ export function PageTitle() {
     { href: '/reach-us', labelKey: 'nav.reach_us' },
     { href: '/admin', labelKey: 'nav.admin_panel' },
     { href: '/womens-safety', labelKey: 'nav.womens_safety' },
-    { href: '/cyberwise-kids', labelKey: 'nav.cyberwise_kids' },
     { href: '/case-gallery', labelKey: 'nav.case_gallery' },
   ];
 
