@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { BookKey, MessageSquareQuote, PlusCircle } from 'lucide-react';
+import { BookKey, MessageSquareQuote, PlusCircle, Smile } from 'lucide-react';
 
 export default function AdminDashboardPage() {
   const { t } = useTranslation();
@@ -17,7 +17,7 @@ export default function AdminDashboardPage() {
         <p className="text-muted-foreground">{t('admin_dashboard.description')}</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -49,6 +49,24 @@ export default function AdminDashboardPage() {
               <Link href="/admin/testimonials">
                  <PlusCircle className="mr-2 h-4 w-4" />
                  {t('admin_dashboard.victim_voices.button')}
+              </Link>
+            </Button>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Smile />
+              {t('admin_dashboard.kids_stories.title')}
+            </CardTitle>
+            <CardDescription>{t('admin_dashboard.kids_stories.description')}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Button asChild>
+              <Link href="/admin/kids">
+                 <PlusCircle className="mr-2 h-4 w-4" />
+                 {t('admin_dashboard.kids_stories.button')}
               </Link>
             </Button>
           </CardContent>

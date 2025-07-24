@@ -21,6 +21,17 @@ export interface VictimTestimonial {
     messageKey: string;
 }
 
+export interface KidStory {
+    id?: string;
+    title_key: string;
+    description_key: string;
+    content_key: string;
+    age_group: string;
+    topic: string;
+    image_url?: string;
+}
+
+
 const supabase = createClient();
 
 // Functions for Solved Cases
@@ -158,6 +169,75 @@ export async function deleteVictimTestimonial(id: string) {
         
     if (error) {
         console.error('Error deleting testimonial:', error);
+    }
+    return;
+}
+
+// Functions for CyberWise Kids Stories
+export async function getKidStories(): Promise<KidStory[]> {
+    const { data, error } = await supabase
+        .from('kid_stories')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+    if (error) {
+        console.error('Error fetching kid stories:', error);
+        return [];
+    }
+    return data as KidStory[];
+}
+
+export async function getKidStory(id: string): Promise<KidStory | null> {
+    const { data, error } = await supabase
+        .from('kid_stories')
+        .select('*')
+        .eq('id', id)
+        .single();
+
+    if (error) {
+        console.error('Error fetching kid story:', error);
+        return null;
+    }
+    return data as KidStory;
+}
+
+export async function addKidStory(data: Omit<KidStory, 'id'>) {
+    const { data: newStory, error } = await supabase
+        .from('kid_stories')
+        .insert([data])
+        .select()
+        .single();
+
+    if (error) {
+        console.error('Error adding kid story:', error);
+        return null;
+    }
+    return newStory;
+}
+
+export async function updateKidStory(id: string, data: Partial<KidStory>) {
+    const { data: updatedStory, error } = await supabase
+        .from('kid_stories')
+        .update(data)
+        .eq('id', id)
+        .select()
+        .single();
+
+    if (error) {
+        console.error('Error updating kid story:', error);
+        return null;
+    }
+    return updatedStory;
+}
+
+export async function deleteKidStory(id: string) {
+    const { error } = await supabase
+        .from('kid_stories')
+        .delete()
+        .eq('id', id);
+
+    if (error) {
+        console.error('Error deleting kid story:', error);
     }
     return;
 }

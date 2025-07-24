@@ -10,6 +10,9 @@ import {
   addVictimTestimonial,
   updateVictimTestimonial,
   deleteVictimTestimonial,
+  addKidStory,
+  updateKidStory,
+  deleteKidStory,
 } from "@/lib/data-service";
 
 const caseSchema = z.object({
@@ -28,6 +31,16 @@ const testimonialSchema = z.object({
     storyKey: z.string().min(1, "Story is required"),
     helpKey: z.string().min(1, "Help received is required"),
     messageKey: z.string().min(1, "Message is required"),
+});
+
+const kidStorySchema = z.object({
+    id: z.string().optional(),
+    title_key: z.string().min(1, "Title is required"),
+    description_key: z.string().min(1, "Description is required"),
+    content_key: z.string().min(1, "Story Content is required"),
+    age_group: z.string().min(1, "Age Group is required"),
+    topic: z.string().min(1, "Topic is required"),
+    image_url: z.string().url("Must be a valid URL").optional().or(z.literal('')),
 });
 
 
@@ -86,4 +99,31 @@ export async function deleteTestimonialAction(id: string) {
     revalidatePath('/admin/testimonials');
     revalidatePath('/case-gallery');
     return { success: true, message: "Testimonial deleted successfully." };
+}
+
+
+export async function upsertKidStoryAction(data: unknown) {
+    const result = kidStorySchema.safeParse(data);
+    if (!result.success) {
+      return { error: result.error.flatten().fieldErrors };
+    }
+    
+    const storyData = result.data;
+  
+    if (storyData.id) {
+        await updateKidStory(storyData.id, storyData);
+    } else {
+        await addKidStory(storyData);
+    }
+    
+    revalidatePath('/admin/kids');
+    revalidatePath('/cyberwise-kids');
+    return { success: true, message: "Kid's story saved successfully." };
+}
+
+export async function deleteKidStoryAction(id: string) {
+    await deleteKidStory(id);
+    revalidatePath('/admin/kids');
+    revalidatePath('/cyberwise-kids');
+    return { success: true, message: "Kid's story deleted successfully." };
 }

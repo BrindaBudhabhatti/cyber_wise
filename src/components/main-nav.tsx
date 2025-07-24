@@ -17,8 +17,8 @@ import {
   ShieldX,
   Link2,
   HeartHandshake,
-  Backpack,
   BookKey,
+  Smile,
 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -42,6 +42,7 @@ export function MainNav() {
     { href: '/news', labelKey: 'nav.news', icon: Newspaper },
     { href: '/stats', labelKey: 'nav.stats', icon: BarChart },
     { href: '/case-gallery', labelKey: 'nav.case_gallery', icon: BookKey },
+    { href: '/cyberwise-kids', labelKey: 'nav.cyberwise_kids', icon: Smile },
     { href: '/quiz', labelKey: 'nav.quiz', icon: ShieldQuestion },
     { href: '/games', labelKey: 'nav.games', icon: Gamepad2 },
     { href: '/scam-scanner', labelKey: 'nav.scam_scanner', icon: ScanLine },

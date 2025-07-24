@@ -69,6 +69,7 @@ const resources = {
       "nav.reach_us": "Reach Us",
       "nav.womens_safety": "Women's Safety",
       "nav.case_gallery": "Case Gallery",
+      "nav.cyberwise_kids": "CyberWise Kids",
 
       "admin_dashboard.title": "Admin Dashboard",
       "admin_dashboard.description": "Manage the content of the CyberWise application.",
@@ -78,6 +79,9 @@ const resources = {
       "admin_dashboard.victim_voices.title": "Victim Voices",
       "admin_dashboard.victim_voices.description": "Add, edit, or delete victim testimonials from the case gallery.",
       "admin_dashboard.victim_voices.button": "Manage Testimonials",
+      "admin_dashboard.kids_stories.title": "CyberWise Kids Stories",
+      "admin_dashboard.kids_stories.description": "Add, edit, or delete stories for the kids section.",
+      "admin_dashboard.kids_stories.button": "Manage Stories",
 
       "case_gallery_page.title": "Case Gallery",
       "case_gallery_page.description": "Explore real-world cyber crime cases and hear from those affected.",
@@ -139,7 +143,7 @@ const resources = {
       "feedback_page.description": "We value your opinion. Let us know how we can improve.",
       "feedback_page.form_title": "Feedback Form",
       "feedback_page.form_description": "Please fill out the form below. Your responses will be recorded directly in our Google Sheet!",
-
+      
       "reach_us_page.title": "Reach Us",
       "reach_us_page.description": "Find our location and contact details below.",
       "reach_us_page.contact_card.title": "Contact Information",
@@ -390,13 +394,13 @@ const resources = {
 
       "learn.photo_morphing.title": "Photo Morphing",
       "learn.photo_morphing.summary": "Creating and distributing morphed, often obscene, images of a person without consent.",
-      "learn.photo_morphing.description": "Photo morphing involves editing or manipulating a person's original image to create a fake one, which is often obscene or defamatory. These images are then used for blackmail, harassment, or to damage a person's reputation.",
-      "learn.photo_morphing.law": "Sections 66E, 67, 67A of the IT Act, 2000. IPC Sections 499 (Defamation), 509 (Insulting the modesty of a woman).",
-      "learn.photo_morphing.penalty": "Can range from imprisonment up to five years and a fine up to ten lakh rupees, depending on the nature of the content.",
-      "learn.photo_morphing.tip1": "Be cautious about who you share your photos with.",
-      "learn.photo_morphing.tip2": "Use watermarks on photos you post publicly if possible.",
-      "learn.photo_morphing.tip3": "If you are a victim, immediately report the profile or content to the platform.",
-      "learn.photo_morphing.tip4": "File a complaint with the cybercrime police with all evidence.",
+      "learn.photo_morphing.description": "ફોટો મોર્ફિંગમાં વ્યક્તિની મૂળ છબીને સંપાદિત કરવી અથવા તેમાં ફેરફાર કરીને નકલી છબી બનાવવાનો સમાવેશ થાય છે, જે ઘણીવાર અશ્લીલ અથવા બદનક્ષીભરી હોય છે. આ છબીઓનો ઉપયોગ બ્લેકમેલ, હેરાનગતિ અથવા વ્યક્તિની પ્રતિષ્ઠાને નુકસાન પહોંચાડવા માટે કરવામાં આવે છે.",
+      "learn.photo_morphing.law": "IT અધિનિયમ, 2000 ની કલમ 66E, 67, 67A. IPC કલમ 499 (બદનક્ષી), 509 (સ્ત્રીની નમ્રતાનું અપમાન).",
+      "learn.photo_morphing.penalty": "સામગ્રીની પ્રકૃતિના આધારે પાંચ વર્ષ સુધીની કેદ અને દસ લાખ રૂપિયા સુધીનો દંડ થઈ શકે છે.",
+      "learn.photo_morphing.tip1": "તમે કોની સાથે તમારા ફોટા શેર કરો છો તે વિશે સાવચેત રહો.",
+      "learn.photo_morphing.tip2": "જો શક્ય હોય તો તમે સાર્વજનિક રૂપે પોસ્ટ કરો છો તે ફોટા પર વોટરમાર્કનો ઉપયોગ કરો.",
+      "learn.photo_morphing.tip3": "જો તમે પીડિત હો, તો તરત જ પ્લેટફોર્મ પર પ્રોફાઇલ અથવા સામગ્રીની જાણ કરો.",
+      "learn.photo_morphing.tip4": "તમામ પુરાવા સાથે સાયબર ક્રાઇમ પોલીસમાં ફરિયાદ નોંધાવો.",
       
       "learn.doxxing.title": "Doxxing",
       "learn.doxxing.summary": "Researching and broadcasting private or identifying information about an individual.",
@@ -476,6 +480,7 @@ const resources = {
       "nav.reach_us": "हमसे संपर्क करें",
       "nav.womens_safety": "महिला सुरक्षा",
       "nav.case_gallery": "केस गैलरी",
+      "nav.cyberwise_kids": "साइबरवाइज़ किड्स",
 
       "admin_dashboard.title": "एडमिन डैशबोर्ड",
       "admin_dashboard.description": "साइबरवाइज एप्लिकेशन की सामग्री प्रबंधित करें।",
@@ -485,6 +490,9 @@ const resources = {
       "admin_dashboard.victim_voices.title": "पीड़ित की आवाजें",
       "admin_dashboard.victim_voices.description": "केस गैलरी से पीड़ित प्रशंसापत्र जोड़ें, संपादित करें या हटाएं।",
       "admin_dashboard.victim_voices.button": "प्रशंसापत्र प्रबंधित करें",
+      "admin_dashboard.kids_stories.title": "साइबरवाइज़ किड्स स्टोरीज़",
+      "admin_dashboard.kids_stories.description": "बच्चों के अनुभाग के लिए कहानियाँ जोड़ें, संपादित करें या हटाएँ।",
+      "admin_dashboard.kids_stories.button": "कहानियाँ प्रबंधित करें",
       
       "case_gallery_page.title": "केस गैलरी",
       "case_gallery_page.description": "वास्तविक दुनिया के साइबर अपराध मामलों का अन्वेषण करें और प्रभावित लोगों से सुनें।",
@@ -882,6 +890,7 @@ const resources = {
       "nav.reach_us": "અમારો સંપર્ક કરો",
       "nav.womens_safety": "મહિલા સુરક્ષા",
       "nav.case_gallery": "કેસ ગેલેરી",
+      "nav.cyberwise_kids": "સાયબરવાઇઝ કિડ્સ",
 
       "admin_dashboard.title": "એડમિન ડેશબોર્ડ",
       "admin_dashboard.description": "સાયબરવાઇઝ એપ્લિકેશનની સામગ્રીનું સંચાલન કરો.",
@@ -891,6 +900,9 @@ const resources = {
       "admin_dashboard.victim_voices.title": "પીડિતોના અવાજો",
       "admin_dashboard.victim_voices.description": "કેસ ગેલેરીમાંથી પીડિત પ્રશંસાપત્રો ઉમેરો, સંપાદિત કરો અથવા કાઢી નાખો.",
       "admin_dashboard.victim_voices.button": "પ્રશંસાપત્રોનું સંચાલન કરો",
+      "admin_dashboard.kids_stories.title": "સાયબરવાઇઝ કિડ્સ વાર્તાઓ",
+      "admin_dashboard.kids_stories.description": "કિડ્સ વિભાગ માટે વાર્તાઓ ઉમેરો, સંપાદિત કરો અથવા કાઢી નાખો.",
+      "admin_dashboard.kids_stories.button": "વાર્તાઓનું સંચાલન કરો",
 
       "case_gallery_page.title": "કેસ ગેલેરી",
       "case_gallery_page.description": "વાસ્તવિક દુનિયાના સાયબર ક્રાઇમ કેસોનું અન્વેષણ કરો અને અસરગ્રસ્તો પાસેથી સાંભળો.",
