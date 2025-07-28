@@ -101,10 +101,11 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 0.1;
+    opacity: 0.3;
     pointer-events: none;
+    background-color: rgb(3, 7, 18);
   }
   .dark .digital-rain {
-    opacity: 0.2;
+    opacity: 0.5;
   }
 }

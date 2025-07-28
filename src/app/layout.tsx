@@ -47,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           disableTransitionOnChange
         >
           <I18nProvider>
+            
             <DigitalRain />
             <MainLayout>{children}</MainLayout>
             <Toaster />

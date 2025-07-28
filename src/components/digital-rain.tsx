@@ -15,54 +15,46 @@ export function DigitalRain() {
 
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
-    
-    const characters = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const charactersArray = characters.split('');
-    const fontSize = 16;
-    const columns = Math.floor(width / fontSize);
+
+    const letters = '01'.split('');
+    const fontSize = 10;
+    let columns = Math.floor(width / fontSize);
     const drops: number[] = [];
 
-    for (let x = 0; x < columns; x++) {
-      drops[x] = Math.floor(Math.random() * height);
+    for (let i = 0; i < columns; i++) {
+      drops[i] = 1;
     }
 
-    let animationFrameId: number;
-
     const draw = () => {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+      ctx.fillStyle = 'rgba(3, 7, 18, 0.1)'; 
       ctx.fillRect(0, 0, width, height);
-
-      ctx.fillStyle = '#0F0';
-      ctx.font = `${fontSize}px monospace`;
-
       for (let i = 0; i < drops.length; i++) {
-        const text = charactersArray[Math.floor(Math.random() * charactersArray.length)];
+        const text = letters[Math.floor(Math.random() * letters.length)];
+        ctx.fillStyle = '#00b300';
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > height && Math.random() > 0.975) {
+        drops[i]++;
+        if (drops[i] * fontSize > height && Math.random() > 0.85) {
           drops[i] = 0;
         }
-        drops[i]++;
       }
-      animationFrameId = requestAnimationFrame(draw);
     };
 
-    draw();
+    const intervalId = setInterval(draw, 50);
 
     const handleResize = () => {
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
-      const newColumns = Math.floor(width / fontSize);
+      columns = Math.floor(width / fontSize);
       drops.length = 0;
-      for (let x = 0; x < newColumns; x++) {
-        drops[x] = Math.floor(Math.random() * height);
+      for (let x = 0; x < columns; x++) {
+        drops[x] = 1;
       }
     };
 
     window.addEventListener('resize', handleResize);
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      clearInterval(intervalId);
       window.removeEventListener('resize', handleResize);
     };
   }, []);
