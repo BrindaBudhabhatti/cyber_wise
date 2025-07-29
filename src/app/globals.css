@@ -103,7 +103,7 @@
     z-index: -1;
     opacity: 0.3;
     pointer-events: none;
-    background-color: rgb(3, 7, 18);
+    /* The main background is now set by the canvas fill, not a CSS color. */
   }
   .dark .digital-rain {
     opacity: 0.5;

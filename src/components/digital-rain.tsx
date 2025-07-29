@@ -13,50 +13,58 @@ export function DigitalRain() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
+    // Setting the width and height of the canvas
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-    const letters = '01'.split('');
-    const fontSize = 10;
-    let columns = Math.floor(width / fontSize);
-    const drops: number[] = [];
+    // Setting up the letters
+    var letters = '01'.split('');
 
-    for (let i = 0; i < columns; i++) {
+    // Setting up the columns
+    var fontSize = 10;
+    var columns = canvas.width / fontSize;
+
+    // Setting up the drops
+    var drops: number[] = [];
+    for (var i = 0; i < columns; i++) {
       drops[i] = 1;
     }
 
-    const draw = () => {
-      ctx.fillStyle = 'rgba(3, 7, 18, 0.1)'; 
-      ctx.fillRect(0, 0, width, height);
-      for (let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillStyle = '#00b300';
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+    // Setting up the draw function
+    function draw() {
+      ctx!.fillStyle = 'rgba(3, 7, 18, 0.1)'; // Fading effect
+      ctx!.fillRect(0, 0, canvas.width, canvas.height);
+      for (var i = 0; i < drops.length; i++) {
+        var text = letters[Math.floor(Math.random() * letters.length)];
+        ctx!.fillStyle = '#00b300';
+        ctx!.fillText(text, i * fontSize, drops[i] * fontSize);
         drops[i]++;
-        if (drops[i] * fontSize > height && Math.random() > 0.85) {
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.85) {
           drops[i] = 0;
         }
       }
-    };
+    }
 
-    const intervalId = setInterval(draw, 50);
+    // Loop the animation
+    const interval = setInterval(draw, 50);
 
     const handleResize = () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-      columns = Math.floor(width / fontSize);
-      drops.length = 0;
-      for (let x = 0; x < columns; x++) {
-        drops[x] = 1;
-      }
-    };
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        columns = canvas.width / fontSize;
+        drops = [];
+        for (var i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+    }
 
     window.addEventListener('resize', handleResize);
 
+    // Cleanup function to stop the animation and remove event listener
     return () => {
-      clearInterval(intervalId);
-      window.removeEventListener('resize', handleResize);
-    };
+        clearInterval(interval);
+        window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   return <canvas ref={canvasRef} className="digital-rain" />;
