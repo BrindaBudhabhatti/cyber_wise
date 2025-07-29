@@ -410,7 +410,25 @@ const resources = {
       "learn.doxxing.tip1": "Review and tighten privacy settings on all your social media accounts.",
       "learn.doxxing.tip2": "Use different usernames and email addresses for different platforms.",
       "learn.doxxing.tip3": "Be mindful of the information you share in public forums.",
-      "learn.doxxing.tip4": "Report any instance of doxxing to the platform and law enforcement."
+      "learn.doxxing.tip4": "Report any instance of doxxing to the platform and law enforcement.",
+
+      "footer.copyright": "© {{year}} CyberWise. All Rights Reserved.",
+      "footer.about_developer": "About the Developer",
+      "about_dialog.title": "About the Developer",
+      "about_dialog.name": "Brinda Budhabhatti",
+      "about_dialog.role": "Intern at the Cyber Crime Department, Jamnagar",
+      "about_dialog.intro_title": "CyberWise & CyberBuddy Developer",
+      "about_dialog.intro_p1": "I’m the creator behind CyberBuddy, a digital assistant designed to raise awareness and offer guidance on cybercrime, online safety, and digital rights. As a CyberWise advocate, I’m committed to educating people—especially students and youth—on staying safe in the digital world.",
+      "about_dialog.cyberbuddy.title": "CyberBuddy",
+      "about_dialog.cyberbuddy.p1": "CyberBuddy is more than just a chatbot — it's a trustworthy companion for anyone seeking help or clarity about cybercrime. It provides users with:",
+      "about_dialog.cyberbuddy.l1": "Information about common online threats",
+      "about_dialog.cyberbuddy.l2": "Legal rights and penalties under cyber laws",
+      "about_dialog.cyberbuddy.l3": "Tips to stay safe online",
+      "about_dialog.cyberbuddy.l4": "Support resources like reporting channels and psychological help",
+      "about_dialog.cyberbuddy.l5": "Engaging quizzes and learning modules on cyber safety",
+      "about_dialog.cyberwise.title": "CyberWise",
+      "about_dialog.cyberwise.p1": "As CyberWise, I strive to simplify complex cyber concepts, making digital literacy and cybersecurity accessible for all. My goal is to empower individuals with knowledge, so they can protect themselves and others in the digital space.",
+
       
     },
   },
@@ -821,7 +839,25 @@ const resources = {
       "learn.doxxing.tip1": "अपने सभी सोशल मीडिया खातों पर गोपनीयता सेटिंग्स की समीक्षा करें और उन्हें सख्त करें।",
       "learn.doxxing.tip2": "विभिन्न प्लेटफार्मों के लिए अलग-अलग उपयोगकर्ता नाम और ईमेल पते का उपयोग करें।",
       "learn.doxxing.tip3": "सार्वजनिक मंचों में आप जो जानकारी साझा करते हैं, उसके प्रति सचेत रहें।",
-      "learn.doxxing.tip4": "डॉक्सिंग के किसी भी उदाहरण की रिपोर्ट प्लेटफॉर्म और कानून प्रवर्तन को करें।"
+      "learn.doxxing.tip4": "डॉक्सिंग के किसी भी उदाहरण की रिपोर्ट प्लेटफॉर्म और कानून प्रवर्तन को करें।",
+
+      "footer.copyright": "© {{year}} साइबरवाइज़। सर्वाधिकार सुरक्षित।",
+      "footer.about_developer": "डेवलपर के बारे में",
+      "about_dialog.title": "डेवलपर के बारे में",
+      "about_dialog.name": "वृंदा बुधभट्टी",
+      "about_dialog.role": "इंटर्न, साइबर क्राइम विभाग, जामनगर",
+      "about_dialog.intro_title": "साइबरवाइज और साइबरबडी डेवलपर",
+      "about_dialog.intro_p1": "मैं साइबरबडी के पीछे की निर्माता हूं, जो साइबर अपराध, ऑनलाइन सुरक्षा और डिजिटल अधिकारों पर जागरूकता बढ़ाने और मार्गदर्शन प्रदान करने के लिए डिज़ाइन किया गया एक डिजिटल सहायक है। एक साइबरवाइज हिमायતી के रूप में, मैं लोगों को - विशेष रूप से छात्रों और युवाओं को - डिजिटल दुनिया में सुरक्षित रहने के बारे में शिक्षित करने के लिए प्रतिबद्ध हूं।",
+      "about_dialog.cyberbuddy.title": "साइबरबडी",
+      "about_dialog.cyberbuddy.p1": "साइबरबडी सिर्फ एक चैटबॉट से कहीं बढ़कर है - यह साइबर अपराध के बारे में मदद या स्पष्टता चाहने वाले किसी भी व्यक्ति के लिए एक भरोसेमंद साथी है। यह उपयोगकर्ताओं को प्रदान करता है:",
+      "about_dialog.cyberbuddy.l1": "सामान्य ऑनलाइन खतरों के बारे में जानकारी",
+      "about_dialog.cyberbuddy.l2": "साइबर कानूनों के तहत कानूनी अधिकार और दंड",
+      "about_dialog.cyberbuddy.l3": "ऑनलाइन सुरक्षित रहने के टिप्स",
+      "about_dialog.cyberbuddy.l4": "रिपोर्टिंग चैनलों और मनोवैज्ञानिक सहायता जैसे सहायता संसाधन",
+      "about_dialog.cyberbuddy.l5": "साइबर सुरक्षा पर आकर्षक क्विज़ और लर्निंग मॉड्यूल",
+      "about_dialog.cyberwise.title": "साइबरवाइज",
+      "about_dialog.cyberwise.p1": "साइबरवाइज के रूप में, मैं जटिल साइबर अवधारणाओं को सरल बनाने का प्रयास करती हूं, जिससे डिजिटल साक्षरता और साइबर सुरक्षा सभी के लिए सुलभ हो। मेरा लक्ष्य व्यक्तियों को ज्ञान के साथ सशक्त बनाना है, ताकि वे डिजिटल स्पेस में खुद को और दूसरों को सुरक्षित रख सकें।",
+      
     },
   },
   gu: {
